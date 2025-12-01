@@ -624,7 +624,7 @@ const TheatreTracker = () => {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-extrabold text-slate-100 tracking-tight uppercase" style={{fontFamily: 'system-ui, sans-serif'}}>
-                THEATRE WATSON
+                THEATRE WATSON-LONDON
               </h1>
               
               {/* Subtitle Badge */}
