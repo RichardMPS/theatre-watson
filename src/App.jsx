@@ -1,0 +1,905 @@
+import React, { useState, useEffect } from 'react';
+import { Calendar, Star, MapPin, Clock, Search, ExternalLink, Filter, Info, ChevronRight, Ticket, BookOpen, UtensilsCrossed, X } from 'lucide-react';
+
+const TheatreTracker = () => {
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [locationFilter, setLocationFilter] = useState('all');
+  const [visitDate, setVisitDate] = useState('');
+  const [currentDate, setCurrentDate] = useState(new Date());
+
+  const shows = [
+    // --- RECENTLY OPENED (NOVEMBER 2025) ---
+    {
+      id: 101,
+      title: "The Hunger Games: On Stage",
+      venue: "Troubadour Canary Wharf",
+      locationType: "off-west-end",
+      date: "2025-11-13",
+      closingDate: "2026-02-14", // Estimated based on typical run
+      type: "play",
+      description: "A dazzling, high-tech stage adaptation of the dystopian blockbuster.",
+      bookingUrl: "https://troubadourtheatres.com/canary-wharf",
+      reviewUrl: "https://www.theguardian.com/stage/2025/nov/13/the-hunger-games-on-stage-review-thundering-fight-to-the-death-in-a-dazzling-dystopia"
+    },
+    {
+      id: 102,
+      title: "All My Sons",
+      venue: "Wyndham's Theatre",
+      locationType: "west-end",
+      date: "2025-11-14",
+      closingDate: "2026-03-07",
+      type: "play",
+      description: "Bryan Cranston stars in this towering revival of Arthur Miller's tragedy.",
+      bookingUrl: "https://www.delfontmackintosh.co.uk/whats-on/all-my-sons",
+      reviewUrl: "https://www.theguardian.com/stage/2025/nov/22/all-my-sons-review-bryan-cranston-marianne-jean-baptiste-paapa-essiedu-wyndhams-theatre-london"
+    },
+    {
+      id: 103,
+      title: "Ride The Cyclone",
+      venue: "Southwark Playhouse Elephant",
+      locationType: "fringe",
+      date: "2025-11-14",
+      closingDate: "2026-01-10",
+      type: "musical",
+      description: "The cult musical about a rollercoaster accident makes its London debut.",
+      bookingUrl: "https://southwarkplayhouse.co.uk/shows/ride-the-cyclone/",
+      reviewUrl: "https://www.theguardian.com/stage/2025/nov/20/ride-the-cyclone-review-southwark-playhouse-elephant-london"
+    },
+    {
+      id: 105,
+      title: "End",
+      venue: "National Theatre (Dorfman)",
+      locationType: "off-west-end",
+      date: "2025-11-21",
+      closingDate: "2026-01-17",
+      type: "play",
+      description: "Clive Owen and Saskia Reeves star in the final part of David Eldridge's relationship trilogy.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/end/",
+      reviewUrl: "https://www.theguardian.com/stage/2025/nov/21/end-review-clive-owen-saskia-reeves-dorfman-theatre-london"
+    },
+    {
+      id: 106,
+      title: "Ballet Shoes",
+      venue: "National Theatre (Olivier)",
+      locationType: "off-west-end",
+      date: "2025-11-26",
+      closingDate: "2026-02-21",
+      type: "play",
+      description: "A magical new adaptation of Noel Streatfeild's classic novel for the festive season.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/ballet-shoes/",
+      reviewUrl: "https://www.timeout.com/london/theatre/ballet-shoes-review-1"
+    },
+    {
+      id: 104,
+      title: "Paddington The Musical",
+      venue: "Savoy Theatre",
+      locationType: "west-end",
+      date: "2025-11-30",
+      closingDate: "2026-05-25", 
+      type: "musical",
+      description: "The beloved bear arrives in the West End in a major new musical production.",
+      bookingUrl: "https://www.thesavoytheatre.com/shows/paddington-the-musical"
+    },
+
+    // --- DECEMBER 2025 ---
+    {
+      id: 1,
+      title: "Into the Woods",
+      venue: "Bridge Theatre",
+      locationType: "off-west-end",
+      date: "2025-12-02",
+      closingDate: "2026-04-19",
+      type: "musical",
+      description: "Terry Gilliam co-directs this highly anticipated revival of Sondheim's fairytale masterpiece.",
+      bookingUrl: "https://bridgetheatre.co.uk/whats-on/into-the-woods/"
+    },
+    {
+      id: 201,
+      title: "Fallen Angels",
+      venue: "Menier Chocolate Factory",
+      locationType: "fringe",
+      date: "2025-12-02",
+      closingDate: "2026-02-21",
+      type: "play",
+      description: "A major revival of Noël Coward's comedy about two best friends and a shared ex-lover.",
+      bookingUrl: "https://www.menierchocolatefactory.com/"
+    },
+    {
+      id: 202,
+      title: "Bengal Tiger at the Baghdad Zoo",
+      venue: "Young Vic",
+      locationType: "fringe",
+      date: "2025-12-02",
+      closingDate: "2026-01-31",
+      type: "play",
+      description: "David Threlfall stars in this Pulitzer-nominated comedy about two US marines and a tiger.",
+      bookingUrl: "https://www.youngvic.org/"
+    },
+    {
+      id: 203,
+      title: "Indian Ink",
+      venue: "Hampstead Theatre",
+      locationType: "fringe",
+      date: "2025-12-03",
+      closingDate: "2026-01-31",
+      type: "play",
+      description: "Tom Stoppard's moving play about a poet in 1930s India, directed by Jonathan Kent.",
+      bookingUrl: "https://www.hampsteadtheatre.com/"
+    },
+    {
+      id: 2,
+      title: "The Playboy of the Western World",
+      venue: "National Theatre (Lyttelton)",
+      locationType: "off-west-end",
+      date: "2025-12-04",
+      closingDate: "2026-02-28",
+      type: "play",
+      description: "A riotous new production of Synge's Irish classic starring Nicola Coughlan.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/the-playboy-of-the-western-world/"
+    },
+    {
+      id: 3,
+      title: "Christmas Carol Goes Wrong",
+      venue: "Apollo Theatre",
+      locationType: "west-end",
+      date: "2025-12-06",
+      closingDate: "2026-01-25",
+      type: "play",
+      description: "Mischief Theatre returns with their hilarious disaster-prone take on Dickens.",
+      bookingUrl: "https://nimaxtheatres.com/shows/christmas-carol-goes-wrong/"
+    },
+    {
+      id: 204,
+      title: "When We Are Married",
+      venue: "Donmar Warehouse",
+      locationType: "fringe",
+      date: "2025-12-06",
+      closingDate: "2026-02-07",
+      type: "play",
+      description: "J.B. Priestley's classic northern comedy gets an intimate revival.",
+      bookingUrl: "https://www.donmarwarehouse.com/"
+    },
+    {
+      id: 205,
+      title: "Twelfth Night",
+      venue: "Barbican Theatre",
+      locationType: "off-west-end",
+      date: "2025-12-08",
+      closingDate: "2026-01-17",
+      type: "play",
+      description: "The Royal Shakespeare Company brings their acclaimed new production to London.",
+      bookingUrl: "https://www.barbican.org.uk/"
+    },
+    {
+      id: 4,
+      title: "Oh, Mary!",
+      venue: "Trafalgar Theatre",
+      locationType: "west-end",
+      date: "2025-12-10",
+      closingDate: "2026-04-25",
+      type: "play",
+      description: "The Broadway sensation reimagining Mary Todd Lincoln's life arrives in London.",
+      bookingUrl: "https://trafalgartheatre.com/shows/oh-mary/"
+    },
+    {
+      id: 5,
+      title: "High Noon",
+      venue: "Harold Pinter Theatre",
+      locationType: "west-end",
+      date: "2025-12-17",
+      closingDate: "2026-03-14", // Approx based on typical limited run
+      type: "play",
+      description: "World premiere stage adaptation of the classic Western film.",
+      bookingUrl: "https://www.atgtickets.com/shows/high-noon/harold-pinter-theatre/"
+    },
+
+    // --- 2026 ---
+    {
+      id: 6,
+      title: "Gerry & Sewell",
+      venue: "Aldwych Theatre",
+      locationType: "west-end",
+      date: "2026-01-13",
+      closingDate: "2026-01-24",
+      type: "play",
+      description: "The heartwarming North East tale makes its West End transfer.",
+      bookingUrl: "https://nederlander.co.uk/aldwych/shows/gerry-and-sewell/"
+    },
+    {
+      id: 7,
+      title: "Akram Khan's Giselle",
+      venue: "London Coliseum",
+      locationType: "west-end",
+      date: "2026-01-15",
+      closingDate: "2026-01-18",
+      type: "play", 
+      description: "English National Ballet's acclaimed reimagining returns for a limited season.",
+      bookingUrl: "https://londoncoliseum.org/whats-on/akram-khans-giselle/"
+    },
+    {
+      id: 8,
+      title: "The Tempest",
+      venue: "Sam Wanamaker Playhouse",
+      locationType: "off-west-end",
+      date: "2026-01-17",
+      closingDate: "2026-04-12",
+      type: "play",
+      description: "Shakespeare's final play performed in the intimate, candlelit indoor theatre.",
+      bookingUrl: "https://www.shakespearesglobe.com/whats-on/the-tempest/"
+    },
+    {
+      id: 9,
+      title: "Mrs President",
+      venue: "Charing Cross Theatre",
+      locationType: "west-end",
+      date: "2026-01-23",
+      closingDate: "2026-03-08",
+      type: "musical",
+      description: "A new musical exploring the first woman to run for President of the United States.",
+      bookingUrl: "https://charingcrosstheatre.co.uk/theatre/mrs-president"
+    },
+    {
+      id: 10,
+      title: "American Psycho",
+      venue: "Almeida Theatre",
+      locationType: "fringe",
+      date: "2026-01-24",
+      closingDate: "2026-03-14",
+      type: "musical",
+      description: "Matt Smith stars in this stylish, bloody musical satire of 1980s Wall Street.",
+      bookingUrl: "https://almeida.co.uk/whats-on/american-psycho/"
+    },
+    {
+      id: 11,
+      title: "Arcadia",
+      venue: "The Old Vic",
+      locationType: "off-west-end",
+      date: "2026-01-24",
+      closingDate: "2026-03-21",
+      type: "play",
+      description: "Tom Stoppard's dazzling masterpiece of physics, gardening, and scandal returns.",
+      bookingUrl: "https://www.oldvictheatre.com/stage/arcadia/"
+    },
+    {
+      id: 12,
+      title: "Man and Boy",
+      venue: "National Theatre",
+      locationType: "off-west-end",
+      date: "2026-01-30",
+      closingDate: "2026-03-14",
+      type: "play",
+      description: "Terence Rattigan's gripping thriller about finance and fatherhood.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/man-and-boy/"
+    },
+    {
+      id: 13,
+      title: "I'm Sorry, Prime Minister",
+      venue: "Apollo Theatre",
+      locationType: "west-end",
+      date: "2026-01-30",
+      closingDate: "2026-05-09",
+      type: "play",
+      description: "The classic political sitcom characters return in a brand new stage comedy.",
+      bookingUrl: "https://nimaxtheatres.com/shows/im-sorry-prime-minister/"
+    },
+    {
+      id: 14,
+      title: "Dracula",
+      venue: "Noël Coward Theatre",
+      locationType: "west-end",
+      date: "2026-02-04",
+      closingDate: "2026-05-31",
+      type: "play",
+      description: "A radical new one-woman adaptation starring Cynthia Erivo.",
+      bookingUrl: "https://draculawestend.com/"
+    },
+    {
+      id: 15,
+      title: "Così fan tutte",
+      venue: "London Coliseum",
+      locationType: "west-end",
+      date: "2026-02-06",
+      closingDate: "2026-02-21",
+      type: "musical", 
+      description: "ENO's new production of Mozart's comedy of love and fidelity.",
+      bookingUrl: "https://londoncoliseum.org/whats-on/cosi-fan-tutte/"
+    },
+    {
+      id: 206,
+      title: "Broken Glass",
+      venue: "Young Vic",
+      locationType: "fringe",
+      date: "2026-02-21",
+      closingDate: "2026-04-18",
+      type: "play",
+      description: "Arthur Miller's powerful drama about a Jewish couple in 1930s Brooklyn.",
+      bookingUrl: "https://www.youngvic.org/"
+    },
+    {
+      id: 207,
+      title: "The Holy Rosenbergs",
+      venue: "Menier Chocolate Factory",
+      locationType: "fringe",
+      date: "2026-02-27",
+      closingDate: "2026-05-02",
+      type: "play",
+      description: "A gripping family drama starring the Menier's 2026 season ensemble.",
+      bookingUrl: "https://www.menierchocolatefactory.com/"
+    },
+    {
+      id: 16,
+      title: "Summerfolk",
+      venue: "National Theatre",
+      locationType: "off-west-end",
+      date: "2026-03-06",
+      closingDate: "2026-04-29",
+      type: "play",
+      description: "Maxim Gorky's portrait of a privileged class oblivious to the storm approaching.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/summerfolk/"
+    },
+    {
+      id: 208,
+      title: "Jaja’s African Hair Braiding",
+      venue: "Lyric Hammersmith",
+      locationType: "fringe",
+      date: "2026-03-18",
+      closingDate: "2026-04-25",
+      type: "play",
+      description: "The UK premiere of the Tony Award-winning Broadway hit comedy.",
+      bookingUrl: "https://lyric.co.uk/"
+    },
+    {
+      id: 17,
+      title: "Kinky Boots",
+      venue: "London Coliseum",
+      locationType: "west-end",
+      date: "2026-03-17",
+      closingDate: "2026-07-11",
+      type: "musical",
+      description: "The high-kicking musical returns, starring Johannes Radebe as Lola.",
+      bookingUrl: "https://londoncoliseum.org/whats-on/kinky-boots/"
+    },
+    {
+      id: 18,
+      title: "Avenue Q",
+      venue: "Shaftesbury Theatre",
+      locationType: "west-end",
+      date: "2026-03-20",
+      closingDate: "2026-08-29",
+      type: "musical",
+      description: "The puppet-filled, adult comedy musical makes a cheeky West End return.",
+      bookingUrl: "https://www.shaftesburytheatre.com/events/avenue-q/"
+    },
+    {
+      id: 19,
+      title: "Les Liaisons Dangereuses",
+      venue: "National Theatre",
+      locationType: "off-west-end",
+      date: "2026-03-21",
+      closingDate: "2026-06-06",
+      type: "play",
+      description: "A dangerous game of seduction and revenge in pre-revolutionary France.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/les-liaisons-dangereuses/"
+    },
+    {
+      id: 209,
+      title: "Waitress",
+      venue: "New Wimbledon Theatre",
+      locationType: "fringe",
+      date: "2026-03-28",
+      closingDate: "2026-04-04",
+      type: "musical",
+      description: "The smash-hit musical about friendship, motherhood, and the magic of a well-made pie.",
+      bookingUrl: "https://www.atgtickets.com/venues/new-wimbledon-theatre/"
+    },
+    {
+      id: 20,
+      title: "Grace Pervades",
+      venue: "Theatre Royal Haymarket",
+      locationType: "west-end",
+      date: "2026-04-24",
+      closingDate: "2026-07-11",
+      type: "play",
+      description: "Ralph Fiennes stars in this new play about the Victorian theatre legends.",
+      bookingUrl: "https://trh.co.uk/whatson/grace-pervades/"
+    },
+    {
+      id: 210,
+      title: "The Karate Kid The Musical",
+      venue: "New Wimbledon Theatre",
+      locationType: "fringe",
+      date: "2026-04-28",
+      closingDate: "2026-05-09",
+      type: "musical",
+      description: "The world premiere UK tour of the musical based on the classic film kicks off.",
+      bookingUrl: "https://www.atgtickets.com/venues/new-wimbledon-theatre/"
+    },
+    {
+      id: 211,
+      title: "An Ideal Husband",
+      venue: "Lyric Hammersmith",
+      locationType: "fringe",
+      date: "2026-05-08",
+      closingDate: "2026-06-06",
+      type: "play",
+      description: "Oscar Wilde's sharp political comedy returns to the Lyric after 100 years.",
+      bookingUrl: "https://lyric.co.uk/"
+    },
+    {
+      id: 21,
+      title: "Beetlejuice",
+      venue: "Prince Edward Theatre",
+      locationType: "west-end",
+      date: "2026-05-20",
+      closingDate: "2027-04-17",
+      type: "musical",
+      description: "The ghost with the most finally arrives in London in this spectral musical comedy.",
+      bookingUrl: "https://www.delfontmackintosh.co.uk/whats-on/beetlejuice"
+    },
+    {
+      id: 22,
+      title: "Pride The Musical",
+      venue: "National Theatre",
+      locationType: "off-west-end",
+      date: "2026-06-11",
+      closingDate: "2026-09-12",
+      type: "musical",
+      description: "Based on the hit film, celebrating the alliance between miners and the gay community.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/shows/pride/"
+    },
+    {
+      id: 23,
+      title: "Jesus Christ Superstar",
+      venue: "London Palladium",
+      locationType: "west-end",
+      date: "2026-06-20",
+      closingDate: "2026-09-05",
+      type: "musical",
+      description: "The iconic rock opera returns to the Palladium for a summer season.",
+      bookingUrl: "https://lwtheatres.co.uk/whats-on/jesus-christ-superstar/"
+    },
+    {
+      id: 24,
+      title: "Cats",
+      venue: "Regent's Park Open Air",
+      locationType: "off-west-end",
+      date: "2026-07-25",
+      closingDate: "2026-09-12",
+      type: "musical",
+      description: "Andrew Lloyd Webber's feline phenomenon performed under the stars.",
+      bookingUrl: "https://openairtheatre.com/production/cats"
+    },
+    {
+      id: 212,
+      title: "Kimberly Akimbo",
+      venue: "Hampstead Theatre",
+      locationType: "fringe",
+      date: "2026-08-28",
+      closingDate: "2026-11-07",
+      type: "musical",
+      description: "European premiere of the Tony Award-winning musical about a teen who ages too fast.",
+      bookingUrl: "https://www.hampsteadtheatre.com/"
+    }
+  ];
+
+  // Helper: Format Date
+  const formatDate = (dateString) => {
+    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('en-GB', options);
+  };
+
+  // Helper: Check if date is in the past
+  const isPast = (dateString) => {
+    return new Date(dateString) <= currentDate;
+  };
+
+  // Helper: Check if date is within 30 days
+  const isApproaching = (dateString) => {
+    const showDate = new Date(dateString);
+    const diffTime = showDate - currentDate;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays > 0 && diffDays <= 30;
+  };
+
+  // Helper: Google Calendar Link
+  const getCalendarLink = (show) => {
+    const start = new Date(show.date).toISOString().replace(/-|:|\.\d\d\d/g, "").substring(0, 15) + "Z";
+    const endDate = new Date(new Date(show.date).getTime() + 150 * 60000);
+    const end = endDate.toISOString().replace(/-|:|\.\d\d\d/g, "").substring(0, 15) + "Z";
+    
+    const details = `Opening Night for ${show.title} at ${show.venue}. \n\n${show.description}`;
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Opening: " + show.title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(show.venue)}`;
+  };
+
+  // Helper: Get Review Link (Prioritise direct link, fallback to search)
+  const getReviewLink = (show) => {
+    if (show.reviewUrl) return show.reviewUrl;
+    return `https://www.google.com/search?q=${encodeURIComponent(show.title + " London theatre review")}`;
+  };
+
+  // Helper: Google Maps Link
+  const getMapsLink = (venue) => {
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue + " theatre London")}`;
+  };
+
+  // Helper: TripAdvisor Restaurants Link
+  const getRestaurantsLink = (venue) => {
+    return `https://www.google.com/search?q=${encodeURIComponent("TripAdvisor 10 best restaurants near " + venue + " London")}`;
+  };
+
+  // Filter Logic
+  const filteredShows = shows.filter(show => {
+    const typeMatch = typeFilter === 'all' || show.type === typeFilter;
+    const locationMatch = locationFilter === 'all' || show.locationType === locationFilter;
+    
+    // Date Filtering Logic
+    let dateMatch = true;
+    if (visitDate) {
+      const visit = new Date(visitDate);
+      const start = new Date(show.date);
+      const end = new Date(show.closingDate);
+      dateMatch = visit >= start && visit <= end;
+    }
+
+    return typeMatch && locationMatch && dateMatch;
+  }).sort((a, b) => new Date(a.date) - new Date(b.date));
+
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-amber-50 font-sans selection:bg-amber-500 selection:text-white">
+      {/* Hero Header */}
+      <div className="bg-gradient-to-b from-slate-900 to-slate-950 pb-12 pt-12 px-6 shadow-2xl relative overflow-hidden border-b border-amber-900/30">
+        
+        {/* Background Texture */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+           <div className="w-full h-full" style={{backgroundImage: 'radial-gradient(circle, #f59e0b 1px, transparent 1px)', backgroundSize: '30px 30px'}}></div>
+        </div>
+        
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+            <div className="flex flex-col items-center md:items-start">
+              
+              {/* BRANDING LOGO: Coded version of the pin.jpg design */}
+              <div className="mb-4 relative">
+                 <div className="w-24 h-24 relative z-10 filter drop-shadow-xl">
+                    <svg viewBox="0 0 100 100" className="w-full h-full">
+                       <defs>
+                          <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                             <stop offset="0%" stopColor="#fff7ed" />
+                             <stop offset="50%" stopColor="#ffedd5" />
+                             <stop offset="100%" stopColor="#fdba74" />
+                          </radialGradient>
+                          <linearGradient id="curtainRed" x1="0%" y1="0%" x2="100%" y2="0%">
+                             <stop offset="0%" stopColor="#7f1d1d" />
+                             <stop offset="20%" stopColor="#991b1b" />
+                             <stop offset="50%" stopColor="#b91c1c" />
+                             <stop offset="80%" stopColor="#991b1b" />
+                             <stop offset="100%" stopColor="#7f1d1d" />
+                          </linearGradient>
+                       </defs>
+                       
+                       {/* Pin Shape Clip Path */}
+                       <clipPath id="pinClip">
+                          <path d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z" />
+                       </clipPath>
+
+                       <g clipPath="url(#pinClip)">
+                          {/* Background Glow */}
+                          <rect width="100" height="100" fill="url(#glow)" />
+                          
+                          {/* Left Curtain */}
+                          <path 
+                            d="M0 0 L50 0 C40 20, 20 60, 0 80 Z" 
+                            fill="url(#curtainRed)" 
+                            stroke="#7f1d1d"
+                            strokeWidth="0.5"
+                          />
+                          {/* Left Curtain Tie Back */}
+                          <path d="M0 60 Q10 65 20 60" fill="none" stroke="#7f1d1d" strokeWidth="2" />
+
+                          {/* Right Curtain */}
+                          <path 
+                            d="M100 0 L50 0 C60 20, 80 60, 100 80 Z" 
+                            fill="url(#curtainRed)"
+                            stroke="#7f1d1d" 
+                            strokeWidth="0.5"
+                          />
+                          {/* Right Curtain Tie Back */}
+                          <path d="M100 60 Q90 65 80 60" fill="none" stroke="#7f1d1d" strokeWidth="2" />
+
+                          {/* Stage Floor */}
+                          <path d="M0 80 L100 80 L100 100 L0 100 Z" fill="#1e293b" />
+                          <path d="M0 80 Q50 85 100 80" fill="none" stroke="#fbbf24" strokeWidth="1" />
+                       </g>
+
+                       {/* Orange Outline */}
+                       <path 
+                          d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z" 
+                          fill="none" 
+                          stroke="#f59e0b" 
+                          strokeWidth="2" 
+                       />
+                    </svg>
+                 </div>
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-extrabold text-slate-100 tracking-tight uppercase" style={{fontFamily: 'system-ui, sans-serif'}}>
+                THEATRE WATSON
+              </h1>
+              
+              {/* Subtitle Badge */}
+              <div className="mt-2 flex items-center space-x-2">
+                 <div className="h-px w-8 bg-amber-500/50"></div>
+                 <span className="text-amber-500 font-serif tracking-widest text-sm font-bold uppercase bg-slate-900/50 px-2 py-1 rounded border border-amber-900/50">London Edition</span>
+                 <div className="h-px w-8 bg-amber-500/50"></div>
+              </div>
+            </div>
+            
+            {/* Filter Controls */}
+            <div className="flex flex-col space-y-3 items-end w-full md:w-auto">
+              
+              {/* DATE PICKER */}
+              <div className="bg-slate-900 p-2 rounded-xl border border-amber-500/30 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40">
+                 <div className="bg-slate-800 p-2 rounded-lg text-amber-500">
+                    <Calendar className="w-4 h-4" />
+                 </div>
+                 <div className="flex-1">
+                    <label className="text-xs text-amber-500/70 block ml-1 mb-0.5 font-medium uppercase tracking-wider">My Visit Date</label>
+                    <div className="flex items-center">
+                      <input 
+                        type="date" 
+                        className="bg-transparent text-slate-200 text-sm focus:outline-none w-full cursor-pointer [&::-webkit-calendar-picker-indicator]:invert"
+                        value={visitDate}
+                        onChange={(e) => setVisitDate(e.target.value)}
+                      />
+                      {visitDate && (
+                        <button onClick={() => setVisitDate('')} className="ml-2 hover:bg-slate-700 rounded-full p-1 transition-colors">
+                          <X className="w-3 h-3 text-slate-400" />
+                        </button>
+                      )}
+                    </div>
+                 </div>
+              </div>
+
+              {/* Type Filter */}
+              <div className="flex bg-slate-900 p-1 rounded-xl backdrop-blur-sm border border-slate-800 w-full md:w-auto justify-end">
+                <button 
+                  onClick={() => setTypeFilter('all')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'all' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  All
+                </button>
+                <button 
+                  onClick={() => setTypeFilter('musical')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'musical' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  Musicals
+                </button>
+                <button 
+                  onClick={() => setTypeFilter('play')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'play' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  Plays
+                </button>
+              </div>
+
+              {/* Location Filter */}
+              <div className="flex bg-slate-900 p-1 rounded-xl backdrop-blur-sm border border-slate-800 overflow-x-auto max-w-full no-scrollbar">
+                <button 
+                  onClick={() => setLocationFilter('all')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'all' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  All Locations
+                </button>
+                <button 
+                  onClick={() => setLocationFilter('west-end')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'west-end' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  West End
+                </button>
+                <button 
+                  onClick={() => setLocationFilter('off-west-end')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'off-west-end' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  Off-West End
+                </button>
+                <button 
+                  onClick={() => setLocationFilter('fringe')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'fringe' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                >
+                  Fringe/Local
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-5xl mx-auto px-6 py-8">
+        
+        {/* Timeline Indicator */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center space-x-2 text-sm text-slate-400">
+            <Clock className="w-4 h-4" />
+            <span>Today is {formatDate(currentDate)}</span>
+          </div>
+          {visitDate && (
+             <div className="text-sm font-medium text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+               Showing plays available on {formatDate(visitDate)}
+             </div>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 gap-6">
+          {filteredShows.map((show) => {
+            const open = isPast(show.date);
+            const urgent = isApproaching(show.date);
+            const isVisitFilterActive = !!visitDate;
+            
+            return (
+              <div 
+                key={show.id}
+                className={`group relative bg-slate-900 rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl hover:shadow-amber-900/20 
+                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-1 ring-amber-500/30' : 'border-slate-800 hover:border-slate-700'}`}
+              >
+                {/* Urgent Badge */}
+                {urgent && !isVisitFilterActive && (
+                  <div className="absolute top-0 right-0 bg-amber-600 text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-xl shadow-lg z-10">
+                    OPENS SOON
+                  </div>
+                )}
+
+                <div className="flex flex-col md:flex-row">
+                  {/* Date Column */}
+                  <div className={`md:w-48 p-6 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-slate-800 ${open ? 'bg-slate-900/50' : 'bg-slate-900'}`}>
+                    <span className="text-sm font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
+                    <span className="text-4xl font-bold text-slate-100 my-1">{new Date(show.date).getDate()}</span>
+                    <span className="text-slate-500 text-sm">{new Date(show.date).getFullYear()}</span>
+                    
+                    <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2 w-full">
+                       <span className={`text-xs px-2 py-1 rounded-full border ${show.type === 'musical' ? 'border-purple-500/30 text-purple-300 bg-purple-500/10' : 'border-emerald-500/30 text-emerald-300 bg-emerald-500/10'}`}>
+                         {show.type === 'musical' ? 'Musical' : 'Play'}
+                       </span>
+                       {/* Location Tag */}
+                       <span className="text-[10px] px-2 py-1 rounded-full border border-indigo-500/30 text-indigo-300 bg-indigo-500/10 text-center">
+                         {show.locationType === 'west-end' ? 'West End' : show.locationType === 'off-west-end' ? 'Off-West End' : 'Fringe'}
+                       </span>
+                    </div>
+                  </div>
+
+                  {/* Info Column */}
+                  <div className="flex-1 p-6 flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors font-serif">{show.title}</h3>
+                    
+                    {/* Venue & Dining */}
+                    <div className="flex flex-wrap items-center gap-3 mt-2 mb-3">
+                      <a 
+                        href={getMapsLink(show.venue)}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-slate-400 hover:text-white transition-colors group/link"
+                        title="Open in Google Maps"
+                      >
+                        <MapPin className="w-4 h-4 mr-1 text-amber-600" />
+                        <span className="text-sm underline decoration-slate-700 group-hover/link:decoration-amber-500 underline-offset-2 transition-all">{show.venue}</span>
+                      </a>
+
+                      <a 
+                        href={getRestaurantsLink(show.venue)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-xs font-medium text-slate-400 bg-slate-800/50 hover:bg-emerald-950/50 hover:text-emerald-400 border border-slate-700 hover:border-emerald-500/30 px-2 py-1 rounded-md transition-all"
+                        title="Find 10 best restaurants nearby on TripAdvisor"
+                      >
+                        <UtensilsCrossed className="w-3 h-3 mr-1.5" />
+                        Nearby Dining
+                      </a>
+                    </div>
+
+                    <p className="text-slate-300 leading-relaxed text-sm md:text-base">{show.description}</p>
+                    
+                    {isVisitFilterActive && (
+                       <div className="mt-3 text-xs text-amber-500/70 font-mono">
+                          Run: {formatDate(show.date)} — {formatDate(show.closingDate)}
+                       </div>
+                    )}
+                  </div>
+
+                  {/* Action Column */}
+                  <div className="p-6 bg-slate-950/30 md:w-64 flex flex-col justify-center space-y-3 border-t md:border-t-0 md:border-l border-slate-800">
+                    
+                    {/* Booking Button (Red Curtain Style) */}
+                    <a 
+                       href={show.bookingUrl}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3 rounded-xl transition-all font-bold shadow-lg shadow-red-900/20 group-active:scale-95 border border-red-900/50"
+                    >
+                       <Ticket className="w-4 h-4 mr-2" />
+                       Book Tickets
+                    </a>
+
+                    {open ? (
+                      /* Reviews Button */
+                      <a 
+                        href={getReviewLink(show)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600"
+                      >
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        Read Reviews
+                      </a>
+                    ) : (
+                      /* Reminder Button */
+                      <a 
+                        href={getCalendarLink(show)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600"
+                      >
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Add to Calendar
+                      </a>
+                    )}
+
+                    {/* Secondary Status Text */}
+                    <div className="text-center">
+                      {open ? (
+                        <div className="flex items-center justify-center text-emerald-500 text-xs font-medium">
+                          <Star className="w-3 h-3 mr-1 fill-current" />
+                          Now Playing
+                        </div>
+                      ) : (
+                         urgent && !isVisitFilterActive ? (
+                           <span className="text-amber-500 text-xs font-medium animate-pulse">
+                             Opening in {Math.ceil((new Date(show.date) - currentDate) / (1000 * 60 * 60 * 24))} days
+                           </span>
+                         ) : (
+                           <span className="text-slate-500 text-xs">
+                             {isVisitFilterActive ? 'Available on your visit' : 'Opens later this year'}
+                           </span>
+                         )
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {filteredShows.length === 0 && (
+             <div className="text-center py-20 bg-slate-900 rounded-2xl border border-slate-800 border-dashed">
+                <Info className="w-12 h-12 text-slate-600 mx-auto mb-4" />
+                <h3 className="text-xl font-medium text-slate-300">No shows found</h3>
+                <p className="text-slate-500 mt-2">
+                  {visitDate ? `Nothing is scheduled for ${formatDate(visitDate)}.` : 'Try adjusting your filters.'}
+                </p>
+             </div>
+          )}
+        </div>
+
+        {/* CSS Skyline Footer */}
+        <div className="mt-20 pt-8 text-center text-slate-600 text-sm relative">
+           {/* Skyline silhouette using borders and blocks */}
+           <div className="absolute bottom-0 left-0 right-0 h-16 flex items-end justify-center opacity-30 pointer-events-none overflow-hidden space-x-1">
+              <div className="w-8 h-24 bg-slate-800"></div>
+              <div className="w-12 h-12 bg-slate-800 rounded-t-full"></div>
+              <div className="w-6 h-32 bg-slate-800"></div> {/* Shard-ish */}
+              <div className="w-16 h-16 bg-slate-800"></div>
+              <div className="w-10 h-10 bg-slate-800 rounded-t-lg"></div>
+              <div className="w-4 h-20 bg-slate-800"></div>
+              <div className="w-20 h-14 bg-slate-800 rounded-t-xl"></div>
+           </div>
+           <div className="relative z-10 border-t border-slate-800 pt-8 bg-slate-950">
+             <p className="font-serif tracking-wider text-amber-500/50">THEATRE WATSON © 2025</p>
+             <p className="mt-1 text-slate-700">Dates are subject to change by production companies.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TheatreTracker;
