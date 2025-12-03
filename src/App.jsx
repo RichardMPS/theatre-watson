@@ -230,7 +230,6 @@ const TheatreTracker = () => {
       bookingUrl: "https://www.oliverthemusical.com/"
     },
 
-  const [shows, setShows] = useState([
     // --- RECENTLY OPENED (NOVEMBER 2025) ---
     {
       id: 101,
@@ -703,7 +702,9 @@ const TheatreTracker = () => {
       description: "European premiere of the Tony Award-winning musical about a teen who ages too fast.",
       bookingUrl: "https://www.hampsteadtheatre.com/"
     }
-  ]);
+  ];
+
+  const [shows, setShows] = useState(initialShows);
 
   // Delete show function
   const deleteShow = (showId) => {
