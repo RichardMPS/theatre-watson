@@ -6,6 +6,7 @@ const TheatreTracker = () => {
   const [locationFilter, setLocationFilter] = useState('all');
   const [visitDate, setVisitDate] = useState('');
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
   const initialShows = [
     // --- LONG-RUNNING CLASSICS ---
@@ -1213,9 +1214,137 @@ const TheatreTracker = () => {
            <div className="relative z-10 border-t border-slate-800 pt-8 bg-slate-950">
              <p className="font-serif tracking-wider text-amber-500/50">THEATRE WATSON © 2025</p>
              <p className="mt-1 text-slate-700">Dates are subject to change by production companies.</p>
+             <button
+               onClick={() => setShowTermsModal(true)}
+               className="mt-3 text-slate-600 hover:text-amber-500 text-xs underline decoration-slate-700 hover:decoration-amber-500 transition-colors"
+             >
+               Terms & Conditions
+             </button>
            </div>
         </div>
       </div>
+
+      {/* Terms and Conditions Modal */}
+      {showTermsModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setShowTermsModal(false)}>
+          <div className="bg-slate-900 rounded-2xl border border-slate-700 max-w-3xl max-h-[90vh] overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-slate-800 to-slate-900 p-6 border-b border-slate-700 flex justify-between items-center">
+              <h2 className="text-2xl font-bold text-amber-500 font-serif">Terms & Conditions</h2>
+              <button
+                onClick={() => setShowTermsModal(false)}
+                className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-lg"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)] text-slate-300 space-y-6 text-sm leading-relaxed">
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">1. Acceptance of Terms</h3>
+                <p>By accessing and using Theatre Watson (the "Website"), you accept and agree to be bound by the terms and conditions set forth below. If you do not agree to these terms, please do not use this Website.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">2. Information Accuracy Disclaimer</h3>
+                <p className="mb-2">Theatre Watson provides information about London theatre productions, including show dates, venues, descriptions, and booking links. While we strive to maintain accurate and up-to-date information:</p>
+                <ul className="list-disc list-inside space-y-1 ml-4 text-slate-400">
+                  <li>All dates, times, venues, and show details are subject to change without notice by production companies</li>
+                  <li>We cannot guarantee the accuracy, completeness, or timeliness of any information displayed on this Website</li>
+                  <li>Show dates marked as "TBC" (To Be Confirmed) are estimates and may be extended, shortened, or cancelled</li>
+                  <li>Ticket availability is not guaranteed through any links provided</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">3. Limitation of Liability</h3>
+                <p className="mb-2">The creator and operator of Theatre Watson shall not be held liable for:</p>
+                <ul className="list-disc list-inside space-y-1 ml-4 text-slate-400">
+                  <li>Any errors, inaccuracies, or omissions in the information provided</li>
+                  <li>Any losses, damages, or expenses arising from the use of this Website</li>
+                  <li>Missed performances, incorrect booking information, or travel arrangements based on information from this Website</li>
+                  <li>Any issues arising from third-party websites, booking platforms, or external links</li>
+                  <li>Changes to show schedules, cancellations, or closures made by theatre companies</li>
+                </ul>
+                <p className="mt-2 font-semibold text-slate-200">USE OF THIS WEBSITE IS ENTIRELY AT YOUR OWN RISK.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">4. Third-Party Links and Content</h3>
+                <p className="mb-2">This Website contains links to external websites including:</p>
+                <ul className="list-disc list-inside space-y-1 ml-4 text-slate-400">
+                  <li>Official theatre and production booking websites</li>
+                  <li>Review platforms (e.g., The Guardian, TimeOut)</li>
+                  <li>Google Maps and TripAdvisor for location and dining information</li>
+                </ul>
+                <p className="mt-2">We do not control, endorse, or assume responsibility for the content, privacy policies, or practices of any third-party websites. You access these sites at your own risk.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">5. No Affiliation</h3>
+                <p>Theatre Watson is an independent information resource and is not affiliated with, endorsed by, or connected to any theatre company, production company, ticket vendor, or venue mentioned on this Website.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">6. Booking and Ticketing</h3>
+                <p>All ticket bookings are made directly with theatre box offices or official ticketing partners. Theatre Watson does not sell tickets, process payments, or handle bookings. All transactions are subject to the terms and conditions of the respective ticketing providers.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">7. User Responsibilities</h3>
+                <p className="mb-2">Users of this Website agree to:</p>
+                <ul className="list-disc list-inside space-y-1 ml-4 text-slate-400">
+                  <li>Verify all show information directly with official theatre sources before making travel or booking arrangements</li>
+                  <li>Check official websites for the most current scheduling and availability</li>
+                  <li>Use the Website for personal, non-commercial purposes only</li>
+                  <li>Not reproduce, distribute, or republish content without permission</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">8. Intellectual Property</h3>
+                <p>The design, layout, graphics, and compilation of content on Theatre Watson are protected by copyright. Show titles, descriptions, and related information are the property of their respective copyright holders.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">9. Privacy</h3>
+                <p>Theatre Watson does not collect, store, or process personal data. The Website does not use cookies for tracking. Any data entered (such as visit dates for filtering) is processed locally in your browser and is not transmitted or stored.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">10. Modifications to Terms</h3>
+                <p>We reserve the right to modify these Terms and Conditions at any time without prior notice. Continued use of the Website constitutes acceptance of any changes.</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">11. Governing Law</h3>
+                <p>These Terms and Conditions are governed by and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+              </div>
+
+              <div className="border-t border-slate-700 pt-6 mt-6">
+                <p className="text-slate-400 text-xs italic">
+                  <strong>IMPORTANT:</strong> Always verify show information, dates, and ticket availability directly with official theatre sources before making any commitments or travel arrangements. Theatre Watson is provided "AS IS" without warranty of any kind, express or implied.
+                </p>
+                <p className="text-slate-500 text-xs mt-4">
+                  Last Updated: December 2025
+                </p>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="bg-slate-800/50 p-4 border-t border-slate-700 flex justify-end">
+              <button
+                onClick={() => setShowTermsModal(false)}
+                className="bg-amber-600 hover:bg-amber-500 text-slate-900 font-semibold px-6 py-2 rounded-lg transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
