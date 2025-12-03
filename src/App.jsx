@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Star, MapPin, Clock, Search, ExternalLink, Filter, Info, ChevronRight, Ticket, BookOpen, UtensilsCrossed, X, Trash2 } from 'lucide-react';
+import { Calendar, Star, MapPin, Clock, Search, ExternalLink, Filter, Info, ChevronRight, Ticket, BookOpen, UtensilsCrossed, X } from 'lucide-react';
 
 const TheatreTracker = () => {
   const [typeFilter, setTypeFilter] = useState('all');
@@ -705,13 +705,7 @@ const TheatreTracker = () => {
   ];
 
   const [shows, setShows] = useState(initialShows);
-
-  // Delete show function
-  const deleteShow = (showId) => {
-    if (window.confirm('Are you sure you want to delete this show? This action cannot be undone.')) {
-      setShows(shows.filter(show => show.id !== showId));
-    }
-  };
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Helper: Format Date
   const formatDate = (dateString) => {
@@ -755,14 +749,23 @@ const TheatreTracker = () => {
 
   // Helper: TripAdvisor Restaurants Link
   const getRestaurantsLink = (venue) => {
-    return `https://www.google.com/search?q=${encodeURIComponent("TripAdvisor 10 best restaurants near " + venue + " London")}`;
+    return `https://www.tripadvisor.com/Search?q=${encodeURIComponent(venue + " restaurants London")}`;
   };
 
   // Filter Logic
   const filteredShows = shows.filter(show => {
+    // Hide shows that have ended (past closing date)
+    const isStillRunning = new Date(show.closingDate) >= currentDate;
+    if (!isStillRunning) return false;
+
     const typeMatch = typeFilter === 'all' || show.type === typeFilter;
     const locationMatch = locationFilter === 'all' || show.locationType === locationFilter;
-    
+
+    // Search query filtering (title or venue)
+    const searchMatch = searchQuery === '' ||
+      show.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      show.venue.toLowerCase().includes(searchQuery.toLowerCase());
+
     // Date Filtering Logic
     let dateMatch = true;
     if (visitDate) {
@@ -772,7 +775,7 @@ const TheatreTracker = () => {
       dateMatch = visit >= start && visit <= end;
     }
 
-    return typeMatch && locationMatch && dateMatch;
+    return typeMatch && locationMatch && dateMatch && searchMatch;
   }).sort((a, b) => new Date(a.date) - new Date(b.date));
 
 
@@ -868,7 +871,28 @@ const TheatreTracker = () => {
             
             {/* Filter Controls */}
             <div className="flex flex-col space-y-3 items-end w-full md:w-auto">
-              
+
+              {/* SEARCH BAR */}
+              <div className="bg-slate-900 p-2 rounded-xl border border-slate-700 hover:border-slate-600 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40 transition-colors">
+                 <div className="bg-slate-800 p-2 rounded-lg text-slate-400">
+                    <Search className="w-4 h-4" />
+                 </div>
+                 <div className="flex-1">
+                    <input
+                      type="text"
+                      placeholder="Search by show or theatre..."
+                      className="bg-transparent text-slate-200 text-sm focus:outline-none w-full placeholder:text-slate-500"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                    {searchQuery && (
+                      <button onClick={() => setSearchQuery('')} className="absolute right-4 hover:bg-slate-700 rounded-full p-1 transition-colors">
+                        <X className="w-3 h-3 text-slate-400" />
+                      </button>
+                    )}
+                 </div>
+              </div>
+
               {/* DATE PICKER */}
               <div className="bg-slate-900 p-2 rounded-xl border border-amber-500/30 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40">
                  <div className="bg-slate-800 p-2 rounded-lg text-amber-500">
@@ -1039,16 +1063,6 @@ const TheatreTracker = () => {
 
                   {/* Action Column */}
                   <div className="p-6 bg-slate-950/30 md:w-64 flex flex-col justify-center space-y-3 border-t md:border-t-0 md:border-l border-slate-800">
-
-                    {/* Delete Button */}
-                    <button
-                       onClick={() => deleteShow(show.id)}
-                       className="flex items-center justify-center w-full bg-slate-800/50 hover:bg-red-900/50 text-slate-400 hover:text-red-300 py-2 rounded-xl transition-all font-medium border border-slate-700 hover:border-red-500/30 group/delete"
-                       title="Delete this show (when the run has ended)"
-                    >
-                       <Trash2 className="w-3.5 h-3.5 mr-2 group-hover/delete:animate-pulse" />
-                       <span className="text-xs">Remove Show</span>
-                    </button>
 
                     {/* Booking Button (Red Curtain Style) */}
                     <a
