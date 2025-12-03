@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Star, MapPin, Clock, Search, ExternalLink, Filter, Info, ChevronRight, Ticket, BookOpen, UtensilsCrossed, X } from 'lucide-react';
+import { Calendar, Star, MapPin, Clock, Search, ExternalLink, Filter, Info, ChevronRight, Ticket, BookOpen, UtensilsCrossed, X, Trash2 } from 'lucide-react';
 
 const TheatreTracker = () => {
   const [typeFilter, setTypeFilter] = useState('all');
@@ -7,7 +7,230 @@ const TheatreTracker = () => {
   const [visitDate, setVisitDate] = useState('');
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  const shows = [
+  const initialShows = [
+    // --- LONG-RUNNING CLASSICS ---
+    {
+      id: 301,
+      title: "The Lion King",
+      venue: "Lyceum Theatre",
+      locationType: "west-end",
+      date: "1999-10-19",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "Disney's award-winning musical phenomenon. Experience the majesty of the Pride Lands.",
+      bookingUrl: "https://www.thelionking.co.uk/"
+    },
+    {
+      id: 302,
+      title: "Wicked",
+      venue: "Apollo Victoria Theatre",
+      locationType: "west-end",
+      date: "2006-09-27",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "The untold story of the Witches of Oz. One of the West End's most beloved musicals.",
+      bookingUrl: "https://www.wickedthemusical.co.uk/"
+    },
+    {
+      id: 303,
+      title: "Les Misérables",
+      venue: "Sondheim Theatre",
+      locationType: "west-end",
+      date: "1985-10-08",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "Cameron Mackintosh's legendary production of the global musical phenomenon.",
+      bookingUrl: "https://www.lesmis.com/"
+    },
+    {
+      id: 304,
+      title: "The Mousetrap",
+      venue: "St Martin's Theatre",
+      locationType: "west-end",
+      date: "1952-11-25",
+      closingDate: "2027-12-31", // Open-ended
+      type: "play",
+      description: "Agatha Christie's classic whodunnit. The world's longest-running play.",
+      bookingUrl: "https://uk.the-mousetrap.co.uk/"
+    },
+    {
+      id: 305,
+      title: "Hamilton",
+      venue: "Victoria Palace Theatre",
+      locationType: "west-end",
+      date: "2017-12-21",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "Lin-Manuel Miranda's revolutionary hip-hop musical about America's founding father.",
+      bookingUrl: "https://hamiltonmusical.co.uk/"
+    },
+    {
+      id: 306,
+      title: "The Phantom of the Opera",
+      venue: "His Majesty's Theatre",
+      locationType: "west-end",
+      date: "1986-10-09",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "Andrew Lloyd Webber's timeless tale of romance and obsession beneath the Paris Opera House.",
+      bookingUrl: "https://www.thephantomoftheopera.com/"
+    },
+    {
+      id: 307,
+      title: "Harry Potter and the Cursed Child",
+      venue: "Palace Theatre",
+      locationType: "west-end",
+      date: "2016-07-30",
+      closingDate: "2027-12-31", // Open-ended
+      type: "play",
+      description: "The eighth story. Nineteen years later. Award-winning stage play experience.",
+      bookingUrl: "https://www.harrypottertheplay.com/"
+    },
+    {
+      id: 308,
+      title: "Mamma Mia!",
+      venue: "Novello Theatre",
+      locationType: "west-end",
+      date: "1999-04-06",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "The ultimate feel-good show featuring the music of ABBA.",
+      bookingUrl: "https://mamma-mia.com/"
+    },
+    {
+      id: 309,
+      title: "The Book of Mormon",
+      venue: "Prince of Wales Theatre",
+      locationType: "west-end",
+      date: "2013-03-21",
+      closingDate: "2027-12-31", // Open-ended
+      type: "musical",
+      description: "From the creators of South Park. Outrageous, hilarious, and surprisingly sweet.",
+      bookingUrl: "https://bookofmormonlondon.com/"
+    },
+    {
+      id: 310,
+      title: "Back to the Future: The Musical",
+      venue: "Adelphi Theatre",
+      locationType: "west-end",
+      date: "2021-09-13",
+      closingDate: "2026-12-31",
+      type: "musical",
+      description: "Great Scott! The movie classic hits 88mph on stage with spectacular effects.",
+      bookingUrl: "https://www.backtothefuturemusical.com/"
+    },
+    {
+      id: 311,
+      title: "Stranger Things: The First Shadow",
+      venue: "Phoenix Theatre",
+      locationType: "west-end",
+      date: "2023-11-17",
+      closingDate: "2026-09-27",
+      type: "play",
+      description: "Discover the origin story before Season 1. A brand new adventure in Hawkins.",
+      bookingUrl: "https://strangerthingsonstage.com/"
+    },
+    {
+      id: 312,
+      title: "Operation Mincemeat",
+      venue: "Fortune Theatre",
+      locationType: "west-end",
+      date: "2023-03-21",
+      closingDate: "2026-06-30",
+      type: "musical",
+      description: "The true story of the oddest secret mission of WWII, told with live music.",
+      bookingUrl: "https://www.operationmincemeat.com/"
+    },
+    {
+      id: 313,
+      title: "Hadestown",
+      venue: "Lyric Theatre",
+      locationType: "west-end",
+      date: "2024-02-02",
+      closingDate: "2026-12-31",
+      type: "musical",
+      description: "Tony Award-winning folk-opera retelling the myth of Orpheus and Eurydice.",
+      bookingUrl: "https://hadestown.co.uk/"
+    },
+    {
+      id: 314,
+      title: "Starlight Express",
+      venue: "Troubadour Wembley Park Theatre",
+      locationType: "off-west-end",
+      date: "2024-06-20",
+      closingDate: "2026-12-31",
+      type: "musical",
+      description: "Andrew Lloyd Webber's roller-skating spectacular races back with a new production.",
+      bookingUrl: "https://www.starlightexpress.com/"
+    },
+    {
+      id: 315,
+      title: "Disney's Hercules",
+      venue: "Theatre Royal Drury Lane",
+      locationType: "west-end",
+      date: "2024-06-04",
+      closingDate: "2026-03-31",
+      type: "musical",
+      description: "From Zero to Hero! Disney's animated classic comes to life on stage.",
+      bookingUrl: "https://www.herculesthemusical.co.uk/"
+    },
+    {
+      id: 316,
+      title: "Woman in Mind",
+      venue: "Duke of York's Theatre",
+      locationType: "west-end",
+      date: "2025-12-10",
+      closingDate: "2026-03-14",
+      type: "play",
+      description: "Sheridan Smith stars in Alan Ayckbourn's darkly comic masterpiece.",
+      bookingUrl: "https://nimaxtheatres.com/shows/woman-in-mind/"
+    },
+    {
+      id: 317,
+      title: "A Christmas Carol",
+      venue: "The Old Vic",
+      locationType: "off-west-end",
+      date: "2025-11-21",
+      closingDate: "2026-01-18",
+      type: "play",
+      description: "Jack Thorne's thrilling adaptation of the Dickens classic returns for Christmas.",
+      bookingUrl: "https://www.oldvictheatre.com/whats-on/a-christmas-carol"
+    },
+    {
+      id: 318,
+      title: "The Nutcracker",
+      venue: "London Coliseum",
+      locationType: "west-end",
+      date: "2025-12-12",
+      closingDate: "2026-01-05",
+      type: "musical",
+      description: "English National Ballet's enchanting production of Tchaikovsky's festive classic.",
+      bookingUrl: "https://londoncoliseum.org/"
+    },
+    {
+      id: 319,
+      title: "HMS Pinafore",
+      venue: "London Coliseum",
+      locationType: "west-end",
+      date: "2025-12-04",
+      closingDate: "2026-02-07",
+      type: "musical",
+      description: "ENO presents Gilbert and Sullivan's nautical comic opera.",
+      bookingUrl: "https://londoncoliseum.org/"
+    },
+    {
+      id: 320,
+      title: "Oliver!",
+      venue: "Gielgud Theatre",
+      locationType: "west-end",
+      date: "2025-05-23",
+      closingDate: "2026-06-27",
+      type: "musical",
+      description: "Cameron Mackintosh's spectacular new production of Lionel Bart's classic musical.",
+      bookingUrl: "https://www.oliverthemusical.com/"
+    },
+
+  const [shows, setShows] = useState([
     // --- RECENTLY OPENED (NOVEMBER 2025) ---
     {
       id: 101,
@@ -480,7 +703,14 @@ const TheatreTracker = () => {
       description: "European premiere of the Tony Award-winning musical about a teen who ages too fast.",
       bookingUrl: "https://www.hampsteadtheatre.com/"
     }
-  ];
+  ]);
+
+  // Delete show function
+  const deleteShow = (showId) => {
+    if (window.confirm('Are you sure you want to delete this show? This action cannot be undone.')) {
+      setShows(shows.filter(show => show.id !== showId));
+    }
+  };
 
   // Helper: Format Date
   const formatDate = (dateString) => {
@@ -808,9 +1038,19 @@ const TheatreTracker = () => {
 
                   {/* Action Column */}
                   <div className="p-6 bg-slate-950/30 md:w-64 flex flex-col justify-center space-y-3 border-t md:border-t-0 md:border-l border-slate-800">
-                    
+
+                    {/* Delete Button */}
+                    <button
+                       onClick={() => deleteShow(show.id)}
+                       className="flex items-center justify-center w-full bg-slate-800/50 hover:bg-red-900/50 text-slate-400 hover:text-red-300 py-2 rounded-xl transition-all font-medium border border-slate-700 hover:border-red-500/30 group/delete"
+                       title="Delete this show (when the run has ended)"
+                    >
+                       <Trash2 className="w-3.5 h-3.5 mr-2 group-hover/delete:animate-pulse" />
+                       <span className="text-xs">Remove Show</span>
+                    </button>
+
                     {/* Booking Button (Red Curtain Style) */}
-                    <a 
+                    <a
                        href={show.bookingUrl}
                        target="_blank"
                        rel="noopener noreferrer"
