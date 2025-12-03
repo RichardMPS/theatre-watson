@@ -749,7 +749,54 @@ const TheatreTracker = () => {
 
   // Helper: TripAdvisor Restaurants Link
   const getRestaurantsLink = (venue) => {
-    return `https://www.tripadvisor.com/Search?q=${encodeURIComponent(venue + " restaurants London")}`;
+    // TripAdvisor venue IDs for major London theatres
+    const tripadvisorIds = {
+      "Aldwych Theatre": "d1977221",
+      "Apollo Theatre": "d2450346",
+      "Apollo Victoria Theatre": "d2390625",
+      "Lyceum Theatre": "d2390658",
+      "Palace Theatre": "d7088795",
+      "Victoria Palace Theatre": "d2390646",
+      "His Majesty's Theatre": "d2459316",
+      "Prince of Wales Theatre": "d2390641",
+      "Novello Theatre": "d2390629",
+      "Wyndham's Theatre": "d2390648",
+      "Harold Pinter Theatre": "d3851486",
+      "Trafalgar Theatre": "d2459311",
+      "Gielgud Theatre": "d2390616",
+      "Duke of York's Theatre": "d2390611",
+      "Savoy Theatre": "d2390643",
+      "Bridge Theatre": "d12865499",
+      "National Theatre": "d215551",
+      "The Old Vic": "d2390614",
+      "Young Vic": "d2390649",
+      "Donmar Warehouse": "d7283509",
+      "Almeida Theatre": "d2450343",
+      "Menier Chocolate Factory": "d2450357",
+      "Hampstead Theatre": "d2450351",
+      "Barbican Theatre": "d2450344",
+      "London Coliseum": "d215632",
+      "Shaftesbury Theatre": "d2390644",
+      "Theatre Royal Haymarket": "d2390645",
+      "Prince Edward Theatre": "d2390642",
+      "Adelphi Theatre": "d2390609",
+      "Phoenix Theatre": "d2390640",
+      "Fortune Theatre": "d2459315",
+      "Lyric Theatre": "d8592668",
+      "Sondheim Theatre": "d2390628",
+      "St Martin's Theatre": "d2459318"
+    };
+
+    const venueId = tripadvisorIds[venue];
+
+    if (venueId) {
+      // Format venue name for URL (replace spaces with underscores, remove apostrophes/special chars)
+      const formattedVenue = venue.replace(/'/g, '').replace(/ /g, '_').replace(/&/g, 'and');
+      return `https://www.tripadvisor.co.uk/RestaurantsNear-g186338-${venueId}-${formattedVenue}-London_England.html`;
+    }
+
+    // Fallback for venues without IDs: search for restaurants near the venue
+    return `https://www.tripadvisor.co.uk/Search?q=restaurants+near+${encodeURIComponent(venue + ' London')}&geo=186338`;
   };
 
   // Filter Logic
@@ -1077,7 +1124,7 @@ const TheatreTracker = () => {
 
                     {open ? (
                       /* Reviews Button */
-                      <a 
+                      <a
                         href={getReviewLink(show)}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1086,18 +1133,21 @@ const TheatreTracker = () => {
                         <BookOpen className="w-4 h-4 mr-2" />
                         Read Reviews
                       </a>
-                    ) : (
-                      /* Reminder Button */
-                      <a 
-                        href={getCalendarLink(show)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600"
-                      >
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Add to Calendar
-                      </a>
-                    )}
+                    ) : null}
+
+                    {/* Opens/Closes Dates */}
+                    <div className="text-center py-2 px-3 bg-slate-800/50 rounded-xl border border-slate-700">
+                      <div className="text-xs text-slate-400 space-y-1">
+                        <div>
+                          <span className="text-slate-500">Opens:</span>
+                          <span className="text-slate-200 ml-2 font-medium">{formatDate(show.date)}</span>
+                        </div>
+                        <div>
+                          <span className="text-slate-500">Closes:</span>
+                          <span className="text-slate-200 ml-2 font-medium">{formatDate(show.closingDate)}</span>
+                        </div>
+                      </div>
+                    </div>
 
                     {/* Secondary Status Text */}
                     <div className="text-center">
