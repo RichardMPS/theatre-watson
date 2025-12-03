@@ -1163,7 +1163,14 @@ const TheatreTracker = () => {
                            </span>
                          ) : (
                            <span className="text-slate-500 text-xs">
-                             {isVisitFilterActive ? 'Available on your visit' : 'Opens later this year'}
+                             {isVisitFilterActive ? 'Available on your visit' : (() => {
+                               const closingYear = new Date(show.closingDate).getFullYear();
+                               // If closing date is 2027 or later (used for open-ended shows), display TBC
+                               if (closingYear >= 2027) {
+                                 return 'Runs until TBC';
+                               }
+                               return `Runs until ${formatDate(show.closingDate)}`;
+                             })()}
                            </span>
                          )
                       )}
