@@ -814,7 +814,7 @@ const TheatreTracker = () => {
                              <stop offset="100%" stopColor="#7f1d1d" />
                           </linearGradient>
                        </defs>
-                       
+
                        {/* Pin Shape Clip Path */}
                        <clipPath id="pinClip">
                           <path d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z" />
@@ -823,11 +823,11 @@ const TheatreTracker = () => {
                        <g clipPath="url(#pinClip)">
                           {/* Background Glow */}
                           <rect width="100" height="100" fill="url(#glow)" />
-                          
+
                           {/* Left Curtain */}
-                          <path 
-                            d="M0 0 L50 0 C40 20, 20 60, 0 80 Z" 
-                            fill="url(#curtainRed)" 
+                          <path
+                            d="M0 0 L50 0 C40 20, 20 60, 0 80 Z"
+                            fill="url(#curtainRed)"
                             stroke="#7f1d1d"
                             strokeWidth="0.5"
                           />
@@ -835,10 +835,10 @@ const TheatreTracker = () => {
                           <path d="M0 60 Q10 65 20 60" fill="none" stroke="#7f1d1d" strokeWidth="2" />
 
                           {/* Right Curtain */}
-                          <path 
-                            d="M100 0 L50 0 C60 20, 80 60, 100 80 Z" 
+                          <path
+                            d="M100 0 L50 0 C60 20, 80 60, 100 80 Z"
                             fill="url(#curtainRed)"
-                            stroke="#7f1d1d" 
+                            stroke="#7f1d1d"
                             strokeWidth="0.5"
                           />
                           {/* Right Curtain Tie Back */}
@@ -850,11 +850,11 @@ const TheatreTracker = () => {
                        </g>
 
                        {/* Orange Outline */}
-                       <path 
-                          d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z" 
-                          fill="none" 
-                          stroke="#f59e0b" 
-                          strokeWidth="2" 
+                       <path
+                          d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z"
+                          fill="none"
+                          stroke="#f59e0b"
+                          strokeWidth="2"
                        />
                     </svg>
                  </div>
