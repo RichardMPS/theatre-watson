@@ -796,65 +796,113 @@ const TheatreTracker = () => {
           <div className="flex flex-col md:flex-row justify-between items-end gap-8">
             <div className="flex flex-col items-center md:items-start">
               
-              {/* BRANDING LOGO: Coded version of the pin.jpg design */}
+              {/* BRANDING LOGO: Theatre Curtain Pin */}
               <div className="mb-4 relative">
                  <div className="w-24 h-24 relative z-10 filter drop-shadow-xl">
                     <svg viewBox="0 0 100 100" className="w-full h-full">
                        <defs>
-                          <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                             <stop offset="0%" stopColor="#fff7ed" />
-                             <stop offset="50%" stopColor="#ffedd5" />
-                             <stop offset="100%" stopColor="#fdba74" />
+                          {/* Center stage glow */}
+                          <radialGradient id="stageGlow" cx="50%" cy="40%" r="40%">
+                             <stop offset="0%" stopColor="#fffbeb" />
+                             <stop offset="40%" stopColor="#fef3c7" />
+                             <stop offset="70%" stopColor="#fde68a" />
+                             <stop offset="100%" stopColor="#fbbf24" />
                           </radialGradient>
-                          <linearGradient id="curtainRed" x1="0%" y1="0%" x2="100%" y2="0%">
+
+                          {/* Curtain red gradients - left side */}
+                          <linearGradient id="curtainLeft1" x1="0%" y1="0%" x2="100%" y2="0%">
                              <stop offset="0%" stopColor="#7f1d1d" />
-                             <stop offset="20%" stopColor="#991b1b" />
-                             <stop offset="50%" stopColor="#b91c1c" />
-                             <stop offset="80%" stopColor="#991b1b" />
+                             <stop offset="30%" stopColor="#991b1b" />
+                             <stop offset="60%" stopColor="#b91c1c" />
                              <stop offset="100%" stopColor="#7f1d1d" />
+                          </linearGradient>
+
+                          {/* Curtain red gradients - right side */}
+                          <linearGradient id="curtainRight1" x1="0%" y1="0%" x2="100%" y2="0%">
+                             <stop offset="0%" stopColor="#7f1d1d" />
+                             <stop offset="40%" stopColor="#b91c1c" />
+                             <stop offset="70%" stopColor="#991b1b" />
+                             <stop offset="100%" stopColor="#7f1d1d" />
+                          </linearGradient>
+
+                          {/* Darker red for fold shadows */}
+                          <linearGradient id="curtainDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                             <stop offset="0%" stopColor="#7f1d1d" />
+                             <stop offset="100%" stopColor="#5f1616" />
+                          </linearGradient>
+
+                          {/* Lighter red for fold highlights */}
+                          <linearGradient id="curtainLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                             <stop offset="0%" stopColor="#dc2626" />
+                             <stop offset="100%" stopColor="#991b1b" />
+                          </linearGradient>
+
+                          {/* Orange border gradient */}
+                          <linearGradient id="orangeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                             <stop offset="0%" stopColor="#f59e0b" />
+                             <stop offset="50%" stopColor="#d97706" />
+                             <stop offset="100%" stopColor="#b45309" />
                           </linearGradient>
                        </defs>
 
                        {/* Pin Shape Clip Path */}
                        <clipPath id="pinClip">
-                          <path d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z" />
+                          <path d="M50 2 C24 2 2 24 2 50 C2 76 50 98 50 98 C50 98 98 76 98 50 C98 24 76 2 50 2 Z" />
                        </clipPath>
 
                        <g clipPath="url(#pinClip)">
-                          {/* Background Glow */}
-                          <rect width="100" height="100" fill="url(#glow)" />
+                          {/* Background stage glow */}
+                          <rect width="100" height="100" fill="url(#stageGlow)" />
 
-                          {/* Left Curtain */}
-                          <path
-                            d="M0 0 L50 0 C40 20, 20 60, 0 80 Z"
-                            fill="url(#curtainRed)"
-                            stroke="#7f1d1d"
-                            strokeWidth="0.5"
-                          />
-                          {/* Left Curtain Tie Back */}
-                          <path d="M0 60 Q10 65 20 60" fill="none" stroke="#7f1d1d" strokeWidth="2" />
+                          {/* Upper curtain valance */}
+                          <ellipse cx="50" cy="0" rx="50" ry="8" fill="#7f1d1d" />
+                          <ellipse cx="50" cy="0" rx="48" ry="6" fill="#991b1b" />
 
-                          {/* Right Curtain */}
-                          <path
-                            d="M100 0 L50 0 C60 20, 80 60, 100 80 Z"
-                            fill="url(#curtainRed)"
-                            stroke="#7f1d1d"
-                            strokeWidth="0.5"
-                          />
-                          {/* Right Curtain Tie Back */}
-                          <path d="M100 60 Q90 65 80 60" fill="none" stroke="#7f1d1d" strokeWidth="2" />
+                          {/* Left curtain - multiple folds */}
+                          <path d="M0 0 L12 0 Q10 25 8 50 Q6 65 0 80 Z" fill="url(#curtainDark)" />
+                          <path d="M12 0 L20 0 Q18 25 16 50 Q14 65 8 80 L0 80 Q6 65 8 50 Q10 25 12 0 Z" fill="url(#curtainLeft1)" />
+                          <path d="M20 0 L28 0 Q26 25 24 50 Q22 65 16 80 L8 80 Q14 65 16 50 Q18 25 20 0 Z" fill="url(#curtainDark)" />
+                          <path d="M28 0 L36 0 Q34 25 32 50 Q30 65 24 80 L16 80 Q22 65 24 50 Q26 25 28 0 Z" fill="url(#curtainLight)" />
+                          <path d="M36 0 L44 0 Q42 30 40 55 Q38 68 32 80 L24 80 Q30 65 32 50 Q34 25 36 0 Z" fill="url(#curtainLeft1)" />
 
-                          {/* Stage Floor */}
-                          <path d="M0 80 L100 80 L100 100 L0 100 Z" fill="#1e293b" />
-                          <path d="M0 80 Q50 85 100 80" fill="none" stroke="#fbbf24" strokeWidth="1" />
+                          {/* Left curtain tie-back rope */}
+                          <path d="M44 0 Q42 35 35 60" fill="none" stroke="#92400e" strokeWidth="1.5" opacity="0.8" />
+                          <ellipse cx="35" cy="60" rx="4" ry="5" fill="#92400e" opacity="0.6" />
+
+                          {/* Right curtain - multiple folds (mirrored) */}
+                          <path d="M100 0 L88 0 Q90 25 92 50 Q94 65 100 80 Z" fill="url(#curtainDark)" />
+                          <path d="M88 0 L80 0 Q82 25 84 50 Q86 65 92 80 L100 80 Q94 65 92 50 Q90 25 88 0 Z" fill="url(#curtainRight1)" />
+                          <path d="M80 0 L72 0 Q74 25 76 50 Q78 65 84 80 L92 80 Q86 65 84 50 Q82 25 80 0 Z" fill="url(#curtainDark)" />
+                          <path d="M72 0 L64 0 Q66 25 68 50 Q70 65 76 80 L84 80 Q78 65 76 50 Q74 25 72 0 Z" fill="url(#curtainLight)" />
+                          <path d="M64 0 L56 0 Q58 30 60 55 Q62 68 68 80 L76 80 Q70 65 68 50 Q66 25 64 0 Z" fill="url(#curtainRight1)" />
+
+                          {/* Right curtain tie-back rope */}
+                          <path d="M56 0 Q58 35 65 60" fill="none" stroke="#92400e" strokeWidth="1.5" opacity="0.8" />
+                          <ellipse cx="65" cy="60" rx="4" ry="5" fill="#92400e" opacity="0.6" />
+
+                          {/* Stage floor - dark wood */}
+                          <rect x="0" y="80" width="100" height="20" fill="#1e293b" />
+                          <rect x="0" y="80" width="100" height="3" fill="#334155" opacity="0.5" />
+
+                          {/* Stage floor highlight edge */}
+                          <path d="M0 80 Q50 78 100 80" fill="none" stroke="#d97706" strokeWidth="0.5" opacity="0.4" />
                        </g>
 
-                       {/* Orange Outline */}
+                       {/* Pin outer border - orange gradient */}
                        <path
                           d="M50 0 C22.4 0 0 22.4 0 50 C0 77.6 50 100 50 100 C50 100 100 77.6 100 50 C100 22.4 77.6 0 50 0 Z"
                           fill="none"
-                          stroke="#f59e0b"
-                          strokeWidth="2"
+                          stroke="url(#orangeBorder)"
+                          strokeWidth="3"
+                       />
+
+                       {/* Inner border for depth */}
+                       <path
+                          d="M50 3 C24 3 3 24 3 50 C3 75.5 50 97 50 97 C50 97 97 75.5 97 50 C97 24 76 3 50 3 Z"
+                          fill="none"
+                          stroke="#d97706"
+                          strokeWidth="1"
+                          opacity="0.5"
                        />
                     </svg>
                  </div>
