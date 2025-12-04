@@ -1022,6 +1022,39 @@ const TheatreTracker = () => {
       type: "musical",
       description: "Olivier Award-winning musical comedy. Céline Dion hijacks a Titanic museum tour, combining the iconic film with her greatest hits.",
       bookingUrl: "https://london.titaniquemusical.com/"
+    },
+    {
+      id: 460,
+      title: "Cabaret",
+      venue: "Playhouse Theatre",
+      locationType: "west-end",
+      date: "2021-11-15",
+      closingDate: "2026-09-26",
+      type: "musical",
+      description: "Record-breaking 7 Olivier Award-winning revival. Immersive experience at the Kit Kat Club with pre-show entertainment. Willkommen!",
+      bookingUrl: "https://kitkat.club/cabaret-london/"
+    },
+    {
+      id: 461,
+      title: "Moulin Rouge! The Musical",
+      venue: "Piccadilly Theatre",
+      locationType: "west-end",
+      date: "2021-11-12",
+      closingDate: "2026-02-21",
+      type: "musical",
+      description: "Tony Award-winning spectacular based on Baz Luhrmann's iconic film. A bohemian celebration of truth, beauty, freedom and love.",
+      bookingUrl: "https://www.atgtickets.com/shows/moulin-rouge-the-musical/piccadilly-theatre/"
+    },
+    {
+      id: 462,
+      title: "Paranormal Activity",
+      venue: "Ambassadors Theatre",
+      locationType: "west-end",
+      date: "2025-12-05",
+      closingDate: "2026-03-28",
+      type: "play",
+      description: "Supernatural thriller directed by Felix Barrett (Punchdrunk). An American couple relocates to London but the ghosts of their past follow.",
+      bookingUrl: "https://www.atgtickets.com/shows/paranormal-activity/ambassadors-theatre/"
     }
   ];
 
