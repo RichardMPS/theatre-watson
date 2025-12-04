@@ -1011,6 +1011,17 @@ const TheatreTracker = () => {
       type: "play",
       description: "Olivier-nominated STEM adventure in Santa's workshop. Interactive science experiments and festive fun for all the family.",
       bookingUrl: "https://nimaxtheatres.com/shows/maddies-curious-christmas-live-on-stage/"
+    },
+    {
+      id: 459,
+      title: "Titanique",
+      venue: "Criterion Theatre",
+      locationType: "west-end",
+      date: "2024-12-09",
+      closingDate: "2026-06-07",
+      type: "musical",
+      description: "Olivier Award-winning musical comedy. Céline Dion hijacks a Titanic museum tour, combining the iconic film with her greatest hits.",
+      bookingUrl: "https://london.titaniquemusical.com/"
     }
   ];
 
