@@ -1048,7 +1048,7 @@ const TheatreTracker = () => {
         </div>
         
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
             <div className="flex flex-col items-center">
               
               {/* BRANDING LOGO: Theatre Curtain Pin */}
@@ -1315,9 +1315,11 @@ const TheatreTracker = () => {
                   {/* Date Column */}
                   <div className={`md:w-48 p-6 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-slate-800 ${open ? 'bg-slate-900/50' : 'bg-slate-900'}`}>
                     <span className="text-xs text-slate-400 uppercase tracking-wide mb-2">Opening Night</span>
-                    <span className="text-sm font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
-                    <span className="text-4xl font-bold text-slate-100 my-1">{new Date(show.date).getDate()}</span>
-                    <span className="text-slate-500 text-sm">{new Date(show.date).getFullYear()}</span>
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="text-lg font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
+                      <span className="text-2xl font-bold text-slate-100">{new Date(show.date).getDate()},</span>
+                      <span className="text-lg text-slate-400">{new Date(show.date).getFullYear()}</span>
+                    </div>
                     
                     <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-2 w-full">
                        <span className={`text-xs px-2 py-1 rounded-full border ${show.type === 'musical' ? 'border-purple-500/30 text-purple-300 bg-purple-500/10' : 'border-emerald-500/30 text-emerald-300 bg-emerald-500/10'}`}>
