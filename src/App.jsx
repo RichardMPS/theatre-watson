@@ -7,6 +7,8 @@ const TheatreTracker = () => {
   const [visitDate, setVisitDate] = useState('');
   const [currentDate, setCurrentDate] = useState(new Date());
   const [showTermsModal, setShowTermsModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState(null);
 
   const initialShows = [
     // --- LONG-RUNNING CLASSICS ---
@@ -1060,6 +1062,65 @@ const TheatreTracker = () => {
 
   const [shows, setShows] = useState(initialShows);
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Fetch shows from Airtable on mount
+  useEffect(() => {
+    const fetchShowsFromAirtable = async () => {
+      const apiKey = import.meta.env.VITE_AIRTABLE_API_KEY;
+      const baseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
+
+      // If Airtable not configured, use hardcoded shows
+      if (!apiKey || !baseId) {
+        console.log('Airtable not configured, using hardcoded shows');
+        setIsLoading(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          `https://api.airtable.com/v0/${baseId}/Shows`,
+          {
+            headers: {
+              'Authorization': `Bearer ${apiKey}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`Airtable API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Transform Airtable records to our show format
+        const airtableShows = data.records.map((record, index) => ({
+          id: record.id, // Use Airtable record ID
+          title: record.fields.title || '',
+          venue: record.fields.venue || '',
+          locationType: record.fields.locationType || 'west-end',
+          date: record.fields.date || '',
+          closingDate: record.fields.closingDate || '',
+          type: record.fields.type || 'play',
+          description: record.fields.description || '',
+          bookingUrl: record.fields.bookingUrl || '',
+          reviewUrl: record.fields.reviewUrl || undefined,
+        }));
+
+        setShows(airtableShows);
+        setLoadError(null);
+        console.log(`Loaded ${airtableShows.length} shows from Airtable`);
+      } catch (error) {
+        console.error('Failed to fetch from Airtable:', error);
+        setLoadError(error.message);
+        // Keep using hardcoded shows on error
+        console.log('Falling back to hardcoded shows');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchShowsFromAirtable();
+  }, []);
 
   // Helper: Format Date
   const formatDate = (dateString) => {
