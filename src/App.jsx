@@ -956,6 +956,39 @@ const TheatreTracker = () => {
       type: "play",
       description: "Royal Shakespeare Company's London premiere by Martina Laird, set in the Caribbean during the 1950s.",
       bookingUrl: "https://kilntheatre.com/"
+    },
+    {
+      id: 454,
+      title: "The Producers",
+      venue: "Garrick Theatre",
+      locationType: "west-end",
+      date: "2025-08-30",
+      closingDate: "2026-09-19",
+      type: "musical",
+      description: "Mel Brooks' hilarious musical about a down-on-his-luck Broadway producer and his scheme to make a fortune. Starring Andy Nyman and Marc Antolin.",
+      bookingUrl: "https://theproducersmusical.com/"
+    },
+    {
+      id: 455,
+      title: "The Play That Goes Wrong",
+      venue: "Duchess Theatre",
+      locationType: "west-end",
+      date: "2014-09-14",
+      closingDate: "2026-08-30",
+      type: "play",
+      description: "Award-winning comedy hit in its 11th year. The accident-prone Cornley Polytechnic Drama Society's disastrous 1920s murder mystery.",
+      bookingUrl: "https://theduchesstheatre.co.uk/tickets/the-play-that-goes-wrong/"
+    },
+    {
+      id: 456,
+      title: "SIX",
+      venue: "Vaudeville Theatre",
+      locationType: "west-end",
+      date: "2021-09-29",
+      closingDate: "2027-01-31",
+      type: "musical",
+      description: "The phenomenon pop musical about Henry VIII's six wives. These Tudor queens take the mic to remix 500 years of history.",
+      bookingUrl: "https://sixthemusical.com/london/tickets/"
     }
   ];
 
