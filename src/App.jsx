@@ -1049,7 +1049,7 @@ const TheatreTracker = () => {
         
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center">
               
               {/* BRANDING LOGO: Theatre Curtain Pin */}
               <div className="mb-4 relative">
@@ -1163,7 +1163,7 @@ const TheatreTracker = () => {
                  </div>
               </div>
 
-              <h1 className="text-center md:text-left text-4xl md:text-6xl font-extrabold text-slate-100 tracking-tight uppercase" style={{fontFamily: 'system-ui, sans-serif'}}>
+              <h1 className="text-center text-4xl md:text-6xl font-extrabold text-slate-100 tracking-tight uppercase" style={{fontFamily: 'system-ui, sans-serif'}}>
                 THEATRE WATSON
               </h1>
               
