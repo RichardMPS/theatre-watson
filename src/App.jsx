@@ -989,6 +989,28 @@ const TheatreTracker = () => {
       type: "musical",
       description: "The phenomenon pop musical about Henry VIII's six wives. These Tudor queens take the mic to remix 500 years of history.",
       bookingUrl: "https://sixthemusical.com/london/tickets/"
+    },
+    {
+      id: 457,
+      title: "The Gruffalo's Child",
+      venue: "Lyric Theatre",
+      locationType: "west-end",
+      date: "2025-11-28",
+      closingDate: "2026-01-11",
+      type: "play",
+      description: "The magical family show based on the beloved Julia Donaldson book. Join the Gruffalo's Child on her snowy adventure through the forest.",
+      bookingUrl: "https://nimaxtheatres.com/shows/the-gruffalos-child-2025/"
+    },
+    {
+      id: 458,
+      title: "Maddie Moate's Very Curious Christmas",
+      venue: "Garrick Theatre",
+      locationType: "west-end",
+      date: "2025-12-12",
+      closingDate: "2026-01-04",
+      type: "play",
+      description: "Olivier-nominated STEM adventure in Santa's workshop. Interactive science experiments and festive fun for all the family.",
+      bookingUrl: "https://nimaxtheatres.com/shows/maddies-curious-christmas-live-on-stage/"
     }
   ];
 
