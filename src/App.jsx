@@ -956,6 +956,105 @@ const TheatreTracker = () => {
       type: "play",
       description: "Royal Shakespeare Company's London premiere by Martina Laird, set in the Caribbean during the 1950s.",
       bookingUrl: "https://kilntheatre.com/"
+    },
+    {
+      id: 454,
+      title: "The Producers",
+      venue: "Garrick Theatre",
+      locationType: "west-end",
+      date: "2025-08-30",
+      closingDate: "2026-09-19",
+      type: "musical",
+      description: "Mel Brooks' hilarious musical about a down-on-his-luck Broadway producer and his scheme to make a fortune. Starring Andy Nyman and Marc Antolin.",
+      bookingUrl: "https://theproducersmusical.com/"
+    },
+    {
+      id: 455,
+      title: "The Play That Goes Wrong",
+      venue: "Duchess Theatre",
+      locationType: "west-end",
+      date: "2014-09-14",
+      closingDate: "2026-08-30",
+      type: "play",
+      description: "Award-winning comedy hit in its 11th year. The accident-prone Cornley Polytechnic Drama Society's disastrous 1920s murder mystery.",
+      bookingUrl: "https://theduchesstheatre.co.uk/tickets/the-play-that-goes-wrong/"
+    },
+    {
+      id: 456,
+      title: "SIX",
+      venue: "Vaudeville Theatre",
+      locationType: "west-end",
+      date: "2021-09-29",
+      closingDate: "2027-01-31",
+      type: "musical",
+      description: "The phenomenon pop musical about Henry VIII's six wives. These Tudor queens take the mic to remix 500 years of history.",
+      bookingUrl: "https://sixthemusical.com/london/tickets/"
+    },
+    {
+      id: 457,
+      title: "The Gruffalo's Child",
+      venue: "Lyric Theatre",
+      locationType: "west-end",
+      date: "2025-11-28",
+      closingDate: "2026-01-11",
+      type: "play",
+      description: "The magical family show based on the beloved Julia Donaldson book. Join the Gruffalo's Child on her snowy adventure through the forest.",
+      bookingUrl: "https://nimaxtheatres.com/shows/the-gruffalos-child-2025/"
+    },
+    {
+      id: 458,
+      title: "Maddie Moate's Very Curious Christmas",
+      venue: "Garrick Theatre",
+      locationType: "west-end",
+      date: "2025-12-12",
+      closingDate: "2026-01-04",
+      type: "play",
+      description: "Olivier-nominated STEM adventure in Santa's workshop. Interactive science experiments and festive fun for all the family.",
+      bookingUrl: "https://nimaxtheatres.com/shows/maddies-curious-christmas-live-on-stage/"
+    },
+    {
+      id: 459,
+      title: "Titanique",
+      venue: "Criterion Theatre",
+      locationType: "west-end",
+      date: "2024-12-09",
+      closingDate: "2026-06-07",
+      type: "musical",
+      description: "Olivier Award-winning musical comedy. Céline Dion hijacks a Titanic museum tour, combining the iconic film with her greatest hits.",
+      bookingUrl: "https://london.titaniquemusical.com/"
+    },
+    {
+      id: 460,
+      title: "Cabaret",
+      venue: "Playhouse Theatre",
+      locationType: "west-end",
+      date: "2021-11-15",
+      closingDate: "2026-09-26",
+      type: "musical",
+      description: "Record-breaking 7 Olivier Award-winning revival. Immersive experience at the Kit Kat Club with pre-show entertainment. Willkommen!",
+      bookingUrl: "https://kitkat.club/cabaret-london/"
+    },
+    {
+      id: 461,
+      title: "Moulin Rouge! The Musical",
+      venue: "Piccadilly Theatre",
+      locationType: "west-end",
+      date: "2021-11-12",
+      closingDate: "2026-02-21",
+      type: "musical",
+      description: "Tony Award-winning spectacular based on Baz Luhrmann's iconic film. A bohemian celebration of truth, beauty, freedom and love.",
+      bookingUrl: "https://www.atgtickets.com/shows/moulin-rouge-the-musical/piccadilly-theatre/"
+    },
+    {
+      id: 462,
+      title: "Paranormal Activity",
+      venue: "Ambassadors Theatre",
+      locationType: "west-end",
+      date: "2025-12-05",
+      closingDate: "2026-03-28",
+      type: "play",
+      description: "Supernatural thriller directed by Felix Barrett (Punchdrunk). An American couple relocates to London but the ghosts of their past follow.",
+      bookingUrl: "https://www.atgtickets.com/shows/paranormal-activity/ambassadors-theatre/"
     }
   ];
 
