@@ -1109,9 +1109,9 @@ const TheatreTracker = () => {
       const venueSlug = show.venue.replace(/['']/g, '').replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_]/g, '');
       return `https://www.tripadvisor.co.uk/RestaurantsNear-g186338-d${show.tripadvisorId}-${venueSlug}-London_England.html`;
     }
-    // Fallback: Use Google "I'm Feeling Lucky" to open the first TripAdvisor result
-    const searchQuery = `site:tripadvisor.co.uk Restaurants Near ${show.venue} London`;
-    return `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`;
+    // Fallback: Google Maps restaurant search (no redirect warnings)
+    const searchQuery = `restaurants near ${show.venue} London`;
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(searchQuery)}`;
   };
 
   // Filter Logic
