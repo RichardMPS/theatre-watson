@@ -1415,7 +1415,7 @@ const TheatreTracker = () => {
                     <span className="text-xs text-slate-400 uppercase tracking-wide mb-2">Opening Night</span>
                     <div className="flex items-baseline gap-1.5">
                       <span className="text-lg font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
-                      <span className="text-2xl font-bold text-slate-100">{new Date(show.date).getDate()},</span>
+                      <span className="text-lg font-semibold text-amber-500">{new Date(show.date).getDate()},</span>
                       <span className="text-lg text-slate-400">{new Date(show.date).getFullYear()}</span>
                     </div>
                     
