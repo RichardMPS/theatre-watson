@@ -63,7 +63,7 @@ const TheatreTracker = () => {
       closingDate: "2027-12-31", // Open-ended
       type: "musical",
       description: "Lin-Manuel Miranda's revolutionary hip-hop musical about America's founding father.",
-      bookingUrl: "https://hamiltonmusical.co.uk/"
+      bookingUrl: "https://hamiltonmusical.com/london/"
     },
     {
       id: 306,
@@ -107,7 +107,7 @@ const TheatreTracker = () => {
       closingDate: "2027-12-31", // Open-ended
       type: "musical",
       description: "From the creators of South Park. Outrageous, hilarious, and surprisingly sweet.",
-      bookingUrl: "https://bookofmormonlondon.com/"
+      bookingUrl: "https://thebookofmormonmusical.com/london/"
     },
     {
       id: 310,
@@ -184,7 +184,7 @@ const TheatreTracker = () => {
       closingDate: "2026-03-14",
       type: "play",
       description: "Sheridan Smith stars in Alan Ayckbourn's darkly comic masterpiece.",
-      bookingUrl: "https://nimaxtheatres.com/shows/woman-in-mind/"
+      bookingUrl: "https://www.thedukeofyorks.com/woman-in-mind"
     },
     {
       id: 317,
@@ -241,7 +241,7 @@ const TheatreTracker = () => {
       closingDate: "2026-02-14", // Estimated based on typical run
       type: "play",
       description: "A dazzling, high-tech stage adaptation of the dystopian blockbuster.",
-      bookingUrl: "https://troubadourtheatres.com/canary-wharf",
+      bookingUrl: "https://tickets.thehungergamesonstage.com/tickets/series/thgostage",
       reviewUrl: "https://www.theguardian.com/stage/2025/nov/13/the-hunger-games-on-stage-review-thundering-fight-to-the-death-in-a-dazzling-dystopia"
     },
     {
