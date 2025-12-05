@@ -63,7 +63,7 @@ const TheatreTracker = () => {
       closingDate: "2027-12-31", // Open-ended
       type: "musical",
       description: "Lin-Manuel Miranda's revolutionary hip-hop musical about America's founding father.",
-      bookingUrl: "https://hamiltonmusical.co.uk/"
+      bookingUrl: "https://hamiltonmusical.com/london/"
     },
     {
       id: 306,
@@ -107,7 +107,7 @@ const TheatreTracker = () => {
       closingDate: "2027-12-31", // Open-ended
       type: "musical",
       description: "From the creators of South Park. Outrageous, hilarious, and surprisingly sweet.",
-      bookingUrl: "https://bookofmormonlondon.com/"
+      bookingUrl: "https://thebookofmormonmusical.com/london/"
     },
     {
       id: 310,
@@ -184,7 +184,7 @@ const TheatreTracker = () => {
       closingDate: "2026-03-14",
       type: "play",
       description: "Sheridan Smith stars in Alan Ayckbourn's darkly comic masterpiece.",
-      bookingUrl: "https://nimaxtheatres.com/shows/woman-in-mind/"
+      bookingUrl: "https://www.thedukeofyorks.com/woman-in-mind"
     },
     {
       id: 317,
@@ -241,7 +241,7 @@ const TheatreTracker = () => {
       closingDate: "2026-02-14", // Estimated based on typical run
       type: "play",
       description: "A dazzling, high-tech stage adaptation of the dystopian blockbuster.",
-      bookingUrl: "https://troubadourtheatres.com/canary-wharf",
+      bookingUrl: "https://tickets.thehungergamesonstage.com/tickets/series/thgostage",
       reviewUrl: "https://www.theguardian.com/stage/2025/nov/13/the-hunger-games-on-stage-review-thundering-fight-to-the-death-in-a-dazzling-dystopia"
     },
     {
@@ -591,7 +591,7 @@ const TheatreTracker = () => {
       closingDate: "2026-08-29",
       type: "musical",
       description: "The puppet-filled, adult comedy musical makes a cheeky West End return.",
-      bookingUrl: "https://www.shaftesburytheatre.com/events/avenue-q/"
+      bookingUrl: "https://tixtrack.shaftesburytheatre.com/tickets/series/AVEQ"
     },
     {
       id: 19,
@@ -1103,10 +1103,9 @@ const TheatreTracker = () => {
 
   // Helper: TripAdvisor Restaurants Link
   const getRestaurantsLink = (venue) => {
-    // Use Google search to find the TripAdvisor RestaurantsNear page for this venue
-    // This ensures we get the correct London page rather than incorrect venue IDs
-    const searchQuery = `site:tripadvisor.co.uk RestaurantsNear ${venue} London`;
-    return `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`;
+    // Direct TripAdvisor search for restaurants near the venue
+    const searchQuery = `restaurants near ${venue} London`;
+    return `https://www.tripadvisor.co.uk/Search?q=${encodeURIComponent(searchQuery)}`;
   };
 
   // Filter Logic
@@ -1416,7 +1415,7 @@ const TheatreTracker = () => {
                     <span className="text-xs text-slate-400 uppercase tracking-wide mb-2">Opening Night</span>
                     <div className="flex items-baseline gap-1.5">
                       <span className="text-lg font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
-                      <span className="text-2xl font-bold text-slate-100">{new Date(show.date).getDate()},</span>
+                      <span className="text-lg font-semibold text-amber-500">{new Date(show.date).getDate()},</span>
                       <span className="text-lg text-slate-400">{new Date(show.date).getFullYear()}</span>
                     </div>
                     
