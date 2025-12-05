@@ -591,7 +591,7 @@ const TheatreTracker = () => {
       closingDate: "2026-08-29",
       type: "musical",
       description: "The puppet-filled, adult comedy musical makes a cheeky West End return.",
-      bookingUrl: "https://www.shaftesburytheatre.com/events/avenue-q/"
+      bookingUrl: "https://tixtrack.shaftesburytheatre.com/tickets/series/AVEQ"
     },
     {
       id: 19,
@@ -1103,10 +1103,9 @@ const TheatreTracker = () => {
 
   // Helper: TripAdvisor Restaurants Link
   const getRestaurantsLink = (venue) => {
-    // Use Google search to find the TripAdvisor RestaurantsNear page for this venue
-    // This ensures we get the correct London page rather than incorrect venue IDs
-    const searchQuery = `site:tripadvisor.co.uk RestaurantsNear ${venue} London`;
-    return `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}&btnI=1`;
+    // Direct TripAdvisor search for restaurants near the venue
+    const searchQuery = `restaurants near ${venue} London`;
+    return `https://www.tripadvisor.co.uk/Search?q=${encodeURIComponent(searchQuery)}`;
   };
 
   // Filter Logic
