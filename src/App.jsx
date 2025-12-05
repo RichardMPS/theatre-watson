@@ -74,7 +74,8 @@ const TheatreTracker = () => {
       closingDate: "2027-12-31", // Open-ended
       type: "musical",
       description: "Andrew Lloyd Webber's timeless tale of romance and obsession beneath the Paris Opera House.",
-      bookingUrl: "https://www.thephantomoftheopera.com/"
+      bookingUrl: "https://www.thephantomoftheopera.com/",
+      tripadvisorId: "3813104"
     },
     {
       id: 307,
@@ -1102,10 +1103,15 @@ const TheatreTracker = () => {
   };
 
   // Helper: TripAdvisor Restaurants Link
-  const getRestaurantsLink = (venue) => {
-    // Google search for TripAdvisor's RestaurantsNear page for the specific venue
-    const searchQuery = `site:tripadvisor.co.uk RestaurantsNear ${venue} London`;
-    return `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+  const getRestaurantsLink = (show) => {
+    // If TripAdvisor ID is available, build the proper RestaurantsNear URL
+    if (show.tripadvisorId) {
+      const venueSlug = show.venue.replace(/['']/g, '').replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_]/g, '');
+      return `https://www.tripadvisor.co.uk/RestaurantsNear-g186338-d${show.tripadvisorId}-${venueSlug}-London_England.html`;
+    }
+    // Fallback to Google Maps restaurant search
+    const searchQuery = `restaurants near ${show.venue} London`;
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(searchQuery)}`;
   };
 
   // Filter Logic
@@ -1447,12 +1453,12 @@ const TheatreTracker = () => {
                         <span className="text-sm underline decoration-slate-700 group-hover/link:decoration-amber-500 underline-offset-2 transition-all">{show.venue}</span>
                       </a>
 
-                      <a 
-                        href={getRestaurantsLink(show.venue)}
+                      <a
+                        href={getRestaurantsLink(show)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center text-xs font-medium text-slate-400 bg-slate-800/50 hover:bg-emerald-950/50 hover:text-emerald-400 border border-slate-700 hover:border-emerald-500/30 px-2 py-1 rounded-md transition-all"
-                        title="Find 10 best restaurants nearby on TripAdvisor"
+                        title="Find restaurants nearby"
                       >
                         <UtensilsCrossed className="w-3 h-3 mr-1.5" />
                         Nearby Dining
