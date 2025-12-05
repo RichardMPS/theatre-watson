@@ -1103,9 +1103,9 @@ const TheatreTracker = () => {
 
   // Helper: TripAdvisor Restaurants Link
   const getRestaurantsLink = (venue) => {
-    // Direct TripAdvisor search for restaurants near the venue
-    const searchQuery = `restaurants near ${venue} London`;
-    return `https://www.tripadvisor.co.uk/Search?q=${encodeURIComponent(searchQuery)}`;
+    // Google search for TripAdvisor's RestaurantsNear page for the specific venue
+    const searchQuery = `site:tripadvisor.co.uk RestaurantsNear ${venue} London`;
+    return `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
   };
 
   // Filter Logic
