@@ -1232,11 +1232,12 @@ const TheatreTracker = () => {
         
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
-            <div className="flex flex-col items-center">
-              
+            {/* Logo + Title Container */}
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+
               {/* BRANDING LOGO: Theatre Curtain Pin */}
-              <div className="mb-4 relative">
-                 <div className="w-24 h-24 relative z-10 filter drop-shadow-xl">
+              <div className="relative">
+                 <div className="w-20 h-20 md:w-24 md:h-24 relative z-10 filter drop-shadow-xl flex-shrink-0">
                     <svg viewBox="0 0 100 100" className="w-full h-full">
                        <defs>
                           {/* Center stage glow */}
@@ -1346,16 +1347,20 @@ const TheatreTracker = () => {
                  </div>
               </div>
 
-              <h1 className="text-center text-4xl md:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
-                THEATRE WATSON
-              </h1>
-              
-              {/* Subtitle Badge */}
-              <div className="mt-2 flex items-center space-x-2">
-                 <div className="h-px w-8 bg-amber-500/50"></div>
-                 <span className="text-amber-500 font-serif tracking-widest text-sm font-bold uppercase bg-slate-900/50 px-2 py-1 rounded border border-amber-900/50">London Edition</span>
-                 <div className="h-px w-8 bg-amber-500/50"></div>
+              {/* Title + Subtitle Container */}
+              <div className="flex flex-col items-center md:items-start">
+                <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
+                  THEATRE WATSON
+                </h1>
+
+                {/* Subtitle Badge */}
+                <div className="mt-2 flex items-center space-x-2">
+                   <div className="h-px w-8 bg-amber-500/50"></div>
+                   <span className="text-amber-500 font-serif tracking-widest text-sm font-bold uppercase bg-slate-900/50 px-2 py-1 rounded border border-amber-900/50">London Edition</span>
+                   <div className="h-px w-8 bg-amber-500/50"></div>
+                </div>
               </div>
+
             </div>
             
             {/* Filter Controls */}
