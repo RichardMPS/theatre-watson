@@ -1348,8 +1348,8 @@ const TheatreTracker = () => {
               </div>
 
               {/* Title + Subtitle Container */}
-              <div className="flex flex-col items-center md:items-start">
-                <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
+              <div className="flex flex-col items-center">
+                <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
                   THEATRE WATSON
                 </h1>
 
