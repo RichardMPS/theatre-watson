@@ -1135,358 +1135,17 @@ const TheatreTracker = () => {
       bookingUrl: "https://www.hampsteadtheatre.com/"
     },
 
-    // --- PARK THEATRE ---
-    {
-      id: 400,
-      title: "Dracapella",
-      venue: "Park Theatre",
-      locationType: "fringe",
-      date: "2025-12-03",
-      closingDate: "2026-01-17",
-      type: "musical",
-      description: "A capella musical comedy that puts a fresh spin on the Dracula legend.",
-      bookingUrl: "https://parktheatre.co.uk/whats-on/"
-    },
-    {
-      id: 401,
-      title: "Gawain and the Green Knight",
-      venue: "Park Theatre",
-      locationType: "fringe",
-      date: "2025-12-10",
-      closingDate: "2026-01-10",
-      type: "play",
-      description: "A thrilling retelling of the medieval Arthurian legend.",
-      bookingUrl: "https://parktheatre.co.uk/whats-on/"
-    },
-    {
-      id: 402,
-      title: "The Train Driver",
-      venue: "Park Theatre",
-      locationType: "fringe",
-      date: "2026-01-14",
-      closingDate: "2026-02-07",
-      type: "play",
-      description: "Athol Fugard's powerful drama about guilt, grief and redemption in post-apartheid South Africa.",
-      bookingUrl: "https://parktheatre.co.uk/whats-on/"
-    },
-    {
-      id: 403,
-      title: "The Rat Trap",
-      venue: "Park Theatre",
-      locationType: "fringe",
-      date: "2026-01-28",
-      closingDate: "2026-03-14",
-      type: "play",
-      description: "Noël Coward's first play receives a stylish period revival for its centenary year.",
-      bookingUrl: "https://parktheatre.co.uk/whats-on/"
-    },
+    // --- PARK THEATRE ---,
 
-    // --- JERMYN STREET THEATRE ---
-    {
-      id: 410,
-      title: "David Copperfield",
-      venue: "Jermyn Street Theatre",
-      locationType: "fringe",
-      date: "2025-11-20",
-      closingDate: "2025-12-20",
-      type: "play",
-      description: "A witty one-man adaptation featuring observational humor and the pains and lessons of growing up.",
-      bookingUrl: "https://www.jermynstreettheatre.co.uk/"
-    },
-    {
-      id: 411,
-      title: "Orphans",
-      venue: "Jermyn Street Theatre",
-      locationType: "fringe",
-      date: "2026-01-05",
-      closingDate: "2026-01-24",
-      type: "play",
-      description: "Revival of Lyle Kessler's Tony Award-nominated modern classic starring Forbes Masson.",
-      bookingUrl: "https://www.jermynstreettheatre.co.uk/"
-    },
-    {
-      id: 412,
-      title: "Aether",
-      venue: "Jermyn Street Theatre",
-      locationType: "fringe",
-      date: "2026-03-16",
-      closingDate: "2026-04-04",
-      type: "play",
-      description: "Emma Howlett's award-winning play exploring physics, faith, and magic while investigating the greatest unsolved mystery of the universe.",
-      bookingUrl: "https://www.jermynstreettheatre.co.uk/"
-    },
+    // --- JERMYN STREET THEATRE ---,
 
-    // --- BUSH THEATRE ---
-    {
-      id: 420,
-      title: "The Horse of Jenin",
-      venue: "Bush Theatre",
-      locationType: "fringe",
-      date: "2025-11-20",
-      closingDate: "2026-01-22",
-      type: "play",
-      description: "A powerful story of resilience and human connection in the face of conflict.",
-      bookingUrl: "https://www.bushtheatre.co.uk/"
-    },
-    {
-      id: 421,
-      title: "Maggots",
-      venue: "Bush Theatre",
-      locationType: "fringe",
-      date: "2026-01-27",
-      closingDate: "2026-02-28",
-      type: "play",
-      description: "Farah Najib's play explores human connection and community building.",
-      bookingUrl: "https://www.bushtheatre.co.uk/"
-    },
-    {
-      id: 422,
-      title: "Sweetmeats",
-      venue: "Bush Theatre",
-      locationType: "fringe",
-      date: "2026-02-07",
-      closingDate: "2026-03-21",
-      type: "play",
-      description: "Co-production with Tara Theatre featuring an intimate love story between two South Asian elders by Karim Khan.",
-      bookingUrl: "https://www.bushtheatre.co.uk/"
-    },
-    {
-      id: 423,
-      title: "Heart Wall",
-      venue: "Bush Theatre",
-      locationType: "fringe",
-      date: "2026-04-07",
-      closingDate: "2026-05-16",
-      type: "play",
-      description: "Kit Withington's tender exploration of grief and memory, directed by Katie Greenall.",
-      bookingUrl: "https://www.bushtheatre.co.uk/"
-    },
+    // --- BUSH THEATRE ---,
 
-    // --- ARCOLA THEATRE ---
-    {
-      id: 430,
-      title: "Ms. Holmes & Ms. Watson – Apt. 2B",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2025-11-28",
-      closingDate: "2025-12-20",
-      type: "play",
-      description: "Kate Hamill's witty reimagining of the classic detective duo as modern women sharing an apartment.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
-      id: 431,
-      title: "Safe Haven",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2026-01-14",
-      closingDate: "2026-02-07",
-      type: "play",
-      description: "Chris Bowers' gripping exploration of sanctuary and belonging.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
-      id: 432,
-      title: "Monstering the Rocketman",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2026-02-03",
-      closingDate: "2026-02-21",
-      type: "play",
-      description: "Henry Naylor's compelling drama about ambition and consequence.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
-      id: 433,
-      title: "Dear Jack, Dear Louise",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2026-04-02",
-      closingDate: "2026-05-02",
-      type: "play",
-      description: "Directed by Simon Reade, a wartime correspondence between an army doctor and an aspiring actor.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
-      id: 434,
-      title: "Quartet in Autumn",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2026-05-07",
-      closingDate: "2026-06-13",
-      type: "play",
-      description: "The first stage adaptation of Barbara Pym's Booker-shortlisted novel, adapted by Samantha Harvey and directed by Dominic Dromgoole.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
+    // --- ARCOLA THEATRE ---,
 
-    // --- THEATRE 503 ---
-    {
-      id: 440,
-      title: "Loop",
-      venue: "Theatre 503",
-      locationType: "fringe",
-      date: "2025-11-10",
-      closingDate: "2025-11-29",
-      type: "play",
-      description: "Tanya-Loretta Dee's sharp and darkly funny new work.",
-      bookingUrl: "https://theatre503.com/"
-    },
-    {
-      id: 441,
-      title: "Donbas",
-      venue: "Theatre 503",
-      locationType: "fringe",
-      date: "2026-02-01",
-      closingDate: "2026-02-28",
-      type: "play",
-      description: "Winner of the 2025 Theatre503 International Playwriting Award by Olga Braga, produced in partnership with Good Chance and 45North.",
-      bookingUrl: "https://theatre503.com/"
-    },
+    // --- THEATRE 503 ---,
 
     // --- KILN THEATRE ---
-    {
-      id: 450,
-      title: "Coven",
-      venue: "Kiln Theatre",
-      locationType: "fringe",
-      date: "2025-11-01",
-      closingDate: "2026-01-17",
-      type: "musical",
-      description: "World premiere musical reinterrogating the 17th century Pendle Witch Trials, with music by Grammy Award-winning Daisy Chute with Rebecca Brewer, directed by Olivier Award winner Miranda Cromwell.",
-      bookingUrl: "https://kilntheatre.com/"
-    },
-    {
-      id: 451,
-      title: "Seagulls",
-      venue: "Kiln Theatre",
-      locationType: "fringe",
-      date: "2026-02-12",
-      closingDate: "2026-03-21",
-      type: "play",
-      description: "A new, Black British retelling of Chekhov's iconic play The Seagull.",
-      bookingUrl: "https://kilntheatre.com/"
-    },
-    {
-      id: 452,
-      title: "Please Please Me",
-      venue: "Kiln Theatre",
-      locationType: "fringe",
-      date: "2026-04-16",
-      closingDate: "2026-05-23",
-      type: "play",
-      description: "World premiere by Tom Wright about Brian Epstein, his relationship with John Lennon and his contribution to making The Beatles.",
-      bookingUrl: "https://kilntheatre.com/"
-    },
-    {
-      id: 453,
-      title: "Driftwood",
-      venue: "Kiln Theatre",
-      locationType: "fringe",
-      date: "2026-06-03",
-      closingDate: "2026-07-04",
-      type: "play",
-      description: "Royal Shakespeare Company's London premiere by Martina Laird, set in the Caribbean during the 1950s.",
-      bookingUrl: "https://kilntheatre.com/"
-    },
-    {
-      id: 454,
-      title: "The Producers",
-      venue: "Garrick Theatre",
-      locationType: "west-end",
-      date: "2025-08-30",
-      closingDate: "2026-09-19",
-      type: "musical",
-      description: "Mel Brooks' hilarious musical about a down-on-his-luck Broadway producer and his scheme to make a fortune. Starring Andy Nyman and Marc Antolin.",
-      bookingUrl: "https://theproducersmusical.com/"
-    },
-    {
-      id: 455,
-      title: "The Play That Goes Wrong",
-      venue: "Duchess Theatre",
-      locationType: "west-end",
-      date: "2014-09-14",
-      closingDate: "2026-08-30",
-      type: "play",
-      description: "Award-winning comedy hit in its 11th year. The accident-prone Cornley Polytechnic Drama Society's disastrous 1920s murder mystery.",
-      bookingUrl: "https://theduchesstheatre.co.uk/tickets/the-play-that-goes-wrong/"
-    },
-    {
-      id: 456,
-      title: "SIX",
-      venue: "Vaudeville Theatre",
-      locationType: "west-end",
-      date: "2021-09-29",
-      closingDate: "2027-01-31",
-      type: "musical",
-      description: "The phenomenon pop musical about Henry VIII's six wives. These Tudor queens take the mic to remix 500 years of history.",
-      bookingUrl: "https://sixthemusical.com/london/tickets/"
-    },
-    {
-      id: 457,
-      title: "The Gruffalo's Child",
-      venue: "Lyric Theatre",
-      locationType: "west-end",
-      date: "2025-11-28",
-      closingDate: "2026-01-11",
-      type: "play",
-      description: "The magical family show based on the beloved Julia Donaldson book. Join the Gruffalo's Child on her snowy adventure through the forest.",
-      bookingUrl: "https://nimaxtheatres.com/shows/the-gruffalos-child-2025/"
-    },
-    {
-      id: 458,
-      title: "Maddie Moate's Very Curious Christmas",
-      venue: "Garrick Theatre",
-      locationType: "west-end",
-      date: "2025-12-12",
-      closingDate: "2026-01-04",
-      type: "play",
-      description: "Olivier-nominated STEM adventure in Santa's workshop. Interactive science experiments and festive fun for all the family.",
-      bookingUrl: "https://nimaxtheatres.com/shows/maddies-curious-christmas-live-on-stage/"
-    },
-    {
-      id: 459,
-      title: "Titanique",
-      venue: "Criterion Theatre",
-      locationType: "west-end",
-      date: "2024-12-09",
-      closingDate: "2026-06-07",
-      type: "musical",
-      description: "Olivier Award-winning musical comedy. Céline Dion hijacks a Titanic museum tour, combining the iconic film with her greatest hits.",
-      bookingUrl: "https://london.titaniquemusical.com/"
-    },
-    {
-      id: 460,
-      title: "Cabaret",
-      venue: "Playhouse Theatre",
-      locationType: "west-end",
-      date: "2021-11-15",
-      closingDate: "2026-09-26",
-      type: "musical",
-      description: "Record-breaking 7 Olivier Award-winning revival. Immersive experience at the Kit Kat Club with pre-show entertainment. Willkommen!",
-      bookingUrl: "https://kitkat.club/cabaret-london/"
-    },
-    {
-      id: 461,
-      title: "Moulin Rouge! The Musical",
-      venue: "Piccadilly Theatre",
-      locationType: "west-end",
-      date: "2021-11-12",
-      closingDate: "2026-02-21",
-      type: "musical",
-      description: "Tony Award-winning spectacular based on Baz Luhrmann's iconic film. A bohemian celebration of truth, beauty, freedom and love.",
-      bookingUrl: "https://www.atgtickets.com/shows/moulin-rouge-the-musical/piccadilly-theatre/"
-    },
-    {
-      id: 462,
-      title: "Paranormal Activity",
-      venue: "Ambassadors Theatre",
-      locationType: "west-end",
-      date: "2025-12-05",
-      closingDate: "2026-03-28",
-      type: "play",
-      description: "Supernatural thriller directed by Felix Barrett (Punchdrunk). An American couple relocates to London but the ghosts of their past follow.",
-      bookingUrl: "https://www.atgtickets.com/shows/paranormal-activity/ambassadors-theatre/"
-    }
   ];
 
   const [shows] = useState(initialShows);
@@ -1573,11 +1232,12 @@ const TheatreTracker = () => {
         
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
-            <div className="flex flex-col items-center">
-              
+            {/* Logo + Title Container */}
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+
               {/* BRANDING LOGO: Theatre Curtain Pin */}
-              <div className="mb-4 relative">
-                 <div className="w-24 h-24 relative z-10 filter drop-shadow-xl">
+              <div className="relative">
+                 <div className="w-20 h-20 md:w-24 md:h-24 relative z-10 filter drop-shadow-xl flex-shrink-0">
                     <svg viewBox="0 0 100 100" className="w-full h-full">
                        <defs>
                           {/* Center stage glow */}
@@ -1687,16 +1347,20 @@ const TheatreTracker = () => {
                  </div>
               </div>
 
-              <h1 className="text-center text-4xl md:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
-                THEATRE WATSON
-              </h1>
-              
-              {/* Subtitle Badge */}
-              <div className="mt-2 flex items-center space-x-2">
-                 <div className="h-px w-8 bg-amber-500/50"></div>
-                 <span className="text-amber-500 font-serif tracking-widest text-sm font-bold uppercase bg-slate-900/50 px-2 py-1 rounded border border-amber-900/50">London Edition</span>
-                 <div className="h-px w-8 bg-amber-500/50"></div>
+              {/* Title + Subtitle Container */}
+              <div className="flex flex-col items-center md:items-start">
+                <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
+                  THEATRE WATSON
+                </h1>
+
+                {/* Subtitle Badge */}
+                <div className="mt-2 flex items-center space-x-2">
+                   <div className="h-px w-8 bg-amber-500/50"></div>
+                   <span className="text-amber-500 font-serif tracking-widest text-sm font-bold uppercase bg-slate-900/50 px-2 py-1 rounded border border-amber-900/50">London Edition</span>
+                   <div className="h-px w-8 bg-amber-500/50"></div>
+                </div>
               </div>
+
             </div>
             
             {/* Filter Controls */}
