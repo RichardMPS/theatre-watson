@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theatre Watson - Typography & Style Preview</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0f172a;
+      color: #fffbeb;
+      padding: 2rem;
+      font-family: system-ui, sans-serif;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      color: #fbbf24;
+    }
+
+    .section {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #334155;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #fbbf24;
+      border-bottom: 2px solid #475569;
+      padding-bottom: 0.5rem;
+    }
+
+    .font-option {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 2px solid #334155;
+    }
+
+    .font-option:hover {
+      border-color: #fbbf24;
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+
+    .font-name {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Font Options */
+    .cinzel-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 3rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .playfair-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    .cormorant-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    .playfair-show {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-top: 1rem;
+    }
+
+    .inter-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      color: #cbd5e1;
+    }
+
+    .poppins-body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      color: #cbd5e1;
+    }
+
+    /* Card Examples */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+      border-color: #fbbf24;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-date {
+      color: #fbbf24;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .card-badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-venue {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+
+    .card-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .card-footer {
+      padding: 1.5rem;
+      background: rgba(15, 23, 42, 0.5);
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    }
+
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    .btn-secondary:hover {
+      background: #475569;
+    }
+
+    /* Comparison Grid */
+    .comparison {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .comparison-item {
+      background: #0f172a;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #fbbf24;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎭 Theatre Watson Typography & Style Preview</h1>
+
+    <!-- Font Option 1: Cinzel + Inter -->
+    <div class="section">
+      <div class="section-title">Option 1: Cinzel + Inter (Bold & Classic)</div>
+      <div class="font-option">
+        <div class="font-name">Main Title: Cinzel Bold</div>
+        <div class="cinzel-title" style="color: #fbbf24;">THEATRE WATSON</div>
+        <div class="playfair-show">The Phantom of the Opera</div>
+        <div class="inter-body">Andrew Lloyd Webber's timeless tale of romance and obsession beneath the Paris Opera House. Experience the world's most beloved musical.</div>
+      </div>
+    </div>
+
+    <!-- Font Option 2: Playfair Display + Inter -->
+    <div class="section">
+      <div class="section-title">Option 2: Playfair Display + Inter (Elegant & Readable)</div>
+      <div class="font-option">
+        <div class="font-name">Main Title: Playfair Display Bold</div>
+        <div class="playfair-title" style="color: #fbbf24;">Theatre Watson</div>
+        <div class="playfair-show">The Phantom of the Opera</div>
+        <div class="inter-body">Andrew Lloyd Webber's timeless tale of romance and obsession beneath the Paris Opera House. Experience the world's most beloved musical.</div>
+      </div>
+    </div>
+
+    <!-- Font Option 3: Cormorant Garamond + Poppins -->
+    <div class="section">
+      <div class="section-title">Option 3: Cormorant Garamond + Poppins (Refined & Modern)</div>
+      <div class="font-option">
+        <div class="font-name">Main Title: Cormorant Garamond Bold</div>
+        <div class="cormorant-title" style="color: #fbbf24;">Theatre Watson</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.75rem; margin-top: 1rem;">The Phantom of the Opera</div>
+        <div class="poppins-body">Andrew Lloyd Webber's timeless tale of romance and obsession beneath the Paris Opera House. Experience the world's most beloved musical.</div>
+      </div>
+    </div>
+
+    <!-- Card Examples -->
+    <div class="section">
+      <div class="section-title">Enhanced Card Design Examples</div>
+
+      <div class="card-grid">
+        <!-- Card 1: Now Playing -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-date">Dec 19, 2025</div>
+            <div class="card-badge">NOW PLAYING</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">The Lion King</div>
+            <div class="card-venue">📍 Lyceum Theatre</div>
+            <div class="card-description">Disney's spectacular musical features stunning puppetry and an unforgettable score by Elton John. Experience the majesty of the Pride Lands.</div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">Book Tickets</button>
+            <button class="btn btn-secondary">Reviews</button>
+          </div>
+        </div>
+
+        <!-- Card 2: Opening Soon -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-date">Jan 24, 2026</div>
+            <div class="card-badge" style="background: rgba(251, 191, 36, 0.2); color: #fbbf24; border-color: rgba(251, 191, 36, 0.3);">OPENS SOON</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">American Psycho</div>
+            <div class="card-venue">📍 Almeida Theatre</div>
+            <div class="card-description">Matt Smith stars in this stylish, bloody musical satire of 1980s Wall Street excess and the dark side of ambition.</div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">Book Tickets</button>
+            <button class="btn btn-secondary">Add to Calendar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography Hierarchy Comparison -->
+    <div class="section">
+      <div class="section-title">Typography Hierarchy Summary</div>
+
+      <div class="comparison">
+        <div class="comparison-item">
+          <div class="label">Main Title (THEATRE WATSON)</div>
+          <div style="font-family: 'Cinzel', serif; font-weight: 700; font-size: 2rem; color: #fbbf24;">CINZEL BOLD</div>
+          <div style="margin-top: 0.5rem; font-size: 0.875rem; color: #94a3b8;">✓ Bold, dramatic, traditional theatre poster feel</div>
+        </div>
+
+        <div class="comparison-item">
+          <div class="label">Show Titles</div>
+          <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: #f1f5f9;">Playfair Display Bold</div>
+          <div style="margin-top: 0.5rem; font-size: 0.875rem; color: #94a3b8;">✓ Elegant, readable, perfect for show names</div>
+        </div>
+
+        <div class="comparison-item">
+          <div class="label">Body Text & UI</div>
+          <div style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1rem; color: #cbd5e1;">Inter Regular</div>
+          <div style="margin-top: 0.5rem; font-size: 0.875rem; color: #94a3b8;">✓ Clean, modern, excellent readability</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Improvements Summary -->
+    <div class="section">
+      <div class="section-title">Other Visual Enhancements</div>
+      <ul style="list-style: none; line-height: 2; color: #cbd5e1; font-family: 'Inter', sans-serif;">
+        <li>✨ <strong style="color: #fbbf24;">Hover Effects:</strong> Cards lift 8px with amber shadow glow</li>
+        <li>🎨 <strong style="color: #fbbf24;">Gradients:</strong> Red gradient card headers, subtle button gradients</li>
+        <li>🏷️ <strong style="color: #fbbf24;">Status Badges:</strong> More prominent with colored backgrounds</li>
+        <li>📐 <strong style="color: #fbbf24;">Spacing:</strong> Increased padding and breathing room</li>
+        <li>🔘 <strong style="color: #fbbf24;">Buttons:</strong> Enhanced hover states with lift effect</li>
+        <li>📱 <strong style="color: #fbbf24;">Mobile:</strong> All improvements responsive-friendly</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #1e293b; border-radius: 12px; border: 2px dashed #475569;">
+      <p style="font-family: 'Inter', sans-serif; font-size: 1.125rem; color: #cbd5e1; margin-bottom: 1rem;">
+        <strong style="color: #fbbf24;">Recommendation:</strong> Option 1 (Cinzel + Inter)
+      </p>
+      <p style="font-family: 'Inter', sans-serif; color: #94a3b8; font-size: 0.875rem;">
+        Best balance of theatrical elegance and modern readability
+      </p>
+    </div>
+  </div>
+</body>
+</html>
