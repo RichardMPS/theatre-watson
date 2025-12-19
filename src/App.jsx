@@ -1562,7 +1562,7 @@ const TheatreTracker = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-950 text-amber-50 font-sans selection:bg-amber-500 selection:text-white">
+    <div className="min-h-screen bg-slate-950 text-amber-50 selection:bg-amber-500 selection:text-white" style={{fontFamily: "'Inter', sans-serif"}}>
       {/* Hero Header */}
       <div className="bg-gradient-to-b from-slate-900 to-slate-950 pb-12 pt-12 px-6 shadow-2xl relative overflow-hidden border-b border-amber-900/30">
         
@@ -1687,7 +1687,7 @@ const TheatreTracker = () => {
                  </div>
               </div>
 
-              <h1 className="text-center text-4xl md:text-6xl font-extrabold text-slate-100 tracking-tight uppercase" style={{fontFamily: 'system-ui, sans-serif'}}>
+              <h1 className="text-center text-4xl md:text-6xl font-extrabold text-amber-500 tracking-wide uppercase" style={{fontFamily: "'Cinzel', serif", letterSpacing: '0.05em'}}>
                 THEATRE WATSON
               </h1>
               
@@ -1825,8 +1825,8 @@ const TheatreTracker = () => {
             return (
               <div 
                 key={show.id}
-                className={`group relative bg-slate-900 rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl hover:shadow-amber-900/20 
-                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-1 ring-amber-500/30' : 'border-slate-800 hover:border-slate-700'}`}
+                className={`group relative bg-slate-900 rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20
+                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-1 ring-amber-500/30' : 'border-slate-800 hover:border-amber-500/50'}`}
               >
                 {/* Urgent Badge */}
                 {urgent && !isVisitFilterActive && (
@@ -1858,7 +1858,7 @@ const TheatreTracker = () => {
 
                   {/* Info Column */}
                   <div className="flex-1 p-6 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors font-serif">{show.title}</h3>
+                    <h3 className="text-2xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>{show.title}</h3>
                     
                     {/* Venue & Dining */}
                     <div className="flex flex-wrap items-center gap-3 mt-2 mb-3">
@@ -1885,7 +1885,7 @@ const TheatreTracker = () => {
                       </a>
                     </div>
 
-                    <p className="text-slate-300 leading-relaxed text-sm md:text-base">{show.description}</p>
+                    <p className="text-slate-300 leading-relaxed text-sm md:text-base" style={{fontFamily: "'Inter', sans-serif"}}>{show.description}</p>
                     
                     {isVisitFilterActive && (
                        <div className="mt-3 text-xs text-amber-500/70 font-mono">
@@ -1902,7 +1902,8 @@ const TheatreTracker = () => {
                        href={show.bookingUrl}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3 rounded-xl transition-all font-bold shadow-lg shadow-red-900/20 group-active:scale-95 border border-red-900/50"
+                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3 rounded-xl transition-all font-bold shadow-lg shadow-red-900/20 group-active:scale-95 border border-red-900/50 hover:-translate-y-0.5"
+                       style={{fontFamily: "'Inter', sans-serif"}}
                     >
                        <Ticket className="w-4 h-4 mr-2" />
                        Book Tickets
@@ -1914,7 +1915,8 @@ const TheatreTracker = () => {
                         href={getReviewLink(show)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600"
+                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600 hover:-translate-y-0.5"
+                        style={{fontFamily: "'Inter', sans-serif"}}
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
                         Read Reviews
