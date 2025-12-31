@@ -123,37 +123,43 @@ const DanishSummerHouse = () => {
       icon: Building,
       title: "Gilleleje Town",
       description: "Charming fishing village with restaurants, harbor fish cafes, and shops. Just 10 minutes away.",
-      distance: "5 km"
+      distance: "5 km",
+      image: "/danish-summer-house/images/Gilleleje-Town.jpg"
     },
     {
       icon: Building,
       title: "Hornbæk Beach",
       description: "Beautiful sandy beach with cafes and water sports. Perfect for families.",
-      distance: "8 km"
+      distance: "8 km",
+      image: "/danish-summer-house/images/Hornbaek.jpg"
     },
     {
       icon: Compass,
       title: "Louisiana Museum",
       description: "World-renowned modern art museum with stunning sea views and sculpture gardens.",
-      distance: "25 km"
+      distance: "25 km",
+      image: "/danish-summer-house/images/Louisiana.jpg"
     },
     {
       icon: Building,
       title: "Kronborg Castle",
       description: "UNESCO World Heritage Site - Hamlet's castle in Helsingør.",
-      distance: "20 km"
+      distance: "20 km",
+      image: "/danish-summer-house/images/kronborg-Castle.jpg"
     },
     {
-      icon: Trees,
-      title: "Tisvilde Hegn",
-      description: "Expansive forest area with walking and biking trails, lakes, and beaches.",
-      distance: "15 km"
+      icon: Building,
+      title: "Copenhagen",
+      description: "Denmark's vibrant capital city with historic landmarks, world-class museums, and colorful Nyhavn harbor.",
+      distance: "60 km",
+      image: "/danish-summer-house/images/Copenhagen.jpg"
     },
     {
       icon: Bike,
       title: "Cycling Routes",
       description: "Scenic coastal cycling paths through charming villages and countryside.",
-      distance: "On doorstep"
+      distance: "On doorstep",
+      image: "/danish-summer-house/images/cycling-routes.jpg"
     }
   ];
 
@@ -572,23 +578,36 @@ const DanishSummerHouse = () => {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-blue-100"
+                  className="relative rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 overflow-hidden group h-80"
                 >
-                  <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
+                  {/* Background Image */}
+                  <img
+                    src={attraction.image}
+                    alt={attraction.title}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
 
-                  <h3 className="text-2xl font-bold text-blue-900 mb-3">
-                    {attraction.title}
-                  </h3>
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
 
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {attraction.description}
-                  </p>
+                  {/* Content */}
+                  <div className="relative h-full flex flex-col justify-end p-8 text-white">
+                    <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
 
-                  <div className="flex items-center text-blue-600 font-semibold">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    {attraction.distance}
+                    <h3 className="text-2xl font-bold mb-3">
+                      {attraction.title}
+                    </h3>
+
+                    <p className="text-white/90 mb-4 leading-relaxed">
+                      {attraction.description}
+                    </p>
+
+                    <div className="flex items-center text-white font-semibold">
+                      <MapPin className="w-4 h-4 mr-2" />
+                      {attraction.distance}
+                    </div>
                   </div>
                 </div>
               );
