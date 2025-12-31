@@ -663,68 +663,103 @@ const DanishSummerHouse = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+      <section id="contact" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
 
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-              Book Your Stay
+              Get in touch
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Get in touch to check availability and make a reservation
+              Contact us to check availability and make a reservation
             </p>
           </div>
 
-          {/* Contact Card */}
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 text-white p-12 rounded-3xl shadow-2xl">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">Contact Information</h3>
-              <p className="text-blue-100 text-lg">
-                We're here to help make your Danish summer holiday perfect
-              </p>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-blue-900 mb-6">Contact us:</h3>
+              <p className="text-gray-600 mb-8">Please fill in the boxes on this page</p>
 
-            <div className="space-y-6 max-w-md mx-auto">
-              <div className="flex items-center gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <Mail className="w-8 h-8 text-blue-300 flex-shrink-0" />
+              <form action="mailto:info@danishsummerhouse.com" method="post" encType="text/plain" className="space-y-4">
                 <div>
-                  <p className="text-blue-200 text-sm mb-1">Email us at</p>
-                  <a
-                    href="mailto:dianakjaergaard@house.com"
-                    className="text-xl font-semibold hover:text-blue-200 transition-colors"
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name *"
+                    required
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email *"
+                    required
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows="6"
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
+                  ></textarea>
+                </div>
+
+                <div className="text-right">
+                  <button
+                    type="submit"
+                    className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
                   >
-                    dianakjaergaard@house.com
+                    Send
+                  </button>
+                </div>
+              </form>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-gray-700 mb-2">
+                  <strong>Email:</strong>{' '}
+                  <a href="mailto:info@danishsummerhouse.com" className="text-blue-600 hover:text-blue-800">
+                    info@danishsummerhouse.com
                   </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <Calendar className="w-8 h-8 text-blue-300 flex-shrink-0" />
-                <div>
-                  <p className="text-blue-200 text-sm mb-1">Availability</p>
-                  <p className="text-xl font-semibold">Much of the year</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <MapPin className="w-8 h-8 text-blue-300 flex-shrink-0" />
-                <div>
-                  <p className="text-blue-200 text-sm mb-1">Location</p>
-                  <p className="text-xl font-semibold">Between Gilleleje & Hornbæk</p>
-                  <p className="text-blue-200 text-sm">1 hour from Copenhagen Airport</p>
-                </div>
+                </p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Location:</strong> Between Gilleleje & Hornbæk, North Zealand
+                </p>
+                <p className="text-gray-700">
+                  <strong>Availability:</strong> Much of the year
+                </p>
               </div>
             </div>
 
-            <div className="mt-10 text-center">
-              <a
-                href="mailto:dianakjaergaard@house.com"
-                className="inline-block bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
-              >
-                Send Inquiry
-              </a>
+            {/* Google Map */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[600px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17891.446779352668!2d12.2878!3d56.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524d5a7c8b7e5f%3A0x4c3e8b9a2c6d7e8f!2sBetween%20Gilleleje%20and%20Hornb%C3%A6k!5e1!3m2!1sen!2sdk!4v1640000000000!5m2!1sen!2sdk"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Property Location Map"
+              ></iframe>
             </div>
           </div>
         </div>
