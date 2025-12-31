@@ -770,14 +770,14 @@ const DanishSummerHouse = () => {
             {/* Google Map */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[600px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17891.446779352668!2d12.2878!3d56.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524d5a7c8b7e5f%3A0x4c3e8b9a2c6d7e8f!2sBetween%20Gilleleje%20and%20Hornb%C3%A6k!5e1!3m2!1sen!2sdk!4v1640000000000!5m2!1sen!2sdk"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jacobslystvej+25+Nakkehoved+Denmark&zoom=15"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Property Location Map"
+                title="Property Location - Jacobslystvej 25 Nakkehoved"
               ></iframe>
             </div>
           </div>
