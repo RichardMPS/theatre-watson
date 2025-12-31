@@ -770,7 +770,7 @@ const DanishSummerHouse = () => {
             {/* Google Map */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[600px]">
               <iframe
-                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&center=56.1285,12.3145&zoom=15&maptype=roadmap"
+                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&center=56.1148,12.3556&zoom=15&maptype=roadmap"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
