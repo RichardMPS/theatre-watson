@@ -432,7 +432,7 @@ const DanishSummerHouse = () => {
                     <Bike className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Recreation Facilities</p>
-                      <p className="text-blue-100 text-sm">Football pitch, ping pong table, trampoline, sandpit</p>
+                      <p className="text-blue-100 text-sm">Football pitch, ping pong table</p>
                     </div>
                   </div>
 
