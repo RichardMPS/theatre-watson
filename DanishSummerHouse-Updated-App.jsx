@@ -620,7 +620,7 @@ const DanishSummerHouse = () => {
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
               The property is ideally located for exploring the beautiful coastline, charming villages,
               and cultural attractions of North Zealand. Perfect for families and groups seeking both
-              relaxation and adventure.
+              relaxation and adventure. The shops, restaurants, museums and attractions of Copenhagen are an hour away.
             </p>
             <p className="text-blue-200">
               Recommendations for local restaurants, shops, and activities can be provided upon booking.
