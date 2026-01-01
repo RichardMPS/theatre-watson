@@ -164,7 +164,7 @@ const DanishSummerHouse = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "'Crimson Text', serif" }}>
+    <div className="min-h-screen bg-white" style={{ fontFamily: "'Figtree', sans-serif" }}>
 
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-md z-50 border-b border-blue-100">
