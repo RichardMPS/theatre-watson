@@ -372,6 +372,15 @@ const DanishSummerHouse = () => {
             </div>
           </div>
 
+          {/* Featured Property Image */}
+          <div className="mb-16">
+            <img
+              src="/danish-summer-house/images/SolkrogenHeroShot.jpg"
+              alt="Beachfront summer house garden with sea views - Danish Summer House North Zealand"
+              className="w-full h-auto rounded-3xl shadow-2xl"
+            />
+          </div>
+
           {/* Property Description */}
           <div className="bg-gradient-to-br from-blue-900 to-blue-700 text-white p-12 rounded-3xl mb-16">
             <div className="grid md:grid-cols-2 gap-12">
