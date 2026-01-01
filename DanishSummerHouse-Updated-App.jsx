@@ -357,7 +357,7 @@ const DanishSummerHouse = () => {
 
             <div className="bg-blue-50 p-8 rounded-2xl text-center">
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">Sleeps 10+</h3>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Sleeps 12</h3>
               <p className="text-gray-700">
                 4 bedrooms in main house plus 2-bedroom annexe
               </p>
@@ -394,7 +394,7 @@ const DanishSummerHouse = () => {
                     <Bed className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Main House - 4 Bedrooms</p>
-                      <p className="text-blue-100 text-sm">Master bedroom with super king bed and ensuite, 2 rooms with twin beds, 1 room with 4 bunk beds</p>
+                      <p className="text-blue-100 text-sm">Master bedroom with superking bed and ensuite, 1 room with double bed, 2 rooms with twin beds</p>
                     </div>
                   </div>
 
@@ -402,7 +402,7 @@ const DanishSummerHouse = () => {
                     <Home className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Annexe - 2 Bedrooms</p>
-                      <p className="text-blue-100 text-sm">Completed last year, each with twin beds</p>
+                      <p className="text-blue-100 text-sm">Sitting room, kitchen, 2 bedrooms, each with twin beds</p>
                     </div>
                   </div>
 
@@ -418,7 +418,7 @@ const DanishSummerHouse = () => {
                     <Waves className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Bathrooms</p>
-                      <p className="text-blue-100 text-sm">Family bathroom, additional bathroom with sauna and steam shower</p>
+                      <p className="text-blue-100 text-sm">Ensuite and family bathroom</p>
                     </div>
                   </div>
                 </div>
@@ -432,8 +432,8 @@ const DanishSummerHouse = () => {
                   <div className="flex items-start gap-3">
                     <Trees className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-lg">Large Garden</p>
-                      <p className="text-blue-100 text-sm">Spacious outdoor area with beautiful landscaping</p>
+                      <p className="font-semibold text-lg">Large Terrace and Garden</p>
+                      <p className="text-blue-100 text-sm">Spacious outdoor dining area outdoor area, garden with views across to Hornbæk and Sweden</p>
                     </div>
                   </div>
 
@@ -441,7 +441,7 @@ const DanishSummerHouse = () => {
                     <Bike className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Recreation Facilities</p>
-                      <p className="text-blue-100 text-sm">Football pitch, ping pong table</p>
+                      <p className="text-blue-100 text-sm">Large lawn for ball games, ping pong table</p>
                     </div>
                   </div>
 
@@ -449,7 +449,7 @@ const DanishSummerHouse = () => {
                     <Anchor className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Beach Access</p>
-                      <p className="text-blue-100 text-sm">Direct access to the beach and stunning coastal walks</p>
+                      <p className="text-blue-100 text-sm">Direct access to the beach</p>
                     </div>
                   </div>
 
@@ -457,7 +457,7 @@ const DanishSummerHouse = () => {
                     <MapPin className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Quiet Location</p>
-                      <p className="text-blue-100 text-sm">Secluded residential spot with privacy and tranquility</p>
+                      <p className="text-blue-100 text-sm">Secluded beachfront retreat with privacy and tranquility</p>
                     </div>
                   </div>
                 </div>
