@@ -469,36 +469,9 @@ const DanishSummerHouse = () => {
           <div className="bg-gray-50 p-12 rounded-3xl">
             <h3 className="text-3xl font-bold text-blue-900 mb-8 text-center">Rental Information</h3>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-200">
-                <div className="text-center">
-                  <p className="text-gray-600 mb-2">Main House + 2 Bedrooms Annexe</p>
-                  <p className="text-4xl font-bold text-blue-900 mb-4">DKK 15,000</p>
-                  <p className="text-gray-500">per week</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-200">
-                <div className="text-center">
-                  <p className="text-gray-600 mb-2">Main House + 2 Bedrooms</p>
-                  <p className="text-4xl font-bold text-blue-900 mb-4">DKK 30,000</p>
-                  <p className="text-gray-500">per week (except Xmas/New Year)</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="max-w-2xl mx-auto space-y-3 text-gray-700">
-              <p className="flex items-start gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                <span>Mandatory cleaning charge: DKK 2,500</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                <span>Linens fee: DKK 150 per person</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                <span>Available for much of the year - contact for availability</span>
+            <div className="max-w-2xl mx-auto text-center">
+              <p className="text-xl text-gray-700">
+                Please contact us for pricing and availability.
               </p>
             </div>
           </div>
