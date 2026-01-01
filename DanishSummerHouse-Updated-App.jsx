@@ -471,7 +471,14 @@ const DanishSummerHouse = () => {
 
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-xl text-gray-700">
-                Please contact us for pricing and availability.
+                Please{' '}
+                <a
+                  href="mailto:info@danishsummerhouse.com?subject=Pricing and Availability Inquiry"
+                  className="text-blue-600 hover:text-blue-800 underline font-semibold"
+                >
+                  contact us
+                </a>{' '}
+                for pricing and availability.
               </p>
             </div>
           </div>
