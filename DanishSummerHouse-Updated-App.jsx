@@ -357,7 +357,7 @@ const DanishSummerHouse = () => {
 
             <div className="bg-blue-50 p-8 rounded-2xl text-center">
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">Sleeps 12</h3>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Sleeps 10</h3>
               <p className="text-gray-700">
                 4 bedrooms in main house plus 2-bedroom annexe
               </p>
@@ -368,6 +368,24 @@ const DanishSummerHouse = () => {
               <h3 className="text-xl font-bold text-blue-900 mb-2">Beachfront Views</h3>
               <p className="text-gray-700">
                 Breathtaking views across the straits to Sweden
+              </p>
+            </div>
+          </div>
+
+          {/* Property Description */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Experience a wonderful beach vacation in our 1930s art deco-inspired summer house, located directly by the water with stunning views of the Øresund and Sweden. Sensitively modernised, the house offers a perfect blend of historic modernist charm and modern conveniences.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                The interior is bright and inviting with a large kitchen/living room where massive folding doors open up to breathtaking sea views. The kitchen is equipped with modern amenities such as an induction hob and two dishwashers, perfect for family and friends to gather.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Outside, you can enjoy the garden with its large terrace facing directly out to sea. There's plenty of space to relax, with comfortable sun loungers and a large swing sofa. The garden leads down to a beach where you can swim or enjoy the sunset.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The area around Gilleleje is ideal for nature and cultural experiences. Take your bike and follow the beautiful coastal path, visit charming fishing villages with excellent restaurants, or drive to cultural treasures such as Kronborg Castle and Louisiana Museum of Modern Art.
               </p>
             </div>
           </div>
@@ -480,6 +498,72 @@ const DanishSummerHouse = () => {
                 </a>{' '}
                 for pricing and availability.
               </p>
+            </div>
+          </div>
+
+          {/* Amenities Section */}
+          <div className="mt-16">
+            <h3 className="text-3xl font-bold text-blue-900 mb-8 text-center">Property Amenities</h3>
+
+            <div className="grid md:grid-cols-4 gap-8">
+              {/* General */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">General</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> WiFi</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Heating</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Fireplace</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Heat pump</li>
+                </ul>
+              </div>
+
+              {/* Kitchen */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">Kitchen</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Dishwasher (×2)</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Coffee machine</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Electric kettle</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Microwave</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Oven</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Freezer</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Exhaust hood</li>
+                </ul>
+              </div>
+
+              {/* Outdoor */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">Outdoor</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Sea view</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Large terrace</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Enclosed garden</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Garden furniture</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Garden recliners</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> BBQ (gas/charcoal)</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Outdoor shower</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Bicycles</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Close to hiking paths</li>
+                </ul>
+              </div>
+
+              {/* Indoor Facilities */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">Indoor</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> TV</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Streaming service</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Washing machine</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Dryer</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Bathtub</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Board games</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Books</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Toys</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Desk & lamp</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> First aid kit</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Smoke detector</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
