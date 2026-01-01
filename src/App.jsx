@@ -1364,11 +1364,11 @@ const TheatreTracker = () => {
             </div>
             
             {/* Filter Controls */}
-            <div className="flex flex-col space-y-3 items-end w-full md:w-auto">
+            <div className="flex flex-col space-y-4 items-end w-full md:w-auto">
 
               {/* SEARCH BAR */}
-              <div className="bg-slate-900 p-2 rounded-xl border border-slate-700 hover:border-slate-600 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40 transition-colors">
-                 <div className="bg-slate-800 p-2 rounded-lg text-slate-400">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800/80 p-3 rounded-2xl border border-slate-700/50 hover:border-slate-600 focus-within:border-amber-500/50 focus-within:ring-2 focus-within:ring-amber-500/20 flex items-center gap-3 w-full md:w-auto shadow-xl shadow-black/50 transition-all">
+                 <div className="bg-slate-800/80 p-2.5 rounded-xl text-slate-400">
                     <Search className="w-4 h-4" />
                  </div>
                  <div className="flex-1">
@@ -1388,8 +1388,8 @@ const TheatreTracker = () => {
               </div>
 
               {/* DATE PICKER */}
-              <div className="bg-slate-900 p-2 rounded-xl border border-amber-500/30 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40">
-                 <div className="bg-slate-800 p-2 rounded-lg text-amber-500">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800/80 p-3 rounded-2xl border border-amber-500/30 hover:border-amber-500/50 focus-within:border-amber-500/60 focus-within:ring-2 focus-within:ring-amber-500/20 flex items-center gap-3 w-full md:w-auto shadow-xl shadow-amber-900/20 transition-all">
+                 <div className="bg-slate-800/80 p-2.5 rounded-xl text-amber-500">
                     <Calendar className="w-4 h-4" />
                  </div>
                  <div className="flex-1">
@@ -1411,50 +1411,50 @@ const TheatreTracker = () => {
               </div>
 
               {/* Type Filter */}
-              <div className="flex bg-slate-900 p-1 rounded-xl backdrop-blur-sm border border-slate-800 w-full md:w-auto justify-end">
-                <button 
+              <div className="flex bg-gradient-to-br from-slate-900 to-slate-800/80 p-1.5 rounded-2xl backdrop-blur-sm border border-slate-800/80 shadow-xl shadow-black/30 w-full md:w-auto justify-end gap-1">
+                <button
                   onClick={() => setTypeFilter('all')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'all' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${typeFilter === 'all' ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 shadow-lg shadow-amber-500/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   All
                 </button>
-                <button 
+                <button
                   onClick={() => setTypeFilter('musical')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'musical' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${typeFilter === 'musical' ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 shadow-lg shadow-amber-500/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Musicals
                 </button>
-                <button 
+                <button
                   onClick={() => setTypeFilter('play')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'play' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${typeFilter === 'play' ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 shadow-lg shadow-amber-500/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Plays
                 </button>
               </div>
 
               {/* Location Filter */}
-              <div className="flex bg-slate-900 p-1 rounded-xl backdrop-blur-sm border border-slate-800 overflow-x-auto max-w-full no-scrollbar">
-                <button 
+              <div className="flex bg-gradient-to-br from-slate-900 to-slate-800/80 p-1.5 rounded-2xl backdrop-blur-sm border border-slate-800/80 shadow-xl shadow-black/30 overflow-x-auto max-w-full no-scrollbar gap-1">
+                <button
                   onClick={() => setLocationFilter('all')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'all' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'all' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   All Locations
                 </button>
-                <button 
+                <button
                   onClick={() => setLocationFilter('west-end')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'west-end' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'west-end' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   West End
                 </button>
-                <button 
+                <button
                   onClick={() => setLocationFilter('off-west-end')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'off-west-end' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'off-west-end' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Off-West End
                 </button>
-                <button 
+                <button
                   onClick={() => setLocationFilter('fringe')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'fringe' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'fringe' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Fringe/Local
                 </button>
@@ -1480,28 +1480,31 @@ const TheatreTracker = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-8">
           {filteredShows.map((show) => {
             const open = isPast(show.date);
             const urgent = isApproaching(show.date);
             const isVisitFilterActive = !!visitDate;
-            
+
             return (
-              <div 
+              <div
                 key={show.id}
-                className={`group relative bg-slate-900 rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20
-                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-1 ring-amber-500/30' : 'border-slate-800 hover:border-amber-500/50'}`}
+                className={`group relative bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800/80 rounded-3xl overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/30
+                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-2 ring-amber-500/20 shadow-lg shadow-amber-500/10' : 'border-slate-800/80 hover:border-amber-500/50'}`}
+                style={{
+                  backdropFilter: 'blur(10px)'
+                }}
               >
                 {/* Urgent Badge */}
                 {urgent && !isVisitFilterActive && (
-                  <div className="absolute top-0 right-0 bg-amber-600 text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-xl shadow-lg z-10">
+                  <div className="absolute top-0 right-0 bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 text-xs font-bold px-4 py-2 rounded-bl-2xl shadow-xl shadow-amber-500/30 z-10">
                     OPENS SOON
                   </div>
                 )}
 
                 <div className="flex flex-col md:flex-row">
                   {/* Date Column */}
-                  <div className={`md:w-48 p-6 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-slate-800 ${open ? 'bg-slate-900/50' : 'bg-slate-900'}`}>
+                  <div className={`md:w-48 p-8 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-slate-800/50 ${open ? 'bg-slate-900/30' : 'bg-slate-900/50'}`}>
                     <span className="text-xs text-slate-400 uppercase tracking-wide mb-2">Opening Night</span>
                     <div className="flex items-baseline gap-1.5">
                       <span className="text-lg font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
@@ -1521,7 +1524,7 @@ const TheatreTracker = () => {
                   </div>
 
                   {/* Info Column */}
-                  <div className="flex-1 p-6 flex flex-col justify-center">
+                  <div className="flex-1 p-8 flex flex-col justify-center">
                     <h3 className="text-2xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>{show.title}</h3>
                     
                     {/* Venue & Dining */}
@@ -1559,14 +1562,14 @@ const TheatreTracker = () => {
                   </div>
 
                   {/* Action Column */}
-                  <div className="p-6 bg-slate-950/30 md:w-64 flex flex-col justify-center space-y-3 border-t md:border-t-0 md:border-l border-slate-800">
+                  <div className="p-8 bg-slate-950/20 md:w-64 flex flex-col justify-center space-y-4 border-t md:border-t-0 md:border-l border-slate-800/50">
 
                     {/* Booking Button (Red Curtain Style) */}
                     <a
                        href={show.bookingUrl}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3 rounded-xl transition-all font-bold shadow-lg shadow-red-900/20 group-active:scale-95 border border-red-900/50 hover:-translate-y-0.5"
+                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3.5 rounded-2xl transition-all font-bold shadow-xl shadow-red-900/30 hover:shadow-red-700/40 group-active:scale-95 border border-red-900/50 hover:-translate-y-1"
                        style={{fontFamily: "'Inter', sans-serif"}}
                     >
                        <Ticket className="w-4 h-4 mr-2" />
@@ -1579,7 +1582,7 @@ const TheatreTracker = () => {
                         href={getReviewLink(show)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600 hover:-translate-y-0.5"
+                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3.5 rounded-2xl transition-all font-medium shadow-lg shadow-slate-900/30 hover:shadow-slate-700/40 group-active:scale-95 border border-slate-700 hover:border-slate-600 hover:-translate-y-1"
                         style={{fontFamily: "'Inter', sans-serif"}}
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
@@ -1588,7 +1591,7 @@ const TheatreTracker = () => {
                     ) : null}
 
                     {/* Closes Date */}
-                    <div className="text-center py-2 px-3 bg-slate-800/50 rounded-xl border border-slate-700">
+                    <div className="text-center py-3 px-4 bg-slate-800/30 rounded-2xl border border-slate-700/50 shadow-inner">
                       <div className="text-xs text-slate-400">
                         <span className="text-slate-500">Closes:</span>
                         <span className="text-slate-200 ml-2 font-medium">
