@@ -22,16 +22,66 @@ const DanishSummerHouse = () => {
     }
   };
 
-  // Gallery images (placeholder - you'll replace with actual images)
+  // Gallery images - EDIT THIS ARRAY to reorder, remove, or change photos
+  // To reorder: move lines up/down, To remove: delete the line, To change title: edit the text
   const galleryImages = [
-    { id: 1, title: 'Sea View Dining Room', category: 'interior' },
-    { id: 2, title: 'Ocean View from Garden', category: 'exterior' },
-    { id: 3, title: 'Modern Living Area', category: 'interior' },
-    { id: 4, title: 'Master Bedroom', category: 'interior' },
-    { id: 5, title: 'Garden and Beach Access', category: 'exterior' },
-    { id: 6, title: 'Kitchen', category: 'interior' },
-    { id: 7, title: 'Outdoor Seating', category: 'exterior' },
-    { id: 8, title: 'Bathroom', category: 'interior' },
+    '/images/_a0a2586-2-edit.jpg',
+    '/images/_A0A2591-2-Edit 2.jpg',
+    '/images/_A0A2607.jpg',
+    '/images/_A0A2613-Pano.jpg',
+    '/images/_A0A2894-Edit.jpg',
+    '/images/_A0A2903-Edit.jpg',
+    '/images/_A0A2907-Edit-2.jpg',
+    '/images/_A0A2919.jpg',
+    '/images/_A0A2929.jpg',
+    '/images/_a0a2931.jpg',
+    '/images/_A0A3414.jpg',
+    '/images/_A0A6778.jpg',
+    '/images/_A0A7144-Edit 2.jpg',
+    '/images/_A0A7246.jpg',
+    '/images/_A0A7264-HDR.jpg',
+    '/images/_A0A9528-2.jpg',
+    '/images/_A0A9530.jpg',
+    '/images/_A0A9536-2.jpg',
+    '/images/_A0A9631-2.jpg',
+    '/images/_MG_2850.jpg',
+    '/images/_MG_2863-Edit.jpg',
+    '/images/_MG_2877-Edit-2-Edit.jpg',
+    '/images/_MG_2898-Edit 2.jpg',
+    '/images/_MG_2945.jpg',
+    '/images/_MG_2955.jpg',
+    '/images/_MG_3014.jpg',
+    '/images/_MG_3135.jpg',
+    '/images/_MG_3391-Edit.jpg',
+    '/images/_MG_3465.jpg',
+    '/images/_MG_7971.jpg',
+    '/images/_MG_8632.jpg',
+    '/images/_RML7063-Edit.jpg',
+    '/images/_RML7127.jpg',
+    '/images/_RML9849-HDR.jpg',
+    '/images/_RML9851-HDR.jpg',
+    '/images/_RML9867.jpg',
+    '/images/_RML9868.jpg',
+    '/images/_RML9877.jpg',
+    '/images/_RML9887.jpg',
+    '/images/_RML9889.jpg',
+    '/images/20111020155401061.jpg',
+    '/images/annexeplan.jpg',
+    '/images/DJI_0212-3.jpg',
+    '/images/IMG_1268.jpg',
+    '/images/IMG_1578.jpg',
+    '/images/IMG_5028.jpg',
+    '/images/IMG_9894.jpg',
+    '/images/Q1010029.jpg',
+    '/images/Q1010384.jpg',
+    '/images/Q1010388.jpg',
+    '/images/Q1010389.jpg',
+    '/images/Q1010450-Edit-2.jpg',
+    '/images/RML07462.jpg',
+    '/images/RML08037.jpg',
+    '/images/Screenshot 2024-11-25 at 17.08.46.jpg',
+    '/images/Screenshot 2024-11-25 at 17.10.21.jpg',
+    '/images/SOLKROGENPHOTO.jpg'
   ];
 
   // Testimonials data
@@ -72,42 +122,48 @@ const DanishSummerHouse = () => {
       icon: Building,
       title: "Gilleleje Town",
       description: "Charming fishing village with restaurants, harbor fish cafes, and shops. Just 10 minutes away.",
-      distance: "5 km"
+      distance: "5 km",
+      image: "/images/Gilleleje-Town.jpg"
     },
     {
       icon: Building,
       title: "Hornbæk Beach",
       description: "Beautiful sandy beach with cafes and water sports. Perfect for families.",
-      distance: "8 km"
+      distance: "8 km",
+      image: "/images/Hornbaek.jpg"
     },
     {
       icon: Compass,
       title: "Louisiana Museum",
       description: "World-renowned modern art museum with stunning sea views and sculpture gardens.",
-      distance: "25 km"
+      distance: "25 km",
+      image: "/images/Louisiana.jpg"
     },
     {
       icon: Building,
       title: "Kronborg Castle",
       description: "UNESCO World Heritage Site - Hamlet's castle in Helsingør.",
-      distance: "20 km"
+      distance: "20 km",
+      image: "/images/kronborg-Castle.jpg"
     },
     {
-      icon: Trees,
-      title: "Tisvilde Hegn",
-      description: "Expansive forest area with walking and biking trails, lakes, and beaches.",
-      distance: "15 km"
+      icon: Building,
+      title: "Copenhagen",
+      description: "Denmark's vibrant capital city with historic landmarks, world-class museums, and colorful Nyhavn harbor.",
+      distance: "60 km",
+      image: "/images/Copenhagen.jpg"
     },
     {
       icon: Bike,
       title: "Cycling Routes",
       description: "Scenic coastal cycling paths through charming villages and countryside.",
-      distance: "On doorstep"
+      distance: "On doorstep",
+      image: "/images/cycling-routes.jpg"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ fontFamily: "'Figtree', sans-serif" }}>
 
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-md z-50 border-b border-blue-100">
@@ -120,11 +176,11 @@ const DanishSummerHouse = () => {
               className="text-2xl font-bold tracking-wide"
             >
               <span className="text-blue-900">DANISH</span>
-              <span className="text-blue-400 ml-2">SUMMER HOUSE</span>
+              <span className="text-blue-400 ml-2 whitespace-nowrap">SUMMER HOUSE</span>
             </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('home')}
                 className="text-blue-900 hover:text-blue-600 font-medium transition-colors"
@@ -165,7 +221,7 @@ const DanishSummerHouse = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-blue-900"
+              className="lg:hidden text-blue-900"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -174,7 +230,7 @@ const DanishSummerHouse = () => {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 space-y-3">
+            <div className="lg:hidden mt-4 pb-4 space-y-3">
               <button
                 onClick={() => scrollToSection('home')}
                 className="block w-full text-left text-blue-900 hover:text-blue-600 font-medium py-2"
@@ -219,9 +275,8 @@ const DanishSummerHouse = () => {
       {/* Hero Section with Video */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
 
-        {/* Video Background - Placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-blue-600 to-blue-400">
-          {/* You can replace this with actual video:
+        {/* Video Background */}
+        <div className="absolute inset-0">
           <video
             autoPlay
             loop
@@ -229,16 +284,12 @@ const DanishSummerHouse = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/path-to-your-video.mp4" type="video/mp4" />
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
           </video>
-          */}
-
-          {/* Placeholder gradient background */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-30"></div>
         </div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
@@ -305,7 +356,7 @@ const DanishSummerHouse = () => {
 
             <div className="bg-blue-50 p-8 rounded-2xl text-center">
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">Sleeps 10+</h3>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Sleeps 10</h3>
               <p className="text-gray-700">
                 4 bedrooms in main house plus 2-bedroom annexe
               </p>
@@ -321,6 +372,33 @@ const DanishSummerHouse = () => {
           </div>
 
           {/* Property Description */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Experience a wonderful beach vacation in our 1930s art deco-inspired summer house, located directly by the water with stunning views of the Øresund and Sweden. Sensitively modernised, the house offers a perfect blend of historic modernist charm and modern conveniences.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                The interior is bright and inviting with a large kitchen/living room where massive folding doors open up to breathtaking sea views. The kitchen is equipped with modern amenities such as an induction hob and two dishwashers, perfect for family and friends to gather.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Outside, you can enjoy the garden with its large terrace facing directly out to sea. There's plenty of space to relax, with comfortable sun loungers and a large swing sofa. The garden leads down to a beach where you can swim or enjoy the sunset.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The area around Gilleleje is ideal for nature and cultural experiences. Take your bike and follow the beautiful coastal path, visit charming fishing villages with excellent restaurants, or drive to cultural treasures such as Kronborg Castle and Louisiana Museum of Modern Art.
+              </p>
+            </div>
+          </div>
+
+          {/* Featured Property Image */}
+          <div className="mb-16">
+            <img
+              src="/images/SolkrogenHeroShot.jpg"
+              alt="Beachfront summer house garden with sea views - Danish Summer House North Zealand"
+              className="w-full h-auto rounded-3xl shadow-2xl"
+            />
+          </div>
+
+          {/* Property Description */}
           <div className="bg-gradient-to-br from-blue-900 to-blue-700 text-white p-12 rounded-3xl mb-16">
             <div className="grid md:grid-cols-2 gap-12">
 
@@ -333,7 +411,7 @@ const DanishSummerHouse = () => {
                     <Bed className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Main House - 4 Bedrooms</p>
-                      <p className="text-blue-100 text-sm">Master bedroom with super king bed and ensuite, 2 rooms with twin beds, 1 room with 4 bunk beds</p>
+                      <p className="text-blue-100 text-sm">Master bedroom with superking bed and ensuite, 1 room with double bed, 2 rooms with twin beds</p>
                     </div>
                   </div>
 
@@ -341,7 +419,7 @@ const DanishSummerHouse = () => {
                     <Home className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Annexe - 2 Bedrooms</p>
-                      <p className="text-blue-100 text-sm">Completed last year, each with twin beds</p>
+                      <p className="text-blue-100 text-sm">Sitting room, kitchen, 2 bedrooms, each with twin beds</p>
                     </div>
                   </div>
 
@@ -357,7 +435,7 @@ const DanishSummerHouse = () => {
                     <Waves className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Bathrooms</p>
-                      <p className="text-blue-100 text-sm">Family bathroom, additional bathroom with sauna and steam shower</p>
+                      <p className="text-blue-100 text-sm">Ensuite and family bathroom</p>
                     </div>
                   </div>
                 </div>
@@ -371,8 +449,8 @@ const DanishSummerHouse = () => {
                   <div className="flex items-start gap-3">
                     <Trees className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-lg">Large Garden</p>
-                      <p className="text-blue-100 text-sm">Spacious outdoor area with beautiful landscaping</p>
+                      <p className="font-semibold text-lg">Large Terrace and Garden</p>
+                      <p className="text-blue-100 text-sm">Spacious outdoor dining area outdoor area, garden with views across to Hornbæk and Sweden</p>
                     </div>
                   </div>
 
@@ -380,7 +458,7 @@ const DanishSummerHouse = () => {
                     <Bike className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Recreation Facilities</p>
-                      <p className="text-blue-100 text-sm">Football pitch, ping pong table, trampoline, sandpit</p>
+                      <p className="text-blue-100 text-sm">Large lawn for ball games, ping pong table</p>
                     </div>
                   </div>
 
@@ -388,7 +466,7 @@ const DanishSummerHouse = () => {
                     <Anchor className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Beach Access</p>
-                      <p className="text-blue-100 text-sm">Direct access to the beach and stunning coastal walks</p>
+                      <p className="text-blue-100 text-sm">Direct access to the beach</p>
                     </div>
                   </div>
 
@@ -396,7 +474,7 @@ const DanishSummerHouse = () => {
                     <MapPin className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-lg">Quiet Location</p>
-                      <p className="text-blue-100 text-sm">Secluded residential spot with privacy and tranquility</p>
+                      <p className="text-blue-100 text-sm">Secluded beachfront retreat with privacy and tranquility</p>
                     </div>
                   </div>
                 </div>
@@ -408,37 +486,83 @@ const DanishSummerHouse = () => {
           <div className="bg-gray-50 p-12 rounded-3xl">
             <h3 className="text-3xl font-bold text-blue-900 mb-8 text-center">Rental Information</h3>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-200">
-                <div className="text-center">
-                  <p className="text-gray-600 mb-2">Main House + 2 Bedrooms Annexe</p>
-                  <p className="text-4xl font-bold text-blue-900 mb-4">DKK 15,000</p>
-                  <p className="text-gray-500">per week</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-200">
-                <div className="text-center">
-                  <p className="text-gray-600 mb-2">Main House + 2 Bedrooms</p>
-                  <p className="text-4xl font-bold text-blue-900 mb-4">DKK 30,000</p>
-                  <p className="text-gray-500">per week (except Xmas/New Year)</p>
-                </div>
-              </div>
+            <div className="max-w-2xl mx-auto text-center">
+              <p className="text-xl text-gray-700">
+                Please{' '}
+                <a
+                  href="mailto:info@danishsummerhouse.com?subject=Pricing and Availability Inquiry"
+                  className="text-blue-600 hover:text-blue-800 underline font-semibold"
+                >
+                  contact us
+                </a>{' '}
+                for pricing and availability.
+              </p>
             </div>
+          </div>
 
-            <div className="max-w-2xl mx-auto space-y-3 text-gray-700">
-              <p className="flex items-start gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                <span>Mandatory cleaning charge: DKK 2,500</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                <span>Linens fee: DKK 150 per person</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <span className="text-blue-600 font-bold">•</span>
-                <span>Available for much of the year - contact for availability</span>
-              </p>
+          {/* Amenities Section */}
+          <div className="mt-16">
+            <h3 className="text-3xl font-bold text-blue-900 mb-8 text-center">Property Amenities</h3>
+
+            <div className="grid md:grid-cols-4 gap-8">
+              {/* General */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">General</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> WiFi</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Heating</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Fireplace</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Heat pump</li>
+                </ul>
+              </div>
+
+              {/* Kitchen */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">Kitchen</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Dishwasher (×2)</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Coffee machine</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Electric kettle</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Microwave</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Oven</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Freezer</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Exhaust hood</li>
+                </ul>
+              </div>
+
+              {/* Outdoor */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">Outdoor</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Sea view</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Large terrace</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Enclosed garden</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Garden furniture</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Garden recliners</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> BBQ (gas/charcoal)</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Outdoor shower</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Bicycles</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Close to hiking paths</li>
+                </ul>
+              </div>
+
+              {/* Indoor Facilities */}
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">Indoor</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> TV</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Streaming service</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Washing machine</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Dryer</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Bathtub</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Board games</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Books</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Toys</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Desk & lamp</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> First aid kit</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-600">✓</span> Smoke detector</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -459,37 +583,50 @@ const DanishSummerHouse = () => {
             </p>
           </div>
 
-          {/* Video Placeholder */}
+          {/* Video Section */}
           <div className="mb-16">
-            <div className="bg-gradient-to-br from-blue-900 to-blue-600 rounded-3xl overflow-hidden shadow-2xl aspect-video flex items-center justify-center">
-              <div className="text-center text-white">
-                <Camera className="w-20 h-20 mx-auto mb-4 opacity-50" />
-                <p className="text-2xl font-semibold mb-2">Video Tour</p>
-                <p className="text-blue-100">Video content can be embedded here</p>
-              </div>
+            <div className="rounded-3xl overflow-hidden shadow-2xl aspect-video">
+              <video
+                controls
+                className="w-full h-full object-cover"
+                poster="/images/DJI_0212-3.jpg"
+              >
+                <source src="/videos/hero-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
+            <p className="text-center text-gray-600 mt-4 text-lg">
+              Video tour of the property and surrounding area
+            </p>
           </div>
 
           {/* Photo Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryImages.map((image, index) => (
+            {galleryImages.map((imagePath, index) => (
               <div
-                key={image.id}
+                key={index}
                 onClick={() => {
                   setLightboxImage(index);
                   setLightboxOpen(true);
                 }}
-                className="relative aspect-square bg-gradient-to-br from-blue-200 to-blue-400 rounded-2xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
+                className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
               >
-                {/* Placeholder for actual images */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-300 to-blue-500 group-hover:scale-110 transition-transform duration-500">
-                  <Camera className="w-16 h-16 text-white opacity-30" />
-                </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all flex items-end p-6">
-                  <p className="text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                    {image.title}
-                  </p>
-                </div>
+                {/* Actual image */}
+                <img
+                  src={imagePath}
+                  alt={`Beachfront summer house rental North Zealand Denmark - ${
+                    index % 8 === 0 ? 'sea view to Sweden' :
+                    index % 8 === 1 ? 'interior living space Gilleleje' :
+                    index % 8 === 2 ? 'garden and outdoor area' :
+                    index % 8 === 3 ? 'bedroom accommodation' :
+                    index % 8 === 4 ? 'kitchen and dining' :
+                    index % 8 === 5 ? 'bathroom facilities' :
+                    index % 8 === 6 ? 'exterior beachfront property' :
+                    'Danish coastal holiday home'
+                  }`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all"></div>
               </div>
             ))}
           </div>
@@ -522,23 +659,36 @@ const DanishSummerHouse = () => {
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-blue-100"
+                  className="relative rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 overflow-hidden group h-80"
                 >
-                  <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
+                  {/* Background Image */}
+                  <img
+                    src={attraction.image}
+                    alt={attraction.title}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
 
-                  <h3 className="text-2xl font-bold text-blue-900 mb-3">
-                    {attraction.title}
-                  </h3>
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
 
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {attraction.description}
-                  </p>
+                  {/* Content */}
+                  <div className="relative h-full flex flex-col justify-end p-8 text-white">
+                    <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
 
-                  <div className="flex items-center text-blue-600 font-semibold">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    {attraction.distance}
+                    <h3 className="text-2xl font-bold mb-3">
+                      {attraction.title}
+                    </h3>
+
+                    <p className="text-white/90 mb-4 leading-relaxed">
+                      {attraction.description}
+                    </p>
+
+                    <div className="flex items-center text-white font-semibold">
+                      <MapPin className="w-4 h-4 mr-2" />
+                      {attraction.distance}
+                    </div>
                   </div>
                 </div>
               );
@@ -551,7 +701,7 @@ const DanishSummerHouse = () => {
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
               The property is ideally located for exploring the beautiful coastline, charming villages,
               and cultural attractions of North Zealand. Perfect for families and groups seeking both
-              relaxation and adventure.
+              relaxation and adventure. The shops, restaurants, museums and attractions of Copenhagen are an hour away.
             </p>
             <p className="text-blue-200">
               Recommendations for local restaurants, shops, and activities can be provided upon booking.
@@ -613,68 +763,103 @@ const DanishSummerHouse = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+      <section id="contact" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
 
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-              Book Your Stay
+              Get in touch
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Get in touch to check availability and make a reservation
+              Contact us to check availability and make a reservation
             </p>
           </div>
 
-          {/* Contact Card */}
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 text-white p-12 rounded-3xl shadow-2xl">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">Contact Information</h3>
-              <p className="text-blue-100 text-lg">
-                We're here to help make your Danish summer holiday perfect
-              </p>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold text-blue-900 mb-6">Contact us:</h3>
+              <p className="text-gray-600 mb-8">Please fill in the boxes on this page</p>
 
-            <div className="space-y-6 max-w-md mx-auto">
-              <div className="flex items-center gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <Mail className="w-8 h-8 text-blue-300 flex-shrink-0" />
+              <form action="mailto:info@danishsummerhouse.com" method="post" encType="text/plain" className="space-y-4">
                 <div>
-                  <p className="text-blue-200 text-sm mb-1">Email us at</p>
-                  <a
-                    href="mailto:dianakjaergaard@house.com"
-                    className="text-xl font-semibold hover:text-blue-200 transition-colors"
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name *"
+                    required
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email *"
+                    required
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows="6"
+                    className="w-full px-4 py-3 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
+                  ></textarea>
+                </div>
+
+                <div className="text-right">
+                  <button
+                    type="submit"
+                    className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
                   >
-                    dianakjaergaard@house.com
+                    Send
+                  </button>
+                </div>
+              </form>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-gray-700 mb-2">
+                  <strong>Email:</strong>{' '}
+                  <a href="mailto:info@danishsummerhouse.com" className="text-blue-600 hover:text-blue-800">
+                    info@danishsummerhouse.com
                   </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <Calendar className="w-8 h-8 text-blue-300 flex-shrink-0" />
-                <div>
-                  <p className="text-blue-200 text-sm mb-1">Availability</p>
-                  <p className="text-xl font-semibold">Much of the year</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <MapPin className="w-8 h-8 text-blue-300 flex-shrink-0" />
-                <div>
-                  <p className="text-blue-200 text-sm mb-1">Location</p>
-                  <p className="text-xl font-semibold">Between Gilleleje & Hornbæk</p>
-                  <p className="text-blue-200 text-sm">1 hour from Copenhagen Airport</p>
-                </div>
+                </p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Location:</strong> Between Gilleleje & Hornbæk, North Zealand
+                </p>
+                <p className="text-gray-700">
+                  <strong>Availability:</strong> Much of the year
+                </p>
               </div>
             </div>
 
-            <div className="mt-10 text-center">
-              <a
-                href="mailto:dianakjaergaard@house.com"
-                className="inline-block bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
-              >
-                Send Inquiry
-              </a>
+            {/* Google Map */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[600px]">
+              <iframe
+                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&center=56.1148,12.3556&zoom=15&maptype=roadmap"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Property Location - North Zealand Coast"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -752,12 +937,24 @@ const DanishSummerHouse = () => {
             <ChevronLeft className="w-12 h-12" />
           </button>
 
-          <div className="max-w-6xl max-h-[90vh] bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl aspect-video flex items-center justify-center">
-            <div className="text-center text-white">
-              <Camera className="w-32 h-32 mx-auto mb-4 opacity-50" />
-              <p className="text-3xl font-semibold mb-2">{galleryImages[lightboxImage].title}</p>
-              <p className="text-blue-100">Image {lightboxImage + 1} of {galleryImages.length}</p>
-            </div>
+          <div className="max-w-6xl max-h-[90vh] relative">
+            <img
+              src={galleryImages[lightboxImage]}
+              alt={`Beachfront summer house rental North Zealand Denmark - ${
+                lightboxImage % 8 === 0 ? 'sea view to Sweden' :
+                lightboxImage % 8 === 1 ? 'interior living space Gilleleje' :
+                lightboxImage % 8 === 2 ? 'garden and outdoor area' :
+                lightboxImage % 8 === 3 ? 'bedroom accommodation' :
+                lightboxImage % 8 === 4 ? 'kitchen and dining' :
+                lightboxImage % 8 === 5 ? 'bathroom facilities' :
+                lightboxImage % 8 === 6 ? 'exterior beachfront property' :
+                'Danish coastal holiday home'
+              }`}
+              className="max-w-full max-h-[90vh] rounded-2xl object-contain"
+            />
+            <p className="text-white text-center mt-4 text-lg">
+              Image {lightboxImage + 1} of {galleryImages.length}
+            </p>
           </div>
 
           <button
