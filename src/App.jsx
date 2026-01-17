@@ -1134,6 +1134,171 @@ const TheatreTracker = () => {
       description: "European premiere of the Tony Award-winning musical about a teen who ages too fast.",
       bookingUrl: "https://www.hampsteadtheatre.com/"
     },
+    {
+      id: 360,
+      title: "The Last Five Years",
+      venue: "London Palladium",
+      locationType: "west-end",
+      date: "2026-03-24",
+      closingDate: "2026-03-29",
+      type: "musical",
+      description: "25th anniversary concert starring Rachel Zegler and Ben Platt in Jason Robert Brown's intimate masterpiece of love and heartbreak.",
+      bookingUrl: "https://lwtheatres.co.uk/whats-on/the-last-five-years-tlp/"
+    },
+    {
+      id: 361,
+      title: "Romeo & Juliet",
+      venue: "Harold Pinter Theatre",
+      locationType: "west-end",
+      date: "2026-03-16",
+      closingDate: "2026-06-06",
+      type: "play",
+      description: "Sadie Sink and Noah Jupe star in Robert Icke's acclaimed adaptation of Shakespeare's timeless tragedy.",
+      bookingUrl: "https://lwtickets.co.uk/whats-on/romeo-and-juliet/"
+    },
+    {
+      id: 362,
+      title: "Dirty Dancing",
+      venue: "Capital Theatre",
+      locationType: "west-end",
+      date: "2026-10-16",
+      closingDate: "2027-12-31",
+      type: "musical",
+      description: "The time of your life. Opening production at the brand-new Capital Theatre at Westfield London.",
+      bookingUrl: "https://dirtydancingonstage.co.uk/london/"
+    },
+    {
+      id: 363,
+      title: "Our Town",
+      venue: "Rose Theatre",
+      locationType: "fringe",
+      date: "2026-02-26",
+      closingDate: "2026-03-28",
+      type: "play",
+      description: "Michael Sheen stars in this bold Welsh National Theatre reimagining of Thornton Wilder's Pulitzer Prize-winning masterpiece.",
+      bookingUrl: "https://www.rosetheatre.org/whats-on/our-town-m74x"
+    },
+    {
+      id: 364,
+      title: "The Unlikely Pilgrimage of Harold Fry",
+      venue: "Theatre Royal Haymarket",
+      locationType: "west-end",
+      date: "2026-04-24",
+      closingDate: "2026-07-25",
+      type: "musical",
+      description: "The beloved novel comes to life in this heartwarming new musical about hope, redemption, and the journey of a lifetime.",
+      bookingUrl: "https://lwtheatres.co.uk/"
+    },
+    {
+      id: 365,
+      title: "One Flew Over the Cuckoo's Nest",
+      venue: "Almeida Theatre",
+      locationType: "fringe",
+      date: "2026-09-01",
+      closingDate: "2026-11-14",
+      type: "play",
+      description: "Aaron Pierre and Giles Terera star in this powerful revival of Ken Kesey's classic tale of rebellion and freedom.",
+      bookingUrl: "https://almeida.co.uk/"
+    },
+    {
+      id: 366,
+      title: "Ivanov",
+      venue: "Barbican Theatre",
+      locationType: "off-west-end",
+      date: "2026-10-08",
+      closingDate: "2026-12-05",
+      type: "play",
+      description: "Chris Pine makes his UK stage debut in Chekhov's darkly comic masterpiece about a man in crisis.",
+      bookingUrl: "https://www.barbican.org.uk/"
+    },
+    {
+      id: 367,
+      title: "Inter Alia",
+      venue: "National Theatre",
+      locationType: "off-west-end",
+      date: "2026-09-10",
+      closingDate: "2026-11-21",
+      type: "play",
+      description: "Rosamund Pike stars in this gripping new political thriller exploring power, ambition, and moral compromise.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/"
+    },
+    {
+      id: 368,
+      title: "Man to Man",
+      venue: "Royal Court Theatre",
+      locationType: "off-west-end",
+      date: "2026-10-20",
+      closingDate: "2026-12-12",
+      type: "play",
+      description: "Tilda Swinton in a groundbreaking solo performance exploring identity, transformation, and what it means to be human.",
+      bookingUrl: "https://royalcourttheatre.com/"
+    },
+    {
+      id: 369,
+      title: "1536",
+      venue: "Kiln Theatre",
+      locationType: "fringe",
+      date: "2026-09-17",
+      closingDate: "2026-11-07",
+      type: "play",
+      description: "Ava Pickett's 5-star new play reimagines the final days of Anne Boleyn with contemporary resonance.",
+      bookingUrl: "https://kilntheatre.com/"
+    },
+    {
+      id: 370,
+      title: "Gerry and Sewell",
+      venue: "Aldwych Theatre",
+      locationType: "west-end",
+      date: "2026-01-13",
+      closingDate: "2026-04-11",
+      type: "play",
+      description: "A witty new comedy about an unlikely friendship that changes two lives forever.",
+      bookingUrl: "https://lwtheatres.co.uk/"
+    },
+    {
+      id: 371,
+      title: "Already Perfect",
+      venue: "King's Head Theatre",
+      locationType: "fringe",
+      date: "2026-01-09",
+      closingDate: "2026-02-14",
+      type: "musical",
+      description: "Tony Award winner Levi Kreis's new musical exploring fame, self-acceptance, and the courage to be yourself.",
+      bookingUrl: "https://kingsheadtheatre.com/"
+    },
+    {
+      id: 372,
+      title: "Cable Street",
+      venue: "Marylebone Theatre",
+      locationType: "off-west-end",
+      date: "2026-01-16",
+      closingDate: "2026-03-14",
+      type: "play",
+      description: "Following two sell-out seasons, this powerful drama about the Battle of Cable Street returns.",
+      bookingUrl: "https://www.marylebonetheatre.com/"
+    },
+    {
+      id: 373,
+      title: "Guess How Much I Love You",
+      venue: "Royal Court Theatre",
+      locationType: "off-west-end",
+      date: "2026-01-16",
+      closingDate: "2026-03-07",
+      type: "play",
+      description: "World premiere by Luke Norris. A tender exploration of love, family, and what we leave behind.",
+      bookingUrl: "https://royalcourttheatre.com/"
+    },
+    {
+      id: 374,
+      title: "Ballad Lines",
+      venue: "Southwark Playhouse Elephant",
+      locationType: "fringe",
+      date: "2026-01-23",
+      closingDate: "2026-03-21",
+      type: "musical",
+      description: "Finn Anderson's new folk musical weaving together tales of love, loss, and the ties that bind us.",
+      bookingUrl: "https://southwarkplayhouse.co.uk/"
+    },
 
     // --- PARK THEATRE ---,
 
