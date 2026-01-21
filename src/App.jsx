@@ -1134,6 +1134,171 @@ const TheatreTracker = () => {
       description: "European premiere of the Tony Award-winning musical about a teen who ages too fast.",
       bookingUrl: "https://www.hampsteadtheatre.com/"
     },
+    {
+      id: 360,
+      title: "The Last Five Years",
+      venue: "London Palladium",
+      locationType: "west-end",
+      date: "2026-03-24",
+      closingDate: "2026-03-29",
+      type: "musical",
+      description: "25th anniversary concert starring Rachel Zegler and Ben Platt in Jason Robert Brown's intimate masterpiece of love and heartbreak.",
+      bookingUrl: "https://lwtheatres.co.uk/whats-on/the-last-five-years-tlp/"
+    },
+    {
+      id: 361,
+      title: "Romeo & Juliet",
+      venue: "Harold Pinter Theatre",
+      locationType: "west-end",
+      date: "2026-03-16",
+      closingDate: "2026-06-06",
+      type: "play",
+      description: "Sadie Sink and Noah Jupe star in Robert Icke's acclaimed adaptation of Shakespeare's timeless tragedy.",
+      bookingUrl: "https://lwtickets.co.uk/whats-on/romeo-and-juliet/"
+    },
+    {
+      id: 362,
+      title: "Dirty Dancing",
+      venue: "Capital Theatre",
+      locationType: "west-end",
+      date: "2026-10-16",
+      closingDate: "2027-12-31",
+      type: "musical",
+      description: "The time of your life. Opening production at the brand-new Capital Theatre at Westfield London.",
+      bookingUrl: "https://dirtydancingonstage.co.uk/london/"
+    },
+    {
+      id: 363,
+      title: "Our Town",
+      venue: "Rose Theatre",
+      locationType: "fringe",
+      date: "2026-02-26",
+      closingDate: "2026-03-28",
+      type: "play",
+      description: "Michael Sheen stars in this bold Welsh National Theatre reimagining of Thornton Wilder's Pulitzer Prize-winning masterpiece.",
+      bookingUrl: "https://www.rosetheatre.org/whats-on/our-town-m74x"
+    },
+    {
+      id: 364,
+      title: "The Unlikely Pilgrimage of Harold Fry",
+      venue: "Theatre Royal Haymarket",
+      locationType: "west-end",
+      date: "2026-04-24",
+      closingDate: "2026-07-25",
+      type: "musical",
+      description: "The beloved novel comes to life in this heartwarming new musical about hope, redemption, and the journey of a lifetime.",
+      bookingUrl: "https://lwtheatres.co.uk/"
+    },
+    {
+      id: 365,
+      title: "One Flew Over the Cuckoo's Nest",
+      venue: "Almeida Theatre",
+      locationType: "fringe",
+      date: "2026-09-01",
+      closingDate: "2026-11-14",
+      type: "play",
+      description: "Aaron Pierre and Giles Terera star in this powerful revival of Ken Kesey's classic tale of rebellion and freedom.",
+      bookingUrl: "https://almeida.co.uk/"
+    },
+    {
+      id: 366,
+      title: "Ivanov",
+      venue: "Barbican Theatre",
+      locationType: "off-west-end",
+      date: "2026-10-08",
+      closingDate: "2026-12-05",
+      type: "play",
+      description: "Chris Pine makes his UK stage debut in Chekhov's darkly comic masterpiece about a man in crisis.",
+      bookingUrl: "https://www.barbican.org.uk/"
+    },
+    {
+      id: 367,
+      title: "Inter Alia",
+      venue: "National Theatre",
+      locationType: "off-west-end",
+      date: "2026-09-10",
+      closingDate: "2026-11-21",
+      type: "play",
+      description: "Rosamund Pike stars in this gripping new political thriller exploring power, ambition, and moral compromise.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/"
+    },
+    {
+      id: 368,
+      title: "Man to Man",
+      venue: "Royal Court Theatre",
+      locationType: "off-west-end",
+      date: "2026-10-20",
+      closingDate: "2026-12-12",
+      type: "play",
+      description: "Tilda Swinton in a groundbreaking solo performance exploring identity, transformation, and what it means to be human.",
+      bookingUrl: "https://royalcourttheatre.com/"
+    },
+    {
+      id: 369,
+      title: "1536",
+      venue: "Kiln Theatre",
+      locationType: "fringe",
+      date: "2026-09-17",
+      closingDate: "2026-11-07",
+      type: "play",
+      description: "Ava Pickett's 5-star new play reimagines the final days of Anne Boleyn with contemporary resonance.",
+      bookingUrl: "https://kilntheatre.com/"
+    },
+    {
+      id: 370,
+      title: "Gerry and Sewell",
+      venue: "Aldwych Theatre",
+      locationType: "west-end",
+      date: "2026-01-13",
+      closingDate: "2026-04-11",
+      type: "play",
+      description: "A witty new comedy about an unlikely friendship that changes two lives forever.",
+      bookingUrl: "https://lwtheatres.co.uk/"
+    },
+    {
+      id: 371,
+      title: "Already Perfect",
+      venue: "King's Head Theatre",
+      locationType: "fringe",
+      date: "2026-01-09",
+      closingDate: "2026-02-14",
+      type: "musical",
+      description: "Tony Award winner Levi Kreis's new musical exploring fame, self-acceptance, and the courage to be yourself.",
+      bookingUrl: "https://kingsheadtheatre.com/"
+    },
+    {
+      id: 372,
+      title: "Cable Street",
+      venue: "Marylebone Theatre",
+      locationType: "off-west-end",
+      date: "2026-01-16",
+      closingDate: "2026-03-14",
+      type: "play",
+      description: "Following two sell-out seasons, this powerful drama about the Battle of Cable Street returns.",
+      bookingUrl: "https://www.marylebonetheatre.com/"
+    },
+    {
+      id: 373,
+      title: "Guess How Much I Love You",
+      venue: "Royal Court Theatre",
+      locationType: "off-west-end",
+      date: "2026-01-16",
+      closingDate: "2026-03-07",
+      type: "play",
+      description: "World premiere by Luke Norris. A tender exploration of love, family, and what we leave behind.",
+      bookingUrl: "https://royalcourttheatre.com/"
+    },
+    {
+      id: 374,
+      title: "Ballad Lines",
+      venue: "Southwark Playhouse Elephant",
+      locationType: "fringe",
+      date: "2026-01-23",
+      closingDate: "2026-03-21",
+      type: "musical",
+      description: "Finn Anderson's new folk musical weaving together tales of love, loss, and the ties that bind us.",
+      bookingUrl: "https://southwarkplayhouse.co.uk/"
+    },
 
     // --- PARK THEATRE ---,
 
@@ -1364,11 +1529,11 @@ const TheatreTracker = () => {
             </div>
             
             {/* Filter Controls */}
-            <div className="flex flex-col space-y-3 items-end w-full md:w-auto">
+            <div className="flex flex-col space-y-4 items-end w-full md:w-auto">
 
               {/* SEARCH BAR */}
-              <div className="bg-slate-900 p-2 rounded-xl border border-slate-700 hover:border-slate-600 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40 transition-colors">
-                 <div className="bg-slate-800 p-2 rounded-lg text-slate-400">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800/80 p-3 rounded-2xl border border-slate-700/50 hover:border-slate-600 focus-within:border-amber-500/50 focus-within:ring-2 focus-within:ring-amber-500/20 flex items-center gap-3 w-full md:w-auto shadow-xl shadow-black/50 transition-all">
+                 <div className="bg-slate-800/80 p-2.5 rounded-xl text-slate-400">
                     <Search className="w-4 h-4" />
                  </div>
                  <div className="flex-1">
@@ -1388,8 +1553,8 @@ const TheatreTracker = () => {
               </div>
 
               {/* DATE PICKER */}
-              <div className="bg-slate-900 p-2 rounded-xl border border-amber-500/30 flex items-center gap-2 w-full md:w-auto shadow-lg shadow-black/40">
-                 <div className="bg-slate-800 p-2 rounded-lg text-amber-500">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800/80 p-3 rounded-2xl border border-amber-500/30 hover:border-amber-500/50 focus-within:border-amber-500/60 focus-within:ring-2 focus-within:ring-amber-500/20 flex items-center gap-3 w-full md:w-auto shadow-xl shadow-amber-900/20 transition-all">
+                 <div className="bg-slate-800/80 p-2.5 rounded-xl text-amber-500">
                     <Calendar className="w-4 h-4" />
                  </div>
                  <div className="flex-1">
@@ -1411,50 +1576,50 @@ const TheatreTracker = () => {
               </div>
 
               {/* Type Filter */}
-              <div className="flex bg-slate-900 p-1 rounded-xl backdrop-blur-sm border border-slate-800 w-full md:w-auto justify-end">
-                <button 
+              <div className="flex bg-gradient-to-br from-slate-900 to-slate-800/80 p-1.5 rounded-2xl backdrop-blur-sm border border-slate-800/80 shadow-xl shadow-black/30 w-full md:w-auto justify-end gap-1">
+                <button
                   onClick={() => setTypeFilter('all')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'all' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${typeFilter === 'all' ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 shadow-lg shadow-amber-500/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   All
                 </button>
-                <button 
+                <button
                   onClick={() => setTypeFilter('musical')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'musical' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${typeFilter === 'musical' ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 shadow-lg shadow-amber-500/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Musicals
                 </button>
-                <button 
+                <button
                   onClick={() => setTypeFilter('play')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${typeFilter === 'play' ? 'bg-amber-600 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${typeFilter === 'play' ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 shadow-lg shadow-amber-500/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Plays
                 </button>
               </div>
 
               {/* Location Filter */}
-              <div className="flex bg-slate-900 p-1 rounded-xl backdrop-blur-sm border border-slate-800 overflow-x-auto max-w-full no-scrollbar">
-                <button 
+              <div className="flex bg-gradient-to-br from-slate-900 to-slate-800/80 p-1.5 rounded-2xl backdrop-blur-sm border border-slate-800/80 shadow-xl shadow-black/30 overflow-x-auto max-w-full no-scrollbar gap-1">
+                <button
                   onClick={() => setLocationFilter('all')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'all' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'all' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   All Locations
                 </button>
-                <button 
+                <button
                   onClick={() => setLocationFilter('west-end')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'west-end' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'west-end' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   West End
                 </button>
-                <button 
+                <button
                   onClick={() => setLocationFilter('off-west-end')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'off-west-end' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'off-west-end' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Off-West End
                 </button>
-                <button 
+                <button
                   onClick={() => setLocationFilter('fringe')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'fringe' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-xl text-xs font-medium transition-all whitespace-nowrap ${locationFilter === 'fringe' ? 'bg-slate-700 text-white shadow-lg shadow-slate-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/80'}`}
                 >
                   Fringe/Local
                 </button>
@@ -1480,28 +1645,31 @@ const TheatreTracker = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-8">
           {filteredShows.map((show) => {
             const open = isPast(show.date);
             const urgent = isApproaching(show.date);
             const isVisitFilterActive = !!visitDate;
-            
+
             return (
-              <div 
+              <div
                 key={show.id}
-                className={`group relative bg-slate-900 rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20
-                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-1 ring-amber-500/30' : 'border-slate-800 hover:border-amber-500/50'}`}
+                className={`group relative bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800/80 rounded-3xl overflow-hidden border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/30
+                  ${urgent && !isVisitFilterActive ? 'border-amber-500/50 ring-2 ring-amber-500/20 shadow-lg shadow-amber-500/10' : 'border-slate-800/80 hover:border-amber-500/50'}`}
+                style={{
+                  backdropFilter: 'blur(10px)'
+                }}
               >
                 {/* Urgent Badge */}
                 {urgent && !isVisitFilterActive && (
-                  <div className="absolute top-0 right-0 bg-amber-600 text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-xl shadow-lg z-10">
+                  <div className="absolute top-0 right-0 bg-gradient-to-br from-amber-500 to-amber-600 text-slate-900 text-xs font-bold px-4 py-2 rounded-bl-2xl shadow-xl shadow-amber-500/30 z-10">
                     OPENS SOON
                   </div>
                 )}
 
                 <div className="flex flex-col md:flex-row">
                   {/* Date Column */}
-                  <div className={`md:w-48 p-6 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-slate-800 ${open ? 'bg-slate-900/50' : 'bg-slate-900'}`}>
+                  <div className={`md:w-48 p-8 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-slate-800/50 ${open ? 'bg-slate-900/30' : 'bg-slate-900/50'}`}>
                     <span className="text-xs text-slate-400 uppercase tracking-wide mb-2">Opening Night</span>
                     <div className="flex items-baseline gap-1.5">
                       <span className="text-lg font-semibold text-amber-500 uppercase tracking-wider">{new Date(show.date).toLocaleString('default', { month: 'short' })}</span>
@@ -1521,7 +1689,7 @@ const TheatreTracker = () => {
                   </div>
 
                   {/* Info Column */}
-                  <div className="flex-1 p-6 flex flex-col justify-center">
+                  <div className="flex-1 p-8 flex flex-col justify-center">
                     <h3 className="text-2xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>{show.title}</h3>
                     
                     {/* Venue & Dining */}
@@ -1559,14 +1727,14 @@ const TheatreTracker = () => {
                   </div>
 
                   {/* Action Column */}
-                  <div className="p-6 bg-slate-950/30 md:w-64 flex flex-col justify-center space-y-3 border-t md:border-t-0 md:border-l border-slate-800">
+                  <div className="p-8 bg-slate-950/20 md:w-64 flex flex-col justify-center space-y-4 border-t md:border-t-0 md:border-l border-slate-800/50">
 
                     {/* Booking Button (Red Curtain Style) */}
                     <a
                        href={show.bookingUrl}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3 rounded-xl transition-all font-bold shadow-lg shadow-red-900/20 group-active:scale-95 border border-red-900/50 hover:-translate-y-0.5"
+                       className="flex items-center justify-center w-full bg-gradient-to-r from-red-800 to-red-700 hover:from-red-700 hover:to-red-600 text-white py-3.5 rounded-2xl transition-all font-bold shadow-xl shadow-red-900/30 hover:shadow-red-700/40 group-active:scale-95 border border-red-900/50 hover:-translate-y-1"
                        style={{fontFamily: "'Inter', sans-serif"}}
                     >
                        <Ticket className="w-4 h-4 mr-2" />
@@ -1579,7 +1747,7 @@ const TheatreTracker = () => {
                         href={getReviewLink(show)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3 rounded-xl transition-all font-medium group-active:scale-95 border border-slate-700 hover:border-slate-600 hover:-translate-y-0.5"
+                        className="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 py-3.5 rounded-2xl transition-all font-medium shadow-lg shadow-slate-900/30 hover:shadow-slate-700/40 group-active:scale-95 border border-slate-700 hover:border-slate-600 hover:-translate-y-1"
                         style={{fontFamily: "'Inter', sans-serif"}}
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
@@ -1588,7 +1756,7 @@ const TheatreTracker = () => {
                     ) : null}
 
                     {/* Closes Date */}
-                    <div className="text-center py-2 px-3 bg-slate-800/50 rounded-xl border border-slate-700">
+                    <div className="text-center py-3 px-4 bg-slate-800/30 rounded-2xl border border-slate-700/50 shadow-inner">
                       <div className="text-xs text-slate-400">
                         <span className="text-slate-500">Closes:</span>
                         <span className="text-slate-200 ml-2 font-medium">
