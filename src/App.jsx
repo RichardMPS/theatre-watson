@@ -215,7 +215,7 @@ const TheatreTracker = () => {
       venue: "Troubadour Wembley Park Theatre",
       locationType: "off-west-end",
       date: "2024-06-20",
-      closingDate: "2026-12-31",
+      closingDate: "2026-05-03",
       type: "musical",
       description: "Andrew Lloyd Webber's roller-skating spectacular races back with a new production.",
       bookingUrl: "https://www.starlightexpress.com/"
@@ -264,30 +264,30 @@ const TheatreTracker = () => {
       description: "Agatha Christie's gripping courtroom drama staged in a magnificent real council chamber.",
       bookingUrl: "https://witnesscountyhall.com/"
     },
+    {
+      id: 375,
+      title: "The Devil Wears Prada",
+      venue: "Dominion Theatre",
+      locationType: "west-end",
+      date: "2024-10-24",
+      closingDate: "2026-09-26",
+      type: "musical",
+      description: "Elton John's musical adaptation with Vanessa Williams as Miranda Priestly. The fastest-selling production in Dominion Theatre history.",
+      bookingUrl: "https://devilwearspradamusical.com/"
+    },
+    {
+      id: 376,
+      title: "MJ The Musical",
+      venue: "Prince Edward Theatre",
+      locationType: "west-end",
+      date: "2024-03-27",
+      closingDate: "2026-02-28",
+      type: "musical",
+      description: "Olivier Award-winning musical celebrating Michael Jackson's artistry and the making of his 1992 Dangerous World Tour.",
+      bookingUrl: "https://london.mjthemusical.com/"
+    },
 
     // --- NOVEMBER 2025 OPENINGS ---
-    {
-      id: 324,
-      title: "Coven",
-      venue: "Kiln Theatre",
-      locationType: "fringe",
-      date: "2025-11-01",
-      closingDate: "2026-01-17",
-      type: "musical",
-      description: "World premiere musical reinterrogating the 17th century Pendle Witch Trials with Grammy Award-winning music.",
-      bookingUrl: "https://kilntheatre.com/"
-    },
-    {
-      id: 325,
-      title: "Loop",
-      venue: "Theatre 503",
-      locationType: "fringe",
-      date: "2025-11-10",
-      closingDate: "2025-11-29",
-      type: "play",
-      description: "Tanya-Loretta Dee's sharp and darkly funny new work.",
-      bookingUrl: "https://theatre503.com/"
-    },
     {
       id: 101,
       title: "The Hunger Games: On Stage",
@@ -313,30 +313,6 @@ const TheatreTracker = () => {
       reviewUrl: "https://www.theguardian.com/stage/2025/nov/22/all-my-sons-review-bryan-cranston-marianne-jean-baptiste-paapa-essiedu-wyndhams-theatre-london"
     },
     {
-      id: 103,
-      title: "Ride The Cyclone",
-      venue: "Southwark Playhouse Elephant",
-      locationType: "fringe",
-      date: "2025-11-14",
-      closingDate: "2026-01-10",
-      type: "musical",
-      description: "The cult musical about a rollercoaster accident makes its London debut.",
-      bookingUrl: "https://southwarkplayhouse.co.uk/shows/ride-the-cyclone/",
-      reviewUrl: "https://www.theguardian.com/stage/2025/nov/20/ride-the-cyclone-review-southwark-playhouse-elephant-london"
-    },
-    {
-      id: 105,
-      title: "End",
-      venue: "National Theatre (Dorfman)",
-      locationType: "off-west-end",
-      date: "2025-11-21",
-      closingDate: "2026-01-17",
-      type: "play",
-      description: "Clive Owen and Saskia Reeves star in the final part of David Eldridge's relationship trilogy.",
-      bookingUrl: "https://www.nationaltheatre.org.uk/shows/end/",
-      reviewUrl: "https://www.theguardian.com/stage/2025/nov/21/end-review-clive-owen-saskia-reeves-dorfman-theatre-london"
-    },
-    {
       id: 106,
       title: "Ballet Shoes",
       venue: "National Theatre (Olivier)",
@@ -360,28 +336,6 @@ const TheatreTracker = () => {
       bookingUrl: "https://www.thesavoytheatre.com/shows/paddington-the-musical"
     },
     {
-      id: 326,
-      title: "The Gruffalo's Child",
-      venue: "Lyric Theatre",
-      locationType: "west-end",
-      date: "2025-11-28",
-      closingDate: "2026-01-11",
-      type: "play",
-      description: "The magical family show based on the beloved Julia Donaldson book.",
-      bookingUrl: "https://nimaxtheatres.com/shows/the-gruffalos-child-2025/"
-    },
-    {
-      id: 327,
-      title: "Ms. Holmes & Ms. Watson – Apt. 2B",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2025-11-28",
-      closingDate: "2025-12-20",
-      type: "play",
-      description: "Kate Hamill's witty reimagining of the classic detective duo as modern women.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
       id: 328,
       title: "The Horse of Jenin",
       venue: "Bush Theatre",
@@ -392,30 +346,8 @@ const TheatreTracker = () => {
       description: "A powerful story of resilience and human connection in the face of conflict.",
       bookingUrl: "https://www.bushtheatre.co.uk/"
     },
-    {
-      id: 329,
-      title: "David Copperfield",
-      venue: "Jermyn Street Theatre",
-      locationType: "fringe",
-      date: "2025-11-20",
-      closingDate: "2025-12-20",
-      type: "play",
-      description: "A witty one-man adaptation featuring observational humor and the pains of growing up.",
-      bookingUrl: "https://www.jermynstreettheatre.co.uk/"
-    },
 
     // --- DECEMBER 2025 ---
-    {
-      id: 330,
-      title: "Just For One Day",
-      venue: "Shaftesbury Theatre",
-      locationType: "west-end",
-      date: "2025-12-01",
-      closingDate: "2026-02-07",
-      type: "musical",
-      description: "The Live Aid Musical. Relive the day music brought the world together.",
-      bookingUrl: "https://www.shaftesburytheatre.com/events/just-for-one-day/"
-    },
     {
       id: 1,
       title: "Into the Woods",
@@ -473,17 +405,6 @@ const TheatreTracker = () => {
       bookingUrl: "https://www.nationaltheatre.org.uk/shows/the-playboy-of-the-western-world/"
     },
     {
-      id: 3,
-      title: "Christmas Carol Goes Wrong",
-      venue: "Apollo Theatre",
-      locationType: "west-end",
-      date: "2025-12-06",
-      closingDate: "2026-01-25",
-      type: "play",
-      description: "Mischief Theatre returns with their hilarious disaster-prone take on Dickens.",
-      bookingUrl: "https://nimaxtheatres.com/shows/christmas-carol-goes-wrong/"
-    },
-    {
       id: 204,
       title: "When We Are Married",
       venue: "Donmar Warehouse",
@@ -493,17 +414,6 @@ const TheatreTracker = () => {
       type: "play",
       description: "J.B. Priestley's classic northern comedy gets an intimate revival.",
       bookingUrl: "https://www.donmarwarehouse.com/"
-    },
-    {
-      id: 331,
-      title: "Dracapella",
-      venue: "Park Theatre",
-      locationType: "fringe",
-      date: "2025-12-03",
-      closingDate: "2026-01-17",
-      type: "musical",
-      description: "A capella musical comedy that puts a fresh spin on the Dracula legend.",
-      bookingUrl: "https://parktheatre.co.uk/whats-on/"
     },
     {
       id: 332,
@@ -528,28 +438,6 @@ const TheatreTracker = () => {
       bookingUrl: "https://www.atgtickets.com/shows/paranormal-activity/ambassadors-theatre/"
     },
     {
-      id: 205,
-      title: "Twelfth Night",
-      venue: "Barbican Theatre",
-      locationType: "off-west-end",
-      date: "2025-12-08",
-      closingDate: "2026-01-17",
-      type: "play",
-      description: "The Royal Shakespeare Company brings their acclaimed new production to London.",
-      bookingUrl: "https://www.barbican.org.uk/"
-    },
-    {
-      id: 334,
-      title: "Gawain and the Green Knight",
-      venue: "Park Theatre",
-      locationType: "fringe",
-      date: "2025-12-10",
-      closingDate: "2026-01-10",
-      type: "play",
-      description: "A thrilling retelling of the medieval Arthurian legend.",
-      bookingUrl: "https://parktheatre.co.uk/whats-on/"
-    },
-    {
       id: 335,
       title: "Woman in Mind",
       venue: "Duke of York's Theatre",
@@ -559,39 +447,6 @@ const TheatreTracker = () => {
       type: "play",
       description: "Sheridan Smith stars in Alan Ayckbourn's darkly comic masterpiece.",
       bookingUrl: "https://www.thedukeofyorks.com/woman-in-mind"
-    },
-    {
-      id: 336,
-      title: "The Nutcracker",
-      venue: "London Coliseum",
-      locationType: "west-end",
-      date: "2025-12-12",
-      closingDate: "2026-01-05",
-      type: "musical",
-      description: "English National Ballet's enchanting production of Tchaikovsky's festive classic.",
-      bookingUrl: "https://londoncoliseum.org/"
-    },
-    {
-      id: 337,
-      title: "Maddie Moate's Very Curious Christmas",
-      venue: "Garrick Theatre",
-      locationType: "west-end",
-      date: "2025-12-12",
-      closingDate: "2026-01-04",
-      type: "play",
-      description: "Olivier-nominated STEM adventure in Santa's workshop with interactive science experiments.",
-      bookingUrl: "https://nimaxtheatres.com/shows/maddies-curious-christmas-live-on-stage/"
-    },
-    {
-      id: 338,
-      title: "A Christmas Carol",
-      venue: "The Old Vic",
-      locationType: "off-west-end",
-      date: "2025-11-21",
-      closingDate: "2026-01-18",
-      type: "play",
-      description: "Jack Thorne's thrilling adaptation of the Dickens classic returns for Christmas.",
-      bookingUrl: "https://www.oldvictheatre.com/whats-on/a-christmas-carol"
     },
     {
       id: 339,
@@ -629,28 +484,6 @@ const TheatreTracker = () => {
 
     // --- 2026 ---
     {
-      id: 340,
-      title: "Orphans",
-      venue: "Jermyn Street Theatre",
-      locationType: "fringe",
-      date: "2026-01-05",
-      closingDate: "2026-01-24",
-      type: "play",
-      description: "Revival of Lyle Kessler's Tony Award-nominated modern classic starring Forbes Masson.",
-      bookingUrl: "https://www.jermynstreettheatre.co.uk/"
-    },
-    {
-      id: 6,
-      title: "Gerry & Sewell",
-      venue: "Aldwych Theatre",
-      locationType: "west-end",
-      date: "2026-01-13",
-      closingDate: "2026-01-24",
-      type: "play",
-      description: "The heartwarming North East tale makes its West End transfer.",
-      bookingUrl: "https://nederlander.co.uk/aldwych/shows/gerry-and-sewell/"
-    },
-    {
       id: 341,
       title: "The Train Driver",
       venue: "Park Theatre",
@@ -671,17 +504,6 @@ const TheatreTracker = () => {
       type: "play",
       description: "Chris Bowers' gripping exploration of sanctuary and belonging.",
       bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
-      id: 7,
-      title: "Akram Khan's Giselle",
-      venue: "London Coliseum",
-      locationType: "west-end",
-      date: "2026-01-15",
-      closingDate: "2026-01-18",
-      type: "play", 
-      description: "English National Ballet's acclaimed reimagining returns for a limited season.",
-      bookingUrl: "https://londoncoliseum.org/whats-on/akram-khans-giselle/"
     },
     {
       id: 8,
@@ -842,7 +664,7 @@ const TheatreTracker = () => {
       title: "Dracula",
       venue: "Noël Coward Theatre",
       locationType: "west-end",
-      date: "2026-02-04",
+      date: "2026-02-07",
       closingDate: "2026-05-31",
       type: "play",
       description: "A radical new one-woman adaptation starring Cynthia Erivo.",
@@ -891,6 +713,28 @@ const TheatreTracker = () => {
       type: "play",
       description: "Maxim Gorky's portrait of a privileged class oblivious to the storm approaching.",
       bookingUrl: "https://www.nationaltheatre.org.uk/shows/summerfolk/"
+    },
+    {
+      id: 377,
+      title: "Teeth 'n' Smiles",
+      venue: "Duke of York's Theatre",
+      locationType: "west-end",
+      date: "2026-03-13",
+      closingDate: "2026-06-13",
+      type: "play",
+      description: "50th-anniversary revival of David Hare's play starring Rebecca Lucy Taylor (Self Esteem).",
+      bookingUrl: "https://www.thedukeofyorks.com/"
+    },
+    {
+      id: 378,
+      title: "Claude Monet: The Immersive Musical",
+      venue: "Charing Cross Theatre",
+      locationType: "off-west-end",
+      date: "2026-03-14",
+      closingDate: "2026-06-28",
+      type: "musical",
+      description: "A new musical inspired by Monet's life and letters.",
+      bookingUrl: "https://charingcrosstheatre.co.uk/"
     },
     {
       id: 351,
@@ -1056,6 +900,17 @@ const TheatreTracker = () => {
       type: "play",
       description: "Oscar Wilde's sharp political comedy returns to the Lyric after 100 years.",
       bookingUrl: "https://lyric.co.uk/"
+    },
+    {
+      id: 379,
+      title: "War Horse",
+      venue: "National Theatre (Olivier)",
+      locationType: "off-west-end",
+      date: "2026-05-16",
+      closingDate: "2026-10-31",
+      type: "play",
+      description: "The acclaimed National Theatre production returns with its stunning puppetry and powerful WWI story.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/"
     },
     {
       id: 358,
