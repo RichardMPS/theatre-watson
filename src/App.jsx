@@ -122,17 +122,6 @@ const TheatreTracker = () => {
       bookingUrl: "https://hamiltonmusical.com/london/"
     },
     {
-      id: 311,
-      title: "Back to the Future: The Musical",
-      venue: "Adelphi Theatre",
-      locationType: "west-end",
-      date: "2021-09-13",
-      closingDate: "2026-04-12",
-      type: "musical",
-      description: "Great Scott! The movie classic is now a high-voltage musical experience. Final performances before the UK tour.",
-      bookingUrl: "https://www.backtothefuturemusical.com/london/"
-    },
-    {
       id: 312,
       title: "SIX",
       venue: "Vaudeville Theatre",
@@ -186,17 +175,6 @@ const TheatreTracker = () => {
       type: "musical",
       description: "Tony Award-winning folk-opera retelling the myth of Orpheus and Eurydice.",
       bookingUrl: "https://hadestown.co.uk/"
-    },
-    {
-      id: 318,
-      title: "Disney's Hercules",
-      venue: "Theatre Royal Drury Lane",
-      locationType: "west-end",
-      date: "2024-06-04",
-      closingDate: "2026-03-31",
-      type: "musical",
-      description: "From Zero to Hero! Disney's animated classic comes to life on stage.",
-      bookingUrl: "https://www.herculesthemusical.co.uk/"
     },
     {
       id: 319,
@@ -255,185 +233,8 @@ const TheatreTracker = () => {
     },
 
     // --- STILL RUNNING (OPENED NOV/DEC 2025) ---
-    {
-      id: 104,
-      title: "Paddington The Musical",
-      venue: "Savoy Theatre",
-      locationType: "west-end",
-      date: "2025-11-30",
-      closingDate: "2026-05-25",
-      type: "musical",
-      description: "The beloved bear arrives in the West End in a major new musical production.",
-      bookingUrl: "https://www.thesavoytheatre.com/shows/paddington-the-musical"
-    },
-    {
-      id: 1,
-      title: "Into the Woods",
-      venue: "Bridge Theatre",
-      locationType: "off-west-end",
-      date: "2025-12-02",
-      closingDate: "2026-05-30",
-      type: "musical",
-      description: "Terry Gilliam co-directs this highly anticipated revival of Sondheim's fairytale masterpiece.",
-      bookingUrl: "https://bridgetheatre.co.uk/whats-on/into-the-woods/",
-      reviewUrl: "https://www.theguardian.com/stage/2025/dec/12/into-the-woods-review-bridge-theatre-london"
-    },
-    {
-      id: 333,
-      title: "Paranormal Activity",
-      venue: "Ambassadors Theatre",
-      locationType: "west-end",
-      date: "2025-12-05",
-      closingDate: "2026-03-28",
-      type: "play",
-      description: "Supernatural thriller directed by Felix Barrett. An American couple relocates to London but ghosts follow.",
-      bookingUrl: "https://www.atgtickets.com/shows/paranormal-activity/ambassadors-theatre/"
-    },
-    {
-      id: 4,
-      title: "Oh, Mary!",
-      venue: "Trafalgar Theatre",
-      locationType: "west-end",
-      date: "2025-12-10",
-      closingDate: "2026-04-25",
-      type: "play",
-      description: "The Broadway sensation reimagining Mary Todd Lincoln's life arrives in London.",
-      bookingUrl: "https://trafalgartheatre.com/shows/oh-mary/"
-    },
 
     // --- 2026 ---
-    {
-      id: 8,
-      title: "The Tempest",
-      venue: "Sam Wanamaker Playhouse",
-      locationType: "off-west-end",
-      date: "2026-01-17",
-      closingDate: "2026-04-12",
-      type: "play",
-      description: "Shakespeare's final play performed in the intimate, candlelit indoor theatre.",
-      bookingUrl: "https://www.shakespearesglobe.com/whats-on/the-tempest/"
-    },
-    {
-      id: 347,
-      title: "Shadowlands",
-      venue: "Aldwych Theatre",
-      locationType: "west-end",
-      date: "2026-02-05",
-      closingDate: "2026-05-09",
-      type: "play",
-      description: "Hugh Bonneville stars as C.S. Lewis in this poignant drama about love and loss.",
-      bookingUrl: "https://nederlander.co.uk/aldwych/"
-    },
-    {
-      id: 348,
-      title: "Unfortunate: The Untold Story of Ursula",
-      venue: "The Other Palace",
-      locationType: "fringe",
-      date: "2026-02-06",
-      closingDate: "2026-04-05",
-      type: "musical",
-      description: "The hit musical parody giving the Sea Witch her time to shine returns to London.",
-      bookingUrl: "https://theotherpalace.co.uk/unfortunate/"
-    },
-    {
-      id: 13,
-      title: "I'm Sorry, Prime Minister",
-      venue: "Apollo Theatre",
-      locationType: "west-end",
-      date: "2026-01-30",
-      closingDate: "2026-05-09",
-      type: "play",
-      description: "The classic political sitcom characters return in a brand new stage comedy.",
-      bookingUrl: "https://nimaxtheatres.com/shows/im-sorry-prime-minister/"
-    },
-    {
-      id: 14,
-      title: "Dracula",
-      venue: "Noël Coward Theatre",
-      locationType: "west-end",
-      date: "2026-02-04",
-      closingDate: "2026-05-31",
-      type: "play",
-      description: "A radical one-woman adaptation starring Cynthia Erivo, playing all 23 roles.",
-      bookingUrl: "https://draculawestend.com/"
-    },
-    {
-      id: 206,
-      title: "Broken Glass",
-      venue: "Young Vic",
-      locationType: "fringe",
-      date: "2026-02-21",
-      closingDate: "2026-04-18",
-      type: "play",
-      description: "Arthur Miller's powerful drama about a Jewish couple in 1930s Brooklyn.",
-      bookingUrl: "https://www.youngvic.org/"
-    },
-    {
-      id: 207,
-      title: "The Holy Rosenbergs",
-      venue: "Menier Chocolate Factory",
-      locationType: "fringe",
-      date: "2026-02-27",
-      closingDate: "2026-05-02",
-      type: "play",
-      description: "A gripping family drama starring the Menier's 2026 season ensemble.",
-      bookingUrl: "https://www.menierchocolatefactory.com/"
-    },
-    {
-      id: 363,
-      title: "Our Town",
-      venue: "Rose Theatre",
-      locationType: "fringe",
-      date: "2026-02-26",
-      closingDate: "2026-03-28",
-      type: "play",
-      description: "Michael Sheen stars in this bold Welsh National Theatre reimagining of Thornton Wilder's Pulitzer Prize-winning masterpiece.",
-      bookingUrl: "https://www.rosetheatre.org/whats-on/our-town-m74x"
-    },
-    {
-      id: 16,
-      title: "Summerfolk",
-      venue: "National Theatre (Lyttelton)",
-      locationType: "off-west-end",
-      date: "2026-03-06",
-      closingDate: "2026-04-29",
-      type: "play",
-      description: "Maxim Gorky's portrait of a privileged class oblivious to the storm approaching.",
-      bookingUrl: "https://www.nationaltheatre.org.uk/shows/summerfolk/"
-    },
-    {
-      id: 370,
-      title: "Gerry and Sewell",
-      venue: "Aldwych Theatre",
-      locationType: "west-end",
-      date: "2026-01-13",
-      closingDate: "2026-04-11",
-      type: "play",
-      description: "A witty new comedy about an unlikely friendship that changes two lives forever.",
-      bookingUrl: "https://lwtheatres.co.uk/"
-    },
-    {
-      id: 351,
-      title: "Aether",
-      venue: "Jermyn Street Theatre",
-      locationType: "fringe",
-      date: "2026-03-16",
-      closingDate: "2026-04-04",
-      type: "play",
-      description: "Emma Howlett's award-winning play exploring physics, faith, and magic.",
-      bookingUrl: "https://www.jermynstreettheatre.co.uk/"
-    },
-    {
-      id: 208,
-      title: "Jaja's African Hair Braiding",
-      venue: "Lyric Hammersmith",
-      locationType: "fringe",
-      date: "2026-03-18",
-      closingDate: "2026-04-25",
-      type: "play",
-      description: "The UK premiere of the Tony Award-winning Broadway hit comedy.",
-      bookingUrl: "https://lyric.co.uk/"
-    },
     {
       id: 17,
       title: "Kinky Boots",
@@ -468,17 +269,6 @@ const TheatreTracker = () => {
       bookingUrl: "https://www.nationaltheatre.org.uk/shows/les-liaisons-dangereuses/"
     },
     {
-      id: 360,
-      title: "The Last Five Years",
-      venue: "London Palladium",
-      locationType: "west-end",
-      date: "2026-03-24",
-      closingDate: "2026-03-29",
-      type: "musical",
-      description: "25th anniversary concert starring Rachel Zegler and Ben Platt in Jason Robert Brown's intimate masterpiece of love and heartbreak.",
-      bookingUrl: "https://lwtheatres.co.uk/whats-on/the-last-five-years-tlp/"
-    },
-    {
       id: 361,
       title: "Romeo & Juliet",
       venue: "Harold Pinter Theatre",
@@ -488,39 +278,6 @@ const TheatreTracker = () => {
       type: "play",
       description: "Sadie Sink and Noah Jupe star in Robert Icke's acclaimed adaptation of Shakespeare's timeless tragedy.",
       bookingUrl: "https://lwtickets.co.uk/whats-on/romeo-and-juliet/"
-    },
-    {
-      id: 209,
-      title: "Waitress",
-      venue: "New Wimbledon Theatre",
-      locationType: "fringe",
-      date: "2026-03-28",
-      closingDate: "2026-04-04",
-      type: "musical",
-      description: "The smash-hit musical about friendship, motherhood, and the magic of a well-made pie.",
-      bookingUrl: "https://www.atgtickets.com/venues/new-wimbledon-theatre/"
-    },
-    {
-      id: 353,
-      title: "Dear Jack, Dear Louise",
-      venue: "Arcola Theatre",
-      locationType: "fringe",
-      date: "2026-04-02",
-      closingDate: "2026-05-02",
-      type: "play",
-      description: "A wartime correspondence between an army doctor and an aspiring actor.",
-      bookingUrl: "https://www.arcolatheatre.com/"
-    },
-    {
-      id: 354,
-      title: "I Was a Teenage She-Devil",
-      venue: "The Other Palace",
-      locationType: "fringe",
-      date: "2026-04-02",
-      closingDate: "2026-04-26",
-      type: "musical",
-      description: "An outrageous 80s horror comedy rock musical about a wallflower turned rock goddess.",
-      bookingUrl: "https://theotherpalace.co.uk/i-was-a-teenage-she-devil/"
     },
     {
       id: 376,
@@ -554,39 +311,6 @@ const TheatreTracker = () => {
       type: "musical",
       description: "The beloved novel comes to life in this heartwarming new musical about hope, redemption, and the journey of a lifetime, with music by Passenger.",
       bookingUrl: "https://lwtheatres.co.uk/whats-on/harold-fry/"
-    },
-    {
-      id: 355,
-      title: "Heart Wall",
-      venue: "Bush Theatre",
-      locationType: "fringe",
-      date: "2026-04-07",
-      closingDate: "2026-05-16",
-      type: "play",
-      description: "Kit Withington's tender exploration of grief and memory, directed by Katie Greenall.",
-      bookingUrl: "https://www.bushtheatre.co.uk/"
-    },
-    {
-      id: 356,
-      title: "Please Please Me",
-      venue: "Kiln Theatre",
-      locationType: "fringe",
-      date: "2026-04-16",
-      closingDate: "2026-05-23",
-      type: "play",
-      description: "World premiere about Brian Epstein and his contribution to making The Beatles.",
-      bookingUrl: "https://kilntheatre.com/"
-    },
-    {
-      id: 210,
-      title: "The Karate Kid The Musical",
-      venue: "New Wimbledon Theatre",
-      locationType: "fringe",
-      date: "2026-04-28",
-      closingDate: "2026-05-09",
-      type: "musical",
-      description: "The world premiere UK tour of the musical based on the classic film kicks off.",
-      bookingUrl: "https://www.atgtickets.com/venues/new-wimbledon-theatre/"
     },
     {
       id: 369,
@@ -774,6 +498,127 @@ const TheatreTracker = () => {
       type: "play",
       description: "Tilda Swinton in a groundbreaking solo performance exploring identity, transformation, and what it means to be human.",
       bookingUrl: "https://royalcourttheatre.com/"
+    },
+    {
+      id: 378,
+      title: "The Truth",
+      venue: "Apollo Theatre",
+      locationType: "west-end",
+      date: "2026-06-09",
+      closingDate: "2026-09-12",
+      type: "play",
+      description: "Florian Zeller's hilarious comedy about love, lies and affairs, starring Stephen Mangan, Ardal O'Hanlon, Sarah Hadland and Janie Dee.",
+      bookingUrl: "https://nimaxtheatres.com/shows/the-truth/"
+    },
+    {
+      id: 379,
+      title: "Cyrano de Bergerac",
+      venue: "Noël Coward Theatre",
+      locationType: "west-end",
+      date: "2026-06-13",
+      closingDate: "2026-09-05",
+      type: "play",
+      description: "Olivier winner Adrian Lester reprises his acclaimed RSC role as the large-nosed wordsmith in this romantic West End transfer.",
+      bookingUrl: "https://www.delfontmackintosh.co.uk/whats-on/cyrano-de-bergerac"
+    },
+    {
+      id: 380,
+      title: "The Misanthrope",
+      venue: "National Theatre (Lyttelton)",
+      locationType: "off-west-end",
+      date: "2026-06-16",
+      closingDate: "2026-08-01",
+      type: "play",
+      description: "Sandra Oh makes her National Theatre debut in Martin Crimp's feminist reimagining of Molière's satirical comedy.",
+      bookingUrl: "https://www.nationaltheatre.org.uk/productions/the-misanthrope/"
+    },
+    {
+      id: 381,
+      title: "Archduke",
+      venue: "Royal Court Theatre",
+      locationType: "off-west-end",
+      date: "2026-06-20",
+      closingDate: "2026-07-25",
+      type: "play",
+      description: "Rajiv Joseph's darkly comic play reimagines the run-up to Archduke Franz Ferdinand's assassination. European premiere.",
+      bookingUrl: "https://royalcourttheatre.com/events/archduke/"
+    },
+    {
+      id: 382,
+      title: "To Kill a Mockingbird",
+      venue: "Wyndham's Theatre",
+      locationType: "west-end",
+      date: "2026-06-25",
+      closingDate: "2026-09-12",
+      type: "play",
+      description: "Aaron Sorkin's Tony-winning adaptation of Harper Lee's Pulitzer Prize novel returns to the West End for a strictly limited season.",
+      bookingUrl: "https://www.delfontmackintosh.co.uk/whats-on/to-kill-a-mockingbird"
+    },
+    {
+      id: 383,
+      title: "Trainspotting The Musical",
+      venue: "Theatre Royal Haymarket",
+      locationType: "west-end",
+      date: "2026-07-15",
+      closingDate: "2026-09-05",
+      type: "musical",
+      description: "Choose life, choose this. Irvine Welsh adapts his own novel into a brand new musical with an original score.",
+      bookingUrl: "https://trainspottingthemusical.co.uk/"
+    },
+    {
+      id: 384,
+      title: "Death Note: The Musical",
+      venue: "Barbican Theatre",
+      locationType: "off-west-end",
+      date: "2026-07-30",
+      closingDate: "2026-09-12",
+      type: "musical",
+      description: "UK premiere of the cult manga turned musical: a high school student discovers a notebook that can kill anyone whose name is written in it.",
+      bookingUrl: "https://deathnotethemusical.com/"
+    },
+    {
+      id: 385,
+      title: "The Comedy About Spies",
+      venue: "Adelphi Theatre",
+      locationType: "west-end",
+      date: "2026-08-01",
+      closingDate: "2026-09-26",
+      type: "play",
+      description: "Mischief Theatre return with a riotous Cold War farce packed with espionage, mistaken identity and clashing CIA and KGB agents.",
+      bookingUrl: "https://lwtheatres.co.uk/whats-on/the-comedy-about-spies/"
+    },
+    {
+      id: 386,
+      title: "Hay Fever",
+      venue: "Wyndham's Theatre",
+      locationType: "west-end",
+      date: "2026-09-22",
+      closingDate: "2026-12-12",
+      type: "play",
+      description: "Richard E. Grant and Christine Baranski (in her West End debut) lead this star-studded revival of Noël Coward's irresistible 1920s comedy.",
+      bookingUrl: "https://www.delfontmackintosh.co.uk/whats-on/hay-fever"
+    },
+    {
+      id: 387,
+      title: "The Cherry Orchard",
+      venue: "Harold Pinter Theatre",
+      locationType: "west-end",
+      date: "2026-10-03",
+      closingDate: "2027-01-09",
+      type: "play",
+      description: "Kristin Scott Thomas leads Conor McPherson's new adaptation of Chekhov's classic. Directed by Ian Rickson.",
+      bookingUrl: "https://www.haroldpintertheatre.co.uk/shows/the-cherry-orchard"
+    },
+    {
+      id: 388,
+      title: "The Lives of Others",
+      venue: "Adelphi Theatre",
+      locationType: "west-end",
+      date: "2026-10-14",
+      closingDate: "2027-01-09",
+      type: "play",
+      description: "Keira Knightley, Luke Thompson and Stephen Dillane star in Robert Icke's adaptation of the Oscar-winning film about surveillance in 1980s East Berlin.",
+      bookingUrl: "https://lwtheatres.co.uk/whats-on/the-lives-of-others/"
     },
   ];
 
